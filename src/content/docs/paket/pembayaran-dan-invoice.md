@@ -11,6 +11,12 @@ Buka **Langganan**, pilih paket dan periode (bulanan atau tahunan), lalu klik **
 
 Hanya **pemilik organisasi** yang bisa membayar.
 
+## Halaman pembayaran
+
+Setelah kamu klik **Bayar sekarang**, Vaulty membuka halaman pembayaran layar penuh. **Di kiri** ada ringkasan pesanan: total, paket, periode, subtotal, dan nomor pesanan. **Di kanan** ada pilihan cara bayar dari Midtrans, tanpa popup. Tombol **Cek status** di bawahnya memeriksa ulang pembayaranmu kalau halaman belum berubah.
+
+Setelah pembayaran diproses, halaman berganti sendiri menjadi **Pembayaran diterima**, **Menunggu pembayaran** (untuk transfer atau gerai ritel yang belum kamu bayar), atau **Pembayaran belum berhasil**.
+
 ## Setelah membayar
 
 - Langgananmu aktif otomatis begitu pembayaran kami terima.

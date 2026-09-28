@@ -11,6 +11,12 @@ Open **Subscription**, choose a plan and period (monthly or yearly), then click 
 
 Only the **organization owner** can pay.
 
+## The payment page
+
+After you click **Pay now**, Vaulty opens a full-screen payment page. **On the left** is the order summary: total, plan, period, subtotal, and order number. **On the right** are the Midtrans payment options, with no popup. The **Check status** button underneath re-checks your payment if the page has not changed.
+
+Once the payment is processed the page switches by itself to **Payment received**, **Waiting for payment** (for transfers or store payments you have not made yet), or **Payment did not go through**.
+
 ## After paying
 
 - Your subscription activates automatically once we receive the payment.
