@@ -5,6 +5,12 @@ sidebar:
   order: 4
 ---
 
+## September 29, 2026
+
+**Fixed**
+- **Onboarding could be skipped** for the next account signed in on the same browser tab (for example a re-login, or a new Google sign-up): it is now checked per account, not per tab.
+- **Paying from the "Choose plan" step in onboarding** now uses the same branded payment page as the dashboard's Subscription menu, instead of a plain Midtrans page. After paying, the "Continue account setup" button returns to onboarding right at the next step.
+
 ## September 28, 2026
 
 **New**

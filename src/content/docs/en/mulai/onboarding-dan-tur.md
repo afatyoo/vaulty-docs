@@ -44,6 +44,18 @@ Step 3, your workspace:
 
 ![Onboarding workspace name, language, and currency step](../../../../assets/screens/en/onboarding-3-workspace.webp)
 
+## If you pay right at step 2
+
+Choosing **Pay now** on the "Choose plan" step opens the same payment page used by the Subscription menu in the dashboard: order summary on the left, embedded Midtrans payment options on the right.
+
+![Payment page opened from onboarding, the same as the Subscription page](../../../../assets/screens/en/onboarding-checkout.webp)
+
+Once the payment is received, the **Continue account setup** button takes you back into onboarding, right at the "Your workspace" step (not back to step 1).
+
+![Payment received card with the Continue account setup button](../../../../assets/screens/en/onboarding-checkout-paid.webp)
+
+![Onboarding resuming at the Your workspace step after paying, with Personal plan active](../../../../assets/screens/en/onboarding-resumed.webp)
+
 ### The tour question and its first step
 
 ![The question asking whether you want the product tour](../../../../assets/screens/en/tour-prompt.webp)

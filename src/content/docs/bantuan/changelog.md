@@ -5,6 +5,12 @@ sidebar:
   order: 4
 ---
 
+## 29 September 2026
+
+**Diperbaiki**
+- **Onboarding sempat melewati langkah pertama** untuk akun berikutnya yang masuk di tab browser yang sama (misalnya login ulang, atau daftar baru lewat Google): sekarang selalu diperiksa per akun, bukan per tab.
+- **Pembayaran dari langkah "Pilih paket" di onboarding** sekarang memakai halaman pembayaran bermerek yang sama dengan menu Langganan di dashboard, bukan halaman Midtrans polos. Setelah bayar, tombol "Lanjutkan pengaturan akun" mengantar balik ke onboarding tepat di langkah berikutnya.
+
 ## 28 September 2026
 
 **Baru**

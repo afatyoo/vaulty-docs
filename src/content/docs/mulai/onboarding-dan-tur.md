@@ -44,6 +44,18 @@ Langkah 3, ruang keuanganmu:
 
 ![Onboarding langkah nama workspace, bahasa, dan mata uang](../../../assets/screens/id/onboarding-3-workspace.webp)
 
+## Kalau kamu langsung bayar di langkah 2
+
+Memilih **Bayar sekarang** di langkah "Pilih paket" membuka halaman pembayaran yang sama dengan menu Langganan di dashboard: ringkasan pesanan di kiri, cara bayar Midtrans tertanam di kanan.
+
+![Halaman pembayaran yang dibuka dari onboarding, sama dengan halaman Langganan](../../../assets/screens/id/onboarding-checkout.webp)
+
+Setelah pembayaran diterima, tombol **Lanjutkan pengaturan akun** mengantarmu balik ke onboarding, tepat di langkah "Ruang keuanganmu" (bukan mengulang dari langkah 1).
+
+![Kartu Pembayaran diterima dengan tombol Lanjutkan pengaturan akun](../../../assets/screens/id/onboarding-checkout-paid.webp)
+
+![Onboarding lanjut di langkah Ruang keuanganmu setelah bayar, dengan Personal plan active](../../../assets/screens/id/onboarding-resumed.webp)
+
 ### Pertanyaan tur dan langkah pertamanya
 
 ![Pertanyaan apakah ingin melihat tur produk](../../../assets/screens/id/tour-prompt.webp)
