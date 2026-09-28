@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="24" fill="#0E6B63"/>
+  <svg x="19" y="19" width="62" height="62" viewBox="541 541 850 850" fill="#FAF9F5">
+    <defs>
+      <mask id="m" maskUnits="userSpaceOnUse" x="541" y="541" width="850" height="850">
+        <rect x="541" y="541" width="850" height="850" fill="white"/>
+        <polygon points="965,870 1067,972 965,1074 863,972" fill="black" stroke="black" stroke-width="56" stroke-linejoin="round"/>
+      </mask>
+    </defs>
+    <path d="M720 865 A245 245 0 0 1 1210 865" fill="none" stroke="#FAF9F5" stroke-width="70"/>
+    <g mask="url(#m)">
+      <path d="M583 970 a40 40 0 0 1 40 -40 H1309 a40 40 0 0 1 40 40 V1190 a160 160 0 0 1 -160 160 H743 a160 160 0 0 1 -160 -160 Z"/>
+      <polygon points="965,817 1120,972 965,1127 810,972" stroke="#FAF9F5" stroke-width="90" stroke-linejoin="round"/>
+    </g>
+  </svg>
+</svg>

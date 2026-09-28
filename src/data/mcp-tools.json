@@ -1,0 +1,148 @@
+{
+  "protocolVersion": "2025-06-18",
+  "minPlan": "personal",
+  "tools": [
+    {
+      "name": "get_summary",
+      "title": "Ringkasan keuangan bulanan",
+      "description": "Total pemasukan, pengeluaran, selisih, lima kategori pengeluaran terbesar, dan pemakaian anggaran untuk satu bulan.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "Bulan format YYYY-MM. Kosong = bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_transactions",
+      "title": "Daftar transaksi",
+      "description": "Transaksi terbaru (pemasukan dan pengeluaran), bisa disaring per jenis, bulan, dan kategori.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense",
+              "all"
+            ],
+            "description": "Default all."
+          },
+          "month": {
+            "type": "string",
+            "description": "Bulan format YYYY-MM. Kosong = semua bulan."
+          },
+          "category": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "description": "Default 20."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_budgets",
+      "title": "Anggaran bulanan",
+      "description": "Anggaran per kategori untuk satu bulan beserta jumlah yang sudah terpakai dan sisanya.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "Bulan format YYYY-MM. Kosong = bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_categories",
+      "title": "Kategori dan metode pembayaran",
+      "description": "Daftar kategori pemasukan, kategori pengeluaran, dan metode pembayaran yang dipakai organisasi. Pakai nilai ini saat mencatat transaksi.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "add_transaction",
+      "title": "Catat transaksi",
+      "description": "Mencatat satu pemasukan atau pengeluaran. Butuh token dengan akses tulis. Cek list_categories dulu supaya kategori dan metode sesuai.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense"
+            ]
+          },
+          "amount": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Jumlah dalam Rupiah."
+          },
+          "category": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string",
+            "description": "Keterangan singkat: sumber pemasukan atau nama pengeluaran."
+          },
+          "date": {
+            "type": "string",
+            "description": "Tanggal YYYY-MM-DD. Kosong = hari ini."
+          },
+          "method": {
+            "type": "string",
+            "description": "Metode pembayaran. Kosong = metode pertama di daftar."
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "amount",
+          "category",
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

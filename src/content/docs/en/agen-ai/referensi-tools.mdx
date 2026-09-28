@@ -1,0 +1,15 @@
+---
+title: "MCP tools reference"
+description: "The list of Vaulty MCP tools and their parameters."
+sidebar: 
+  order: 2
+---
+
+import McpTools from '../../../../components/McpTools.astro';
+import data from '../../../../data/mcp-tools.json';
+
+Vaulty provides **{data.tools.length} tools**. This list is read straight from the server code, so it always matches what is available. Protocol version: <code>{data.protocolVersion}</code>.
+
+All amounts are in **Rupiah (IDR)**. Responses are JSON text.
+
+<McpTools lang="en" />

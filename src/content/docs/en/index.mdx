@@ -1,0 +1,31 @@
+---
+title: "Vaulty Docs"
+description: "Guides for using Vaulty for personal and family finance."
+template: splash
+hero: 
+  tagline: "How to use Vaulty, from your first transaction to connecting an AI agent."
+  actions:
+    - text: Start here
+      link: /en/mulai/apa-itu-vaulty/
+      icon: right-arrow
+    - text: Connect an AI agent (MCP)
+      link: /en/agen-ai/menyambungkan-mcp/
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Getting started" icon="rocket">
+    Sign up, verify your email, and take the short onboarding. [Read the guide](/en/mulai/apa-itu-vaulty/).
+  </Card>
+  <Card title="Tracking your money" icon="pencil">
+    Income, expenses, budgets, bills, and savings. [See how](/en/keuangan/mencatat-transaksi/).
+  </Card>
+  <Card title="Plans and payments" icon="star">
+    What each plan includes, how to pay, and invoices. [See plans](/en/paket/paket-dan-harga/).
+  </Card>
+  <Card title="AI agents (MCP)" icon="setting">
+    Connect an AI assistant to Vaulty to read and record. [MCP guide](/en/agen-ai/menyambungkan-mcp/).
+  </Card>
+</CardGrid>

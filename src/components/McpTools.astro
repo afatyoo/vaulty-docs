@@ -1,0 +1,68 @@
+---
+import data from '../data/mcp-tools.json';
+// Nama, jenis, dan parameter tiap alat dibaca dari berkas yang dihasilkan
+// backend Vaulty (scripts/exportMcpTools.mjs), jadi tidak bisa menyimpang dari
+// kode. Teks penjelasan ditulis per bahasa di bawah supaya satu halaman satu bahasa.
+const { lang = 'id' } = Astro.props;
+const T = {
+  id: {
+    read: 'Baca', write: 'Tulis', params: 'Parameter', none: 'Tanpa parameter', required: 'wajib',
+    desc: {
+      get_summary: 'Total pemasukan, pengeluaran, selisih, lima kategori pengeluaran terbesar, dan kategori anggaran yang terlampaui untuk satu bulan.',
+      list_transactions: 'Transaksi terbaru (pemasukan dan pengeluaran). Bisa disaring per jenis, bulan, dan kategori. Maksimal 100 baris.',
+      list_budgets: 'Anggaran per kategori untuk satu bulan beserta jumlah yang sudah terpakai dan sisanya.',
+      list_categories: 'Kategori pemasukan, kategori pengeluaran, dan metode pembayaran milik organisasi. Panggil ini sebelum mencatat transaksi.',
+      add_transaction: 'Mencatat satu pemasukan atau pengeluaran. Butuh token dengan akses tulis. Hanya menambah, tidak bisa mengubah atau menghapus.',
+    },
+    param: {
+      month: 'Bulan, format YYYY-MM. Kosong = bulan ini (atau semua bulan untuk list_transactions).',
+      type: 'income, expense, atau all (list_transactions). income atau expense saja untuk add_transaction.',
+      category: 'Nama kategori.', limit: 'Jumlah baris, 1 sampai 100. Default 20.',
+      amount: 'Jumlah dalam Rupiah, lebih dari 0.', name: 'Keterangan singkat: sumber pemasukan atau nama pengeluaran.',
+      date: 'Tanggal YYYY-MM-DD. Kosong = hari ini.', method: 'Metode pembayaran. Kosong = metode pertama di daftar.', note: 'Catatan tambahan (maks 500 karakter).',
+    } as Record<string, string>,
+  },
+  en: {
+    read: 'Read', write: 'Write', params: 'Parameters', none: 'No parameters', required: 'required',
+    desc: {
+      get_summary: 'Total income, total expenses, the difference, the five largest expense categories, and any budget categories over their limit for one month.',
+      list_transactions: 'Latest transactions (income and expenses). Filter by type, month, and category. Up to 100 rows.',
+      list_budgets: 'Budgets per category for one month, with the amount already spent and what remains.',
+      list_categories: 'The organization\'s income categories, expense categories, and payment methods. Call this before recording a transaction.',
+      add_transaction: 'Record one income or expense. Needs a token with write access. It can only add, never change or delete.',
+    },
+    param: {
+      month: 'Month, format YYYY-MM. Empty = this month (or all months for list_transactions).',
+      type: 'income, expense, or all (list_transactions). Only income or expense for add_transaction.',
+      category: 'Category name.', limit: 'Number of rows, 1 to 100. Default 20.',
+      amount: 'Amount in Rupiah, greater than 0.', name: 'Short label: the income source or the expense name.',
+      date: 'Date YYYY-MM-DD. Empty = today.', method: 'Payment method. Empty = the first method in the list.', note: 'Extra note (max 500 characters).',
+    } as Record<string, string>,
+  },
+}[lang === 'en' ? 'en' : 'id'];
+const READ_ONLY = (t: any) => t.annotations?.readOnlyHint === true;
+---
+{data.tools.map((tool) => {
+  const props = Object.entries((tool.inputSchema as any).properties ?? {});
+  const required = new Set((tool.inputSchema as any).required ?? []);
+  return (
+    <section>
+      <h3 id={tool.name}><code>{tool.name}</code> <small>({READ_ONLY(tool) ? T.read : T.write})</small></h3>
+      <p>{(T.desc as Record<string, string>)[tool.name] ?? tool.description}</p>
+      {props.length === 0 ? <p><em>{T.none}</em></p> : (
+        <table>
+          <thead><tr><th>{T.params}</th><th>Type</th><th></th></tr></thead>
+          <tbody>
+            {props.map(([name, schema]: [string, any]) => (
+              <tr>
+                <td><code>{name}</code>{required.has(name) ? <> <small>({T.required})</small></> : null}</td>
+                <td><code>{schema.enum ? schema.enum.join(' | ') : schema.type}</code></td>
+                <td>{T.param[name] ?? schema.description ?? ''}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </section>
+  );
+})}

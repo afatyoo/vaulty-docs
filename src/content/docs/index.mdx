@@ -1,0 +1,31 @@
+---
+title: "Dokumentasi Vaulty"
+description: "Panduan memakai Vaulty untuk keuangan pribadi dan keluarga."
+template: splash
+hero: 
+  tagline: "Panduan memakai Vaulty, dari mencatat transaksi pertama sampai menyambungkan agen AI."
+  actions:
+    - text: Mulai di sini
+      link: /mulai/apa-itu-vaulty/
+      icon: right-arrow
+    - text: Sambungkan agen AI (MCP)
+      link: /agen-ai/menyambungkan-mcp/
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Mulai" icon="rocket">
+    Daftar, verifikasi email, dan ikuti onboarding singkat. [Baca panduan mulai](/mulai/apa-itu-vaulty/).
+  </Card>
+  <Card title="Mencatat keuangan" icon="pencil">
+    Pemasukan, pengeluaran, anggaran, tagihan, dan tabungan. [Lihat caranya](/keuangan/mencatat-transaksi/).
+  </Card>
+  <Card title="Paket dan pembayaran" icon="star">
+    Apa yang ada di tiap paket, cara bayar, dan invoice. [Lihat paket](/paket/paket-dan-harga/).
+  </Card>
+  <Card title="Agen AI (MCP)" icon="setting">
+    Hubungkan asisten AI ke Vaulty untuk membaca dan mencatat. [Panduan MCP](/agen-ai/menyambungkan-mcp/).
+  </Card>
+</CardGrid>

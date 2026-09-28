@@ -1,0 +1,11 @@
+{
+  "note": "Sumber harga: backend Vaulty (tabel plans). Perbarui saat harga berubah.",
+  "currency": "IDR",
+  "trialDays": 14,
+  "graceDays": 7,
+  "plans": [
+    { "key": "free", "monthly": 0, "yearly": 0, "users": 1 },
+    { "key": "personal", "monthly": 25000, "yearly": 250000, "users": 1 },
+    { "key": "family", "monthly": 65000, "yearly": 650000, "users": 5 }
+  ]
+}

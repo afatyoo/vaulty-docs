@@ -1,0 +1,15 @@
+---
+title: "Referensi tools MCP"
+description: "Daftar alat MCP Vaulty beserta parameternya."
+sidebar: 
+  order: 2
+---
+
+import McpTools from '../../../components/McpTools.astro';
+import data from '../../../data/mcp-tools.json';
+
+Vaulty menyediakan **{data.tools.length} alat**. Daftar ini dibaca langsung dari kode server, jadi selalu sama dengan yang tersedia. Versi protokol: <code>{data.protocolVersion}</code>.
+
+Semua jumlah dalam **Rupiah (IDR)**. Jawaban berupa teks JSON.
+
+<McpTools lang="id" />

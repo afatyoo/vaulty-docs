@@ -1,0 +1,17 @@
+---
+import plans from '../data/plans.json';
+// Harga dari src/data/plans.json (bukan diketik ulang di halaman).
+const { lang = 'id' } = Astro.props;
+const en = lang === 'en';
+const idr = (n: number) => (n === 0 ? 'Rp 0' : `Rp ${n.toLocaleString('id-ID')}`);
+const names: Record<string, string> = { free: en ? 'Free' : 'Gratis', personal: 'Personal', family: 'Family' };
+const head = en ? ['Plan', 'Per month', 'Per year', 'Users'] : ['Paket', 'Per bulan', 'Per tahun', 'Pengguna'];
+---
+<table class="callout-price">
+  <thead><tr>{head.map((h) => <th>{h}</th>)}</tr></thead>
+  <tbody>
+    {plans.plans.map((p) => (
+      <tr><td><strong>{names[p.key]}</strong></td><td>{idr(p.monthly)}</td><td>{p.yearly ? idr(p.yearly) : '-'}</td><td>{p.users}</td></tr>
+    ))}
+  </tbody>
+</table>
