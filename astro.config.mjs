@@ -23,7 +23,7 @@ export default defineConfig({
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/afatyoo/vaulty-docs' }],
       sidebar: [
         { label: 'Mulai', translations: { en: 'Getting started' }, items: [{ autogenerate: { directory: 'mulai' } }] },
-        { label: 'Mencatat keuangan', translations: { en: 'Tracking your money' }, items: [{ autogenerate: { directory: 'keuangan' } }] },
+        { label: 'Panduan penggunaan', translations: { en: 'User guide' }, items: [{ autogenerate: { directory: 'panduan' } }] },
         { label: 'Paket dan pembayaran', translations: { en: 'Plans and payments' }, items: [{ autogenerate: { directory: 'paket' } }] },
         { label: 'Agen AI (MCP)', translations: { en: 'AI agents (MCP)' }, items: [{ autogenerate: { directory: 'agen-ai' } }] },
         { label: 'Bantuan', translations: { en: 'Help' }, items: [{ autogenerate: { directory: 'bantuan' } }] },

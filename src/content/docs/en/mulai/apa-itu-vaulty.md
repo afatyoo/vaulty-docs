@@ -30,4 +30,4 @@ Vaulty is available in **Bahasa Indonesia** and **English**. One screen uses one
 
 1. [Sign up and log in](/en/mulai/daftar-dan-masuk/)
 2. [Onboarding and product tour](/en/mulai/onboarding-dan-tur/)
-3. [Record your first transaction](/en/keuangan/mencatat-transaksi/)
+3. [Record your first transaction](/en/panduan/pemasukan/)

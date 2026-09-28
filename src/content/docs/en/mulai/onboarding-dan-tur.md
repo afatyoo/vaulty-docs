@@ -29,3 +29,23 @@ The tour **fits your plan**: pages outside your plan are skipped, and at the end
 ### Replay the tour
 
 Open the account menu (the avatar at the top right on a computer, or the menu on a phone) and choose **Product tour**.
+
+## What it looks like
+
+Step 1, welcome:
+
+![Onboarding welcome step](../../../../assets/screens/en/onboarding-1-welcome.webp)
+
+Step 2, choose a plan. Click **See features** to open each plan's details:
+
+![Onboarding choose-a-plan step](../../../../assets/screens/en/onboarding-2-plan.webp)
+
+Step 3, your workspace:
+
+![Onboarding workspace name, language, and currency step](../../../../assets/screens/en/onboarding-3-workspace.webp)
+
+### The tour question and its first step
+
+![The question asking whether you want the product tour](../../../../assets/screens/en/tour-prompt.webp)
+
+![First step of the product tour highlighting the New entry button](../../../../assets/screens/en/tour-step.webp)

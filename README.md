@@ -31,8 +31,23 @@ Dua berkas di `src/data/` tidak boleh diketik ulang di halaman:
 
 Halaman `agen-ai/referensi-tools` dan `paket/paket-dan-harga` membaca berkas itu lewat komponen `McpTools.astro` dan `PlanTable.astro`.
 
+## Screenshot otomatis
+
+Semua gambar di `src/assets/screens/<id|en>/` dibuat oleh skrip, dari data dummy yang realistis di aplikasi **lokal**:
+
+```bash
+npm i                                  # sekali (puppeteer-core dan sharp)
+GLOBAL_RATE_LIMIT_MAX=20000 docker compose -f ../vaulty/docker-compose.yml up -d backend   # longgarkan pembatas lokal
+node scripts/capture-screens.mjs all      # buat data dummy lalu potret semua halaman, id dan en
+node scripts/capture-screens.mjs all reuse    # pakai akun demo yang ada, potret ulang tur dan onboarding
+node scripts/capture-screens.mjs en forms     # hanya form (anggaran, tagihan, tabungan, target)
+```
+
+Syarat: aplikasi lokal di `http://localhost:3030`, Google Chrome terpasang, `docker compose` bisa dipakai dari repo `vaulty` (variabel `VAULTY_REPO`). Data dummy hanya masuk ke database lokal: Keluarga Wulandari (Indonesia) dan Tan Family (Inggris), paket Family, dua anggota, lima bulan transaksi, anggaran, tagihan, tabungan, target, utang, dan riwayat pembayaran. Jalankan ulang setiap ada perubahan tampilan aplikasi.
+
 ## Struktur
 
+- `src/content/docs/panduan/` panduan penggunaan langkah demi langkah per menu, dengan gambar.
 - `src/content/docs/` bahasa Indonesia, `src/content/docs/en/` bahasa Inggris. Nama folder dan berkas sama di kedua bahasa.
 - Satu halaman satu bahasa. Jangan mencampur.
 - Halaman yang memakai komponen harus berekstensi `.mdx`.

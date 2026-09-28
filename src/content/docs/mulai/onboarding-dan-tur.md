@@ -29,3 +29,23 @@ Tur **menyesuaikan paketmu**: halaman yang tidak termasuk paketmu dilewati, dan 
 ### Mengulang tur
 
 Buka menu akun (avatar di pojok kanan atas di komputer, atau menu di ponsel), lalu pilih **Tur produk**.
+
+## Tampilan
+
+Langkah 1, selamat datang:
+
+![Onboarding langkah selamat datang](../../../assets/screens/id/onboarding-1-welcome.webp)
+
+Langkah 2, pilih paket. Klik **Lihat fitur** untuk membuka rincian tiap paket:
+
+![Onboarding langkah pilih paket](../../../assets/screens/id/onboarding-2-plan.webp)
+
+Langkah 3, ruang keuanganmu:
+
+![Onboarding langkah nama workspace, bahasa, dan mata uang](../../../assets/screens/id/onboarding-3-workspace.webp)
+
+### Pertanyaan tur dan langkah pertamanya
+
+![Pertanyaan apakah ingin melihat tur produk](../../../assets/screens/id/tour-prompt.webp)
+
+![Langkah pertama tur produk menyorot tombol Catat baru](../../../assets/screens/id/tour-step.webp)

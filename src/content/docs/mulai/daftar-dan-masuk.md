@@ -33,3 +33,9 @@ Di **Pengaturan** kamu bisa:
 - mengganti password (perangkat lain otomatis keluar),
 - mengaktifkan **verifikasi dua langkah** (paket Personal ke atas),
 - melihat perangkat yang sedang masuk dan mengeluarkannya.
+
+## Tampilan halaman
+
+![Halaman daftar Vaulty](../../../assets/screens/id/register.webp)
+
+![Halaman masuk Vaulty dengan tombol Lanjutkan dengan Google](../../../assets/screens/id/login.webp)

@@ -30,4 +30,4 @@ Vaulty tersedia dalam **Bahasa Indonesia** dan **English**. Satu layar memakai s
 
 1. [Daftar dan masuk](/mulai/daftar-dan-masuk/)
 2. [Onboarding dan tur produk](/mulai/onboarding-dan-tur/)
-3. [Catat transaksi pertamamu](/keuangan/mencatat-transaksi/)
+3. [Catat transaksi pertamamu](/panduan/pemasukan/)

@@ -33,3 +33,9 @@ In **Settings** you can:
 - change your password (other devices are signed out),
 - turn on **two-step verification** (Personal plan and above),
 - see the devices currently signed in and sign them out.
+
+## What the pages look like
+
+![Vaulty sign-up page](../../../../assets/screens/en/register.webp)
+
+![Vaulty login page with the Continue with Google button](../../../../assets/screens/en/login.webp)

@@ -65,3 +65,7 @@ For the last request the token needs write access. The agent will first fetch th
 - Downgrading to Free closes MCP access. Tokens are not deleted and work again when you upgrade.
 
 See the [tools reference](/en/agen-ai/referensi-tools/) for each tool's parameters.
+
+## What it looks like in the app
+
+![AI agent access (MCP) card in Settings](../../../../assets/screens/en/settings-mcp.webp)

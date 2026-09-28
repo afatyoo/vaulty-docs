@@ -65,3 +65,7 @@ Untuk permintaan terakhir, token harus punya akses tulis. Agen akan memanggil da
 - Menurunkan paket ke Gratis menutup akses MCP. Token tidak terhapus dan berfungsi lagi saat kamu naik paket.
 
 Lihat [referensi tools](/agen-ai/referensi-tools/) untuk parameter tiap alat.
+
+## Tampilan di aplikasi
+
+![Kartu Akses agen AI (MCP) di Pengaturan](../../../assets/screens/id/settings-mcp.webp)
