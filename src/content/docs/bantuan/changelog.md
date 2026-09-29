@@ -7,7 +7,12 @@ sidebar:
 
 ## 29 September 2026
 
+**Berubah**
+- **Alamat baru:** aplikasi sekarang di **apps.vaulty.id**, dokumentasi di **docs.vaulty.id**, dan situs utama di **vaulty.id**. Alamat lama otomatis dialihkan, jadi tautan dan bookmark lama tetap jalan.
+- **Daftar tunggu dibuka:** selama pendaftaran belum dibuka, tombol di vaulty.id mengarah ke formulir email. Kami kabari lewat email begitu Vaulty bisa dipakai.
+
 **Diperbaiki**
+- Kartu ketiga di halaman **Insight** versi Inggris menampilkan tulisan `{count}`. Sekarang labelnya "Spending categories" (di bahasa Indonesia "Kategori pengeluaran").
 - **Onboarding sempat melewati langkah pertama** untuk akun berikutnya yang masuk di tab browser yang sama (misalnya login ulang, atau daftar baru lewat Google): sekarang selalu diperiksa per akun, bukan per tab.
 - **Pembayaran dari langkah "Pilih paket" di onboarding** sekarang memakai halaman pembayaran bermerek yang sama dengan menu Langganan di dashboard, bukan halaman Midtrans polos. Setelah bayar, tombol "Lanjutkan pengaturan akun" mengantar balik ke onboarding tepat di langkah berikutnya.
 

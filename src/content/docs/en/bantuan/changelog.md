@@ -7,7 +7,12 @@ sidebar:
 
 ## September 29, 2026
 
+**Changed**
+- **New addresses:** the app now lives at **apps.vaulty.id**, these docs at **docs.vaulty.id**, and the main site at **vaulty.id**. Old addresses redirect automatically, so existing links and bookmarks keep working.
+- **Waitlist is open:** until sign up opens, the buttons on vaulty.id lead to an email form. We will email you as soon as Vaulty is ready to use.
+
 **Fixed**
+- The third card on the English **Insights** page showed the text `{count}`. It now reads "Spending categories".
 - **Onboarding could be skipped** for the next account signed in on the same browser tab (for example a re-login, or a new Google sign-up): it is now checked per account, not per tab.
 - **Paying from the "Choose plan" step in onboarding** now uses the same branded payment page as the dashboard's Subscription menu, instead of a plain Midtrans page. After paying, the "Continue account setup" button returns to onboarding right at the next step.
 

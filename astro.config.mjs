@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // Dokumentasi Vaulty. Indonesia sebagai bahasa utama (di akar), Inggris di /en/.
 // Situs statis, disajikan nginx seperti landing page.
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://docs.vaulty.afatyo.web.id',
+  site: process.env.SITE_URL || 'https://docs.vaulty.id',
   integrations: [
     starlight({
       title: { id: 'Dokumentasi Vaulty', en: 'Vaulty Docs' },
