@@ -19,7 +19,7 @@ Beberapa fitur hanya ada di paket tertentu. Halaman yang terkunci menampilkan pa
 
 ## Apakah datanya aman kalau langganan habis?
 
-Ya. Setelah masa berlangganan berakhir ada masa tenggang 7 hari, dan datamu tetap bisa dibaca dan diunduh. Perubahan baru menunggu langganan aktif.
+Ya. Setelah langganan berakhir ada masa tenggang 1 hari, lalu akunmu pindah ke paket Gratis. Datamu tidak dihapus dan tetap bisa dipakai dalam batas paket Gratis. Trial yang habis juga langsung pindah ke paket Gratis.
 
 ## Bisa dipakai di ponsel?
 

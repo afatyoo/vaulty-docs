@@ -11,6 +11,8 @@ sidebar:
 - **Alamat baru:** aplikasi sekarang di **apps.vaulty.id**, dokumentasi di **docs.vaulty.id**, dan situs utama di **vaulty.id**. Alamat lama otomatis dialihkan, jadi tautan dan bookmark lama tetap jalan.
 - **Daftar tunggu dibuka:** selama pendaftaran belum dibuka, tombol di vaulty.id mengarah ke formulir email. Kami kabari lewat email begitu Vaulty bisa dipakai.
 
+- **Langganan yang habis turun ke paket Gratis:** masa tenggang sekarang 1 hari (sebelumnya 7 hari), lalu akun pindah ke paket Gratis, bukan dikunci baca saja. Trial yang habis juga langsung pindah ke Gratis. Datamu tetap aman.
+
 **Diperbaiki**
 - Kartu ketiga di halaman **Insight** versi Inggris menampilkan tulisan `{count}`. Sekarang labelnya "Spending categories" (di bahasa Indonesia "Kategori pengeluaran").
 - **Onboarding sempat melewati langkah pertama** untuk akun berikutnya yang masuk di tab browser yang sama (misalnya login ulang, atau daftar baru lewat Google): sekarang selalu diperiksa per akun, bukan per tab.

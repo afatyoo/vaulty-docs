@@ -19,7 +19,7 @@ Some features exist only on certain plans. A locked page shows the plan you need
 
 ## Is my data safe if my subscription ends?
 
-Yes. After the subscription ends there is a 7-day grace period and your data can still be read and downloaded. New changes wait until a subscription is active.
+Yes. After the subscription ends there is a 1-day grace period, then your account moves to the Free plan. Your data is not deleted and stays usable within the Free limits. An ended trial also moves straight to the Free plan.
 
 ## Can I use it on my phone?
 

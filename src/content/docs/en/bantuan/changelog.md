@@ -11,6 +11,8 @@ sidebar:
 - **New addresses:** the app now lives at **apps.vaulty.id**, these docs at **docs.vaulty.id**, and the main site at **vaulty.id**. Old addresses redirect automatically, so existing links and bookmarks keep working.
 - **Waitlist is open:** until sign up opens, the buttons on vaulty.id lead to an email form. We will email you as soon as Vaulty is ready to use.
 
+- **Ended subscriptions move to the Free plan:** the grace period is now 1 day (it was 7), after which the account moves to the Free plan instead of becoming read only. An ended trial also moves straight to Free. Your data stays safe.
+
 **Fixed**
 - The third card on the English **Insights** page showed the text `{count}`. It now reads "Spending categories".
 - **Onboarding could be skipped** for the next account signed in on the same browser tab (for example a re-login, or a new Google sign-up): it is now checked per account, not per tab.
