@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## 3 Oktober 2026
+
+**Diperbaiki**
+- **Pembayaran tidak dobel:** klik tombol bayar dua kali, atau koneksi yang gagal lalu dicoba ulang, tidak lagi membuat dua transaksi terpisah untuk pembayaran yang sama.
+
 ## 29 September 2026
 
 **Berubah**

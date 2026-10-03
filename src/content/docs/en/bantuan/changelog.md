@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## October 3, 2026
+
+**Fixed**
+- **No more double payments:** clicking the pay button twice, or a connection that fails and retries, no longer creates two separate transactions for the same checkout.
+
 ## September 29, 2026
 
 **Changed**
