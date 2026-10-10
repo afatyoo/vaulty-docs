@@ -5,6 +5,13 @@ sidebar:
   order: 4
 ---
 
+## October 10, 2026
+
+**Fixed**
+- **Date fields now use Vaulty's own calendar:** adding an expense, income, saving, bill, target, or net worth entry used the browser's default date picker, which looked out of place. Every date field now opens a calendar styled to match the rest of the app.
+- **Financial health score looks clearer:** the status badge no longer uses a colored circle emoji, it now shows a proper icon with a solid colored background so it reads clearly at a glance. The thin colored bar above the score card was also removed.
+- **Cash flow chart tooltip no longer overlaps the growth badge:** tapping a bar on the dashboard's cash flow chart could show the tooltip right on top of the small growth percentage badge, both competing for the same spot. The tooltip now has a fixed position so it stays clear of the badge.
+
 ## October 3, 2026
 
 **Fixed**
