@@ -10,7 +10,7 @@ sidebar:
 **Diperbaiki**
 - **Kolom tanggal sekarang pakai kalender Vaulty sendiri:** mengisi pengeluaran, pemasukan, tabungan, tagihan, target, atau kekayaan bersih sebelumnya memakai date picker bawaan browser yang tampilannya gak nyambung. Sekarang semua kolom tanggal pakai kalender bertema Vaulty.
 - **Skor kesehatan keuangan lebih jelas:** badge status gak lagi pakai emoji lingkaran warna, sekarang pakai ikon asli dengan latar warna solid biar langsung kebaca. Garis warna tipis di atas kartu skor juga dihapus.
-- **Tooltip grafik arus kas gak lagi nabrak badge pertumbuhan:** ketuk salah satu bar di grafik arus kas dashboard bisa bikin tooltip muncul tepat di atas badge persentase pertumbuhan, saling tumpuk. Posisi tooltip sekarang tetap, gak nabrak badge lagi.
+- **Grafik arus kas sekarang selalu nampilin 6 bulan penuh:** bulan yang sama sekali gak ada transaksinya sebelumnya dilewatin gitu aja, jadi bar-nya bisa kurang dari yang seharusnya dan nyisain celah kosong gak konsisten di kanan. Sekarang grafiknya selalu tampil 6 bulan berturut-turut, termasuk yang nol. Posisi tooltip juga dibenerin biar gak nabrak badge persentase pertumbuhan.
 
 ## 3 Oktober 2026
 
