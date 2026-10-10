@@ -11,6 +11,7 @@ sidebar:
 - **Kolom tanggal sekarang pakai kalender Vaulty sendiri:** mengisi pengeluaran, pemasukan, tabungan, tagihan, target, atau kekayaan bersih sebelumnya memakai date picker bawaan browser yang tampilannya gak nyambung. Sekarang semua kolom tanggal pakai kalender bertema Vaulty.
 - **Skor kesehatan keuangan lebih jelas:** badge status gak lagi pakai emoji lingkaran warna, sekarang pakai ikon asli dengan latar warna solid biar langsung kebaca. Garis warna tipis di atas kartu skor juga dihapus.
 - **Grafik arus kas sekarang selalu nampilin 6 bulan penuh:** bulan yang sama sekali gak ada transaksinya sebelumnya dilewatin gitu aja, jadi bar-nya bisa kurang dari yang seharusnya dan nyisain celah kosong gak konsisten di kanan. Sekarang grafiknya selalu tampil 6 bulan berturut-turut, termasuk yang nol. Posisi tooltip juga dibenerin biar gak nabrak badge persentase pertumbuhan.
+- **Transaksi terbaru gak lagi berantakan di HP:** nama transaksi yang panjang (kayak "Uang muka ganti dudukan shock motor") bisa bikin kolom jumlah ke-dorong ke baris baru, jadi gak sejajar sama baris lain. Di layar sempit, tiap transaksi sekarang tampil jadi kartu berlabel seperti tabel lain di aplikasi, bukan baris sempit yang berantakan.
 
 ## 3 Oktober 2026
 

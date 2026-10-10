@@ -11,6 +11,7 @@ sidebar:
 - **Date fields now use Vaulty's own calendar:** adding an expense, income, saving, bill, target, or net worth entry used the browser's default date picker, which looked out of place. Every date field now opens a calendar styled to match the rest of the app.
 - **Financial health score looks clearer:** the status badge no longer uses a colored circle emoji, it now shows a proper icon with a solid colored background so it reads clearly at a glance. The thin colored bar above the score card was also removed.
 - **Cash flow chart always shows a full 6 months:** months with no transactions at all were skipped instead of shown as empty, so the chart could end with fewer bars than expected and leave an inconsistent blank gap on the right. The chart now always shows 6 consecutive months, zero bars included. The tooltip position was also fixed so it no longer lands on top of the growth percentage badge.
+- **Recent transactions no longer break their row layout on mobile:** a long transaction name (like "Down payment for a motorcycle shock mount replacement") could push the amount onto its own wrapped line, misaligned with the other rows. On narrow screens, each transaction now lays out as a labeled card like the rest of the app's tables, instead of a cramped row.
 
 ## October 3, 2026
 
