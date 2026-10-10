@@ -7,6 +7,11 @@ sidebar:
 
 ## 10 Oktober 2026
 
+**Baru**
+
+- **Email konfirmasi daftar tunggu:** pendaftaran baru menerima email dengan template Vaulty, sesuai bahasa landing. Mendaftar ulang dengan email dan produk yang sama tidak mengirim email tambahan.
+
+
 **Diperbaiki**
 - **Kolom tanggal sekarang pakai kalender Vaulty sendiri:** mengisi pengeluaran, pemasukan, tabungan, tagihan, target, atau kekayaan bersih sebelumnya memakai date picker bawaan browser yang tampilannya gak nyambung. Sekarang semua kolom tanggal pakai kalender bertema Vaulty.
 - **Skor kesehatan keuangan lebih jelas:** badge status gak lagi pakai emoji lingkaran warna, sekarang pakai ikon asli dengan latar warna solid biar langsung kebaca. Garis warna tipis di atas kartu skor juga dihapus.
