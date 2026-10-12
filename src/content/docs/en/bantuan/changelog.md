@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## October 12, 2026
+
+**New (internal)**
+- **Custom plans:** the operator console can now create a custom plan (for example a higher member limit for one family) and assign it to a customer directly, without a code deployment. This does not change anything for existing Free, Personal, or Family plans.
+
 ## October 10, 2026
 
 **New**

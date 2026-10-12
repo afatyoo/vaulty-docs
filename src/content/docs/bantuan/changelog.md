@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## 12 Oktober 2026
+
+**Baru (internal)**
+- **Paket custom:** konsol operator sekarang bisa bikin paket custom (misalnya batas anggota lebih banyak untuk satu keluarga) dan langsung dikasih ke satu pelanggan, tanpa perlu deploy kode. Ini tidak mengubah apa pun di paket Gratis, Personal, atau Family yang sudah ada.
+
 ## 10 Oktober 2026
 
 **Baru**
