@@ -5,7 +5,7 @@ sidebar:
   order: 9
 ---
 
-Menu **Perencanaan** punya lima tab. Bagian utang, aturan, dan notifikasi email tersedia di paket **Personal** ke atas.
+Menu **Perencanaan** punya empat tab. Bagian utang dan aturan tersedia di paket **Personal** ke atas.
 
 ## Kekayaan Bersih
 
@@ -31,12 +31,6 @@ Catat **aset** (tabungan bank, reksa dana, emas, kendaraan) dan **kewajiban** (u
 ![Tab Aturan Kategori](../../../assets/screens/id/planning-rules.webp)
 
 Aturan mengisi kategori otomatis dari kata kunci deskripsi. Misalnya kata "Grab" selalu masuk kategori Transportasi. Buat aturan untuk transaksi yang sering berulang supaya pencatatan lebih cepat.
-
-## Notifikasi
-
-![Tab Notifikasi](../../../assets/screens/id/planning-notifications.webp)
-
-Daftar peringatan dari Vaulty: tagihan jatuh tempo, anggaran hampir habis, cicilan utang, dan langganan. Di sini juga kamu mengatur **pengingat email** (alamat tujuan, berapa hari sebelumnya, dan ambang anggaran) dan bisa mengirim email uji.
 
 ## Riwayat Aktivitas
 

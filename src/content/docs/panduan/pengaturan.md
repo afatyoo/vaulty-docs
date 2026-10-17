@@ -31,6 +31,14 @@ Kartu **Pasang aplikasi** membantu menambahkan Vaulty ke layar utama ponsel atau
 
 Buat token untuk menyambungkan asisten AI. Panduan lengkapnya ada di [Menyambungkan agen AI](/agen-ai/menyambungkan-mcp/).
 
+## Notifikasi Email (Personal ke atas)
+
+Atur alamat tujuan, lalu nyalakan **Kirim email** untuk pengingat tagihan jatuh tempo, anggaran hampir habis, dan cicilan utang (berapa hari sebelumnya dan ambang anggaran bisa diatur di sini juga).
+
+Nyalakan **Email tiap transaksi tercatat** kalau mau dapat email setiap kali mencatat pemasukan atau pengeluaran. Mati secara bawaan. Isi **Nominal minimum** kalau cuma mau dikabari untuk transaksi di atas jumlah tertentu, kosongkan untuk semua nominal.
+
+Tombol **Kirim Email Test** memastikan pengaturan SMTP-nya benar, dan **Periksa Sekarang** memuat ulang daftar peringatan yang sudah dikirim.
+
 ## Bahasa, tampilan, dan mata uang
 
 - **Bahasa:** Bahasa Indonesia atau English. Semua layar, email, laporan, dan invoice mengikuti pilihan ini.

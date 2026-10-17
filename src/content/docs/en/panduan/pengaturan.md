@@ -31,6 +31,14 @@ The **Install app** card helps you add Vaulty to your phone's home screen or you
 
 Create a token to connect an AI assistant. The full guide is in [Connecting an AI agent](/en/agen-ai/menyambungkan-mcp/).
 
+## Email notifications (Personal and above)
+
+Set a destination address, then turn on **Send email** for bill due dates, budgets nearly used up, and debt installments (how many days ahead and the budget threshold can be set here too).
+
+Turn on **Email on every transaction** to get an email each time you record an income or expense. Off by default. Fill in **Minimum amount** if you only want to hear about transactions above a certain amount, leave it empty for every amount.
+
+The **Send Test Email** button confirms your SMTP setup works, and **Check Now** refreshes the list of alerts already sent.
+
 ## Language, appearance, and currency
 
 - **Language:** Bahasa Indonesia or English. Every screen, email, report, and invoice follows this choice.

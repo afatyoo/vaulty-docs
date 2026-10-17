@@ -27,4 +27,4 @@ Each card shows **Spent**, **Limit**, and **Remaining**. The progress bar turns 
 
 - Free plan: at most **3 budget categories**.
 - Budgets are per month. For a new month, add them again or use the rollover option.
-- Notifications for a budget nearly used up arrive through the bell and (Personal plan and above) email. Set them up in [Planning](/en/panduan/perencanaan/).
+- Notifications for a budget nearly used up arrive through the bell and (Personal plan and above) email. Set them up in [Account settings](/en/panduan/pengaturan/).

@@ -27,4 +27,4 @@ Tiap kartu menampilkan **Terpakai**, **Batas**, dan **Sisa**. Bilah progres beru
 
 - Paket Gratis: maksimal **3 kategori** anggaran.
 - Anggaran dibuat per bulan. Untuk bulan baru, tambahkan lagi atau pakai opsi bawa sisa.
-- Notifikasi anggaran hampir habis dikirim lewat lonceng dan (paket Personal ke atas) email. Atur di [Perencanaan](/panduan/perencanaan/).
+- Notifikasi anggaran hampir habis dikirim lewat lonceng dan (paket Personal ke atas) email. Atur di [Pengaturan akun](/panduan/pengaturan/).

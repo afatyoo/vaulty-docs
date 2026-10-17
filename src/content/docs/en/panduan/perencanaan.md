@@ -5,7 +5,7 @@ sidebar:
   order: 9
 ---
 
-The **Planning** menu has five tabs. Debts, rules, and email notifications are on the **Personal** plan and above.
+The **Planning** menu has four tabs. Debts and rules are on the **Personal** plan and above.
 
 ## Net Worth
 
@@ -31,12 +31,6 @@ Record **assets** (bank savings, mutual funds, gold, vehicles) and **liabilities
 ![Category Rules tab](../../../../assets/screens/en/planning-rules.webp)
 
 Rules fill in the category automatically from keywords in the description. For example, the word "Ride" always goes to the Transport category. Create rules for transactions that repeat often so recording is faster.
-
-## Notifications
-
-![Notifications tab](../../../../assets/screens/en/planning-notifications.webp)
-
-The list of alerts from Vaulty: bills due, budgets nearly used up, debt installments, and your subscription. This is also where you set up **email reminders** (destination address, how many days ahead, and the budget threshold) and can send a test email.
 
 ## Activity History
 
