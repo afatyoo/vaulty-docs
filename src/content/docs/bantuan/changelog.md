@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## 17 Oktober 2026
+
+**Diperbaiki**
+- **Nama transaksi panjang di dashboard gak lagi berantakan:** di HP, nama transaksi yang panjang (misal keterangan investasi atau transfer) sebelumnya turun ke dua baris dan bikin label kategori jadi gak sejajar. Sekarang dipotong pakai titik-titik seperti bagian lain di aplikasi.
+
 ## 12 Oktober 2026
 
 **Baru (internal)**

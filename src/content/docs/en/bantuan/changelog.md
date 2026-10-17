@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## October 17, 2026
+
+**Fixed**
+- **Long transaction names on the dashboard no longer wrap and misalign:** on mobile, a long transaction name (for example an investment or transfer description) wrapped onto two lines and pushed the category label out of place. It's now truncated with an ellipsis like the rest of the app.
+
 ## October 12, 2026
 
 **New (internal)**
