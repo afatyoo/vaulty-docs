@@ -15,6 +15,7 @@ sidebar:
 
 **Fixed**
 - **Long transaction names on the dashboard no longer wrap and misalign:** on mobile, a long transaction name (for example an investment or transfer description) wrapped onto two lines and pushed the category label out of place. It's now truncated with an ellipsis like the rest of the app.
+- **Buttons now give a pressed feel when tapped:** every button in the app was missing any visual feedback on press, so taps felt unresponsive, especially on mobile. Buttons now scale down slightly while held.
 
 ## October 12, 2026
 

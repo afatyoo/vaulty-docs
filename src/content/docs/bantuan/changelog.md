@@ -15,6 +15,7 @@ sidebar:
 
 **Diperbaiki**
 - **Nama transaksi panjang di dashboard gak lagi berantakan:** di HP, nama transaksi yang panjang (misal keterangan investasi atau transfer) sebelumnya turun ke dua baris dan bikin label kategori jadi gak sejajar. Sekarang dipotong pakai titik-titik seperti bagian lain di aplikasi.
+- **Tombol sekarang kerasa dipencet:** semua tombol di aplikasi sebelumnya gak ngasih efek visual pas ditekan, jadi kerasa gak responsif, apalagi di HP. Sekarang tombolnya sedikit mengecil pas lagi ditahan.
 
 ## 12 Oktober 2026
 
