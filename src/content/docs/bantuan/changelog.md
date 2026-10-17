@@ -7,6 +7,9 @@ sidebar:
 
 ## 17 Oktober 2026
 
+**Baru**
+- **Notifikasi email per transaksi (Personal ke atas):** nyalain di Perencanaan → Notifikasi buat dapet email tiap kali pemasukan atau pengeluaran dicatat. Mati secara bawaan, dan bisa diatur nominal minimumnya biar transaksi kecil sehari-hari gak membanjiri kotak masuk.
+
 **Diperbaiki**
 - **Nama transaksi panjang di dashboard gak lagi berantakan:** di HP, nama transaksi yang panjang (misal keterangan investasi atau transfer) sebelumnya turun ke dua baris dan bikin label kategori jadi gak sejajar. Sekarang dipotong pakai titik-titik seperti bagian lain di aplikasi.
 

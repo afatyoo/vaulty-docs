@@ -7,6 +7,9 @@ sidebar:
 
 ## October 17, 2026
 
+**New**
+- **Email notification per transaction (Personal and up):** turn it on in Planning → Notifications to get an email every time an income or expense is recorded. Off by default, and you can set a minimum amount so small day-to-day transactions don't flood your inbox.
+
 **Fixed**
 - **Long transaction names on the dashboard no longer wrap and misalign:** on mobile, a long transaction name (for example an investment or transfer description) wrapped onto two lines and pushed the category label out of place. It's now truncated with an ellipsis like the rest of the app.
 
