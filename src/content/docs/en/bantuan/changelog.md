@@ -7,10 +7,26 @@ sidebar:
 
 ## October 27, 2026
 
-**Security**
+Results of a full security audit of Vaulty. We found no sign any of these gaps were ever used against a real account; all of them were found and closed before anyone could.
+
+**Security: account and login**
 - **Enabling two-factor authentication now requires your password:** before, a live session alone was enough. You now need to enter your account password before starting 2FA setup, same as when turning it off.
 - **Google sign-in and email login now ask for a 2FA code too** when the account has two-factor authentication enabled. Previously those two paths could sign in without a code, unlike username login.
-- Several other behind-the-scenes security fixes (cross-organization isolation, login attempt rate limiting, Free-plan quotas, and access lockout after a lapsed grace period) from a full security audit.
+- **Changing your password now takes effect on every login path**, whether you sign in with your username or your email. There was a narrow case where the old password could still work on the email login path after a change.
+- **Resetting your password via "forgot password" now signs out every other logged-in device**, not just changing the password. If the reason you're resetting is a suspected leak, the leaked session is now cut off too.
+- **Google sign-in that links to an account someone else registered first** (same email, never verified) now wipes that account's old password and sessions when it links, so only the person who proves ownership through Google can log in.
+- **TOTP code guessing during 2FA login is now bounded more strictly**, closing a gap that previously allowed more guesses than intended.
+
+**Security: plans and billing**
+- **Free-plan monthly transaction and budget-category limits are now enforced more consistently**, including when editing an existing transaction and when recording your very first transaction on the onboarding screen.
+- **Team member limits are now enforced when an invitation is accepted**, not just when it's sent. A plan's member limit could previously be exceeded if every invitation was accepted.
+- **Restoring data from a backup now follows the same grace-period and Free-plan rules** as adding data through the regular forms.
+- **Fixed an upgrade-pricing edge case** so a late-processed payment can no longer be applied against a billing period that has already changed.
+- **Billing details (address, tax ID) on invoices are now visible only to the organization owner**, not every member.
+
+**Security: other**
+- **The notification email address is now format-validated and test sends are rate-limited per day**, so this feature can't be used to repeatedly mail someone else's address.
+- Additional fixes in the operator (admin) console and in server configuration so login rate limiting sees the real visitor IP.
 
 ## October 17, 2026
 

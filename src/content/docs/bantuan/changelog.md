@@ -7,10 +7,26 @@ sidebar:
 
 ## 27 Oktober 2026
 
-**Keamanan**
+Hasil audit keamanan menyeluruh terhadap Vaulty. Tidak ada tanda data pengguna pernah diakses lewat celah-celah ini; semuanya ditemukan dan ditutup sebelum dipakai siapa pun.
+
+**Keamanan: akun dan login**
 - **Aktifkan autentikasi dua faktor sekarang minta password:** sebelumnya cukup sesi yang sedang login. Sekarang kamu perlu masukin password akun dulu sebelum mulai memasang 2FA, sama seperti saat menonaktifkannya.
 - **Login lewat Google dan login pakai email sekarang ikut diminta kode 2FA** kalau akunnya sudah mengaktifkan autentikasi dua faktor. Sebelumnya dua jalur ini bisa langsung masuk tanpa kode, berbeda dari login pakai username.
-- Sejumlah perbaikan keamanan lain di belakang layar (isolasi antar organisasi, pembatasan laju percobaan login, kuota paket Gratis, dan penguncian akses saat masa tenggang habis) dari audit keamanan menyeluruh.
+- **Ganti password sekarang langsung berlaku di semua jalur login**, baik masuk pakai username maupun email. Sebelumnya ada kondisi langka di mana password lama masih bisa dipakai login lewat email setelah diganti.
+- **Reset password lewat "lupa password" sekarang otomatis mengeluarkan semua perangkat yang sedang login**, bukan cuma mengganti passwordnya saja. Ini supaya kalau alasan kamu reset password adalah akun dicurigai bocor, sesi yang bocor itu ikut terputus.
+- **Login Google yang menautkan akun yang sempat didaftarkan duluan oleh orang lain** (dengan email yang sama tapi belum diverifikasi) sekarang otomatis membersihkan password dan sesi lama di akun itu saat ditautkan, supaya yang bisa login hanya pemilik email yang terbukti lewat Google.
+- **Batas percobaan kode verifikasi 2FA saat login sekarang lebih ketat ditegakkan**, menutup celah yang sebelumnya bisa dipakai untuk mencoba banyak kode tanpa kena batas.
+
+**Keamanan: paket dan langganan**
+- **Batas transaksi dan kategori anggaran bulanan paket Gratis sekarang ditegakkan lebih konsisten**, termasuk saat mengedit transaksi yang sudah ada dan saat mencatat transaksi pertama di layar onboarding.
+- **Batas jumlah anggota tim sekarang berlaku juga saat undangan diterima**, bukan cuma saat mengundang. Sebelumnya paket dengan batas anggota tetap bisa kelebihan anggota kalau undangannya diterima semua.
+- **Memulihkan data dari backup sekarang ikut aturan masa tenggang dan batas paket Gratis**, sama seperti menambah data lewat form biasa.
+- **Perbaikan perhitungan harga upgrade paket** supaya tidak salah terapkan kalau pembayaran telat diproses setelah periode langganan sudah berganti.
+- **Rincian tagihan (alamat, NPWP) di faktur sekarang hanya bisa dilihat pemilik organisasi**, bukan semua anggota.
+
+**Keamanan: lainnya**
+- **Alamat email untuk notifikasi transaksi sekarang divalidasi formatnya dan dibatasi jumlah pengiriman uji coba per hari**, supaya fitur ini tidak bisa disalahgunakan untuk mengirim email ke alamat orang lain berkali-kali.
+- Perbaikan tambahan di konsol operator (admin) dan di konfigurasi server supaya alamat IP pengguna terbaca benar oleh pembatas laju login.
 
 ## 17 Oktober 2026
 
