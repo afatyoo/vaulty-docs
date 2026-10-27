@@ -7,7 +7,16 @@ sidebar:
 
 ## October 27, 2026
 
-Results of a full security audit of Vaulty. We found no sign any of these gaps were ever used against a real account; all of them were found and closed before anyone could.
+**New**
+- **You can now choose the currency transactions are recorded in, instead of it always being Rupiah.** When you register a new account, you now pick the currency used to record transactions (IDR, USD, EUR, and 17 others). This is different from the existing "display currency" setting, which only changes how numbers are shown without changing the data; this recording currency is the actual currency the data is stored in.
+- **The recording currency can be changed anytime from Settings** (organization owner only). Every transaction, budget, saving, bill, and debt already recorded gets automatically converted using that day's exchange rate, so the real value stays the same even though the numbers change. There's a clear confirmation step before it runs, since this permanently changes your financial data.
+- **The savings/investment account name field now suggests names you've used before**, so you don't have to retype "BCA Savings" every time you record a deposit or withdrawal. You can still type a new name if it doesn't exist yet.
+- **Savings deposit and withdrawal amounts now get thousand separators automatically as you type** (1500000 becomes 1,500,000), making them easier to read.
+
+**Changed**
+- **The Settings page is tidier.** It used to be nine settings cards stacked one after another; now everything lives in one place, split into rows you can expand and collapse, collapsed by default, so the page is short and you only open what you're looking for. Language, theme, and currency are merged into a single "Preferences" section.
+
+A full security audit was also completed behind the scenes. We found no sign any of the gaps it found were ever used against a real account; all of them were closed before anyone could.
 
 **Security: account and login**
 - **Enabling two-factor authentication now requires your password:** before, a live session alone was enough. You now need to enter your account password before starting 2FA setup, same as when turning it off.

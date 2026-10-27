@@ -7,7 +7,16 @@ sidebar:
 
 ## 27 Oktober 2026
 
-Hasil audit keamanan menyeluruh terhadap Vaulty. Tidak ada tanda data pengguna pernah diakses lewat celah-celah ini; semuanya ditemukan dan ditutup sebelum dipakai siapa pun.
+**Baru**
+- **Mata uang pencatatan keuangan bisa dipilih sendiri, tidak lagi terkunci ke Rupiah.** Saat daftar akun baru, kamu sekarang memilih mata uang yang dipakai untuk mencatat transaksi (IDR, USD, EUR, dan 17 lainnya). Ini beda dari pengaturan "mata uang tampilan" yang sudah ada sebelumnya, yang cuma mengubah cara angka ditampilkan tanpa mengubah datanya; mata uang pencatatan ini adalah mata uang data aslinya.
+- **Mata uang pencatatan bisa diganti kapan saja lewat Pengaturan** (khusus pemilik organisasi). Semua transaksi, anggaran, tabungan, tagihan, dan utang yang sudah tercatat otomatis dikonversi pakai kurs hari itu, jadi nilai riilnya tetap sama walau angkanya berubah. Ada konfirmasi jelas sebelum dijalankan karena ini mengubah data finansial secara permanen.
+- **Nama akun tabungan/investasi sekarang menyarankan daftar yang pernah dipakai**, jadi tidak perlu mengetik ulang "Tabungan BCA" setiap kali mencatat setoran atau penarikan. Tetap bisa mengetik nama baru kalau belum pernah ada.
+- **Nominal setoran dan penarikan tabungan sekarang otomatis dapat titik pemisah ribuan saat diketik** (1500000 jadi 1.500.000), biar lebih gampang dibaca.
+
+**Diubah**
+- **Halaman Pengaturan dirapikan.** Sebelumnya sembilan kartu pengaturan ditumpuk memanjang ke bawah; sekarang semuanya ada di satu tempat, terbagi jadi baris-baris yang bisa dibuka-tutup dan tertutup secara bawaan, supaya halamannya pendek dan kamu tinggal buka bagian yang dicari. Bahasa, tema, dan mata uang digabung jadi satu bagian "Preferensi".
+
+Audit keamanan menyeluruh juga sudah selesai dikerjakan di belakang layar. Tidak ada tanda data pengguna pernah diakses lewat celah-celah yang ditemukan; semuanya ditutup sebelum dipakai siapa pun.
 
 **Keamanan: akun dan login**
 - **Aktifkan autentikasi dua faktor sekarang minta password:** sebelumnya cukup sesi yang sedang login. Sekarang kamu perlu masukin password akun dulu sebelum mulai memasang 2FA, sama seperti saat menonaktifkannya.
