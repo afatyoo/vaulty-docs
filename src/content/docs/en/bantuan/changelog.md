@@ -5,6 +5,13 @@ sidebar:
   order: 4
 ---
 
+## October 27, 2026
+
+**Security**
+- **Enabling two-factor authentication now requires your password:** before, a live session alone was enough. You now need to enter your account password before starting 2FA setup, same as when turning it off.
+- **Google sign-in and email login now ask for a 2FA code too** when the account has two-factor authentication enabled. Previously those two paths could sign in without a code, unlike username login.
+- Several other behind-the-scenes security fixes (cross-organization isolation, login attempt rate limiting, Free-plan quotas, and access lockout after a lapsed grace period) from a full security audit.
+
 ## October 17, 2026
 
 **New**

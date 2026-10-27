@@ -5,6 +5,13 @@ sidebar:
   order: 4
 ---
 
+## 27 Oktober 2026
+
+**Keamanan**
+- **Aktifkan autentikasi dua faktor sekarang minta password:** sebelumnya cukup sesi yang sedang login. Sekarang kamu perlu masukin password akun dulu sebelum mulai memasang 2FA, sama seperti saat menonaktifkannya.
+- **Login lewat Google dan login pakai email sekarang ikut diminta kode 2FA** kalau akunnya sudah mengaktifkan autentikasi dua faktor. Sebelumnya dua jalur ini bisa langsung masuk tanpa kode, berbeda dari login pakai username.
+- Sejumlah perbaikan keamanan lain di belakang layar (isolasi antar organisasi, pembatasan laju percobaan login, kuota paket Gratis, dan penguncian akses saat masa tenggang habis) dari audit keamanan menyeluruh.
+
 ## 17 Oktober 2026
 
 **Baru**
