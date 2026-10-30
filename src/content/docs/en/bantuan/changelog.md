@@ -5,10 +5,30 @@ sidebar:
   order: 4
 ---
 
+## October 30, 2026
+
+**Fixed**
+- **Withdrawals from savings or investments no longer count as income.** Money you withdrew from savings used to inflate Total Income even though it wasn't new money. It still lands in your wallet balance, but Total Income, the cash flow chart, the financial health score, the end-of-month projection, the total on the Income page, PDF and Excel reports, and the AI agent (MCP) summary now only count real income. Existing data corrects itself automatically, with nothing to change.
+
+## October 28, 2026
+
+**New**
+- **Agree to the Terms of Service and Privacy Policy when signing up.** Both can be read right from a popup in the sign-up form, no need to switch tabs or pages. Signing up with Google automatically counts as agreeing to both, since that path skips the form and its checkbox.
+- **Branded error page for server outages (500/502/503/504).** When the server is genuinely unreachable, you now see a clear Vaulty page ("Our servers are having trouble, try again shortly") instead of a plain nginx error page.
+
+- **Thousand separators now appear automatically in every amount field**, not just Savings: Income, Expenses, Bills, the Budget limit, Savings Goals, and the dashboard's quick-add buttons. Type 500000 and it reads 500,000 as you go.
+
+**Changed**
+- **Recording currency selection moved from the sign-up form to onboarding.** It used to be chosen before the account existed; now it's chosen at the "Your workspace" step after the account and organization exist, which makes more sense and keeps the sign-up form short.
+
+**Fixed**
+- **The Settings text that still said "all data is stored in IDR"** is now corrected, since that claim stopped being true once a chosen recording currency was added.
+- **The translation file the running app actually fetches (separate from the one used at build time) had fallen hundreds of terms behind**, including the Terms & Privacy Policy consent text above. It's now generated from a single source automatically on every build, so it can't fall behind again.
+
 ## October 27, 2026
 
 **New**
-- **You can now choose the currency transactions are recorded in, instead of it always being Rupiah.** When you register a new account, you now pick the currency used to record transactions (IDR, USD, EUR, and 17 others). This is different from the existing "display currency" setting, which only changes how numbers are shown without changing the data; this recording currency is the actual currency the data is stored in.
+- **You can now choose the currency transactions are recorded in, instead of it always being Rupiah.** During onboarding (the "Your workspace" step, after your account is created), you now pick the currency used to record transactions (IDR, USD, EUR, and 17 others). This is different from the existing "display currency" setting, which only changes how numbers are shown without changing the data; this recording currency is the actual currency the data is stored in.
 - **The recording currency can be changed anytime from Settings** (organization owner only). Every transaction, budget, saving, bill, and debt already recorded gets automatically converted using that day's exchange rate, so the real value stays the same even though the numbers change. There's a clear confirmation step before it runs, since this permanently changes your financial data.
 - **The savings/investment account name field now suggests names you've used before**, so you don't have to retype "BCA Savings" every time you record a deposit or withdrawal. You can still type a new name if it doesn't exist yet.
 - **Savings deposit and withdrawal amounts now get thousand separators automatically as you type** (1500000 becomes 1,500,000), making them easier to read.

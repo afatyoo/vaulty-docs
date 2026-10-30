@@ -11,7 +11,7 @@ Saat pertama kali masuk, kamu melewati lima langkah singkat:
 
 1. **Selamat datang.**
 2. **Pilih paket.** Trial Personal 14 hari, paket Gratis, atau langsung berbayar. Bisa diganti nanti.
-3. **Workspace.** Nama workspace, bahasa, dan mata uang tampilan.
+3. **Workspace.** Nama workspace, mata uang pencatatan, dan bahasa. Mata uang pencatatan boleh diganti nanti lewat Pengaturan (khusus pemilik organisasi), dan data lama otomatis dikonversi.
 4. **Transaksi pertama.** Bisa memakai data contoh, atau dilewati.
 5. **Selesai.** Layar konfirmasi dengan tombol ke dashboard.
 
@@ -42,7 +42,7 @@ Langkah 2, pilih paket. Klik **Lihat fitur** untuk membuka rincian tiap paket:
 
 Langkah 3, ruang keuanganmu:
 
-![Onboarding langkah nama workspace, bahasa, dan mata uang](../../../assets/screens/id/onboarding-3-workspace.webp)
+![Onboarding langkah nama workspace, mata uang pencatatan, dan bahasa](../../../assets/screens/id/onboarding-3-workspace.webp)
 
 ## Kalau kamu langsung bayar di langkah 2
 

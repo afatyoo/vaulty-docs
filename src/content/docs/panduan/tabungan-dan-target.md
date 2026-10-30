@@ -13,13 +13,15 @@ Dua menu yang bekerja berpasangan: **Tabungan** untuk mencatat uang yang ditabun
 
 1. Buka **Tabungan** dan klik **Tambah Tabungan**.
 2. Pilih **Tanggal** dan **Jenis** (**Tabungan** atau **Investasi**).
-3. Isi **Nama Tabungan**, misalnya "Tabungan Darurat" atau "Reksa Dana".
-4. Isi **Setoran** untuk uang yang masuk, atau **Penarikan** untuk uang yang diambil.
+3. Isi **Nama Tabungan**, misalnya "Tabungan Darurat" atau "Reksa Dana". Kalau nama itu sudah pernah dipakai, akan muncul sebagai saran di bawah kolom supaya tidak perlu mengetik ulang dan tidak kecatat sebagai akun terpisah karena beda ejaan.
+4. Isi **Setoran** untuk uang yang masuk, atau **Penarikan** untuk uang yang diambil. Titik ribuan muncul otomatis saat mengetik, supaya nominal besar lebih mudah dibaca.
 5. Klik **Tambah**.
 
 ![Formulir Tambah Tabungan](../../../assets/screens/id/savings-form.webp)
 
 Saldo tiap akun dihitung dari setoran dikurangi penarikan, dan tampil di kartu di atas daftar.
+
+Uang yang kamu tarik dari tabungan atau investasi masuk ke saldo dompet, tetapi **tidak dihitung sebagai pemasukan**. Total Pemasukan, grafik arus kas, dan skor kesehatan keuangan hanya menghitung uang yang benar-benar baru masuk, seperti gaji atau bonus.
 
 ## Membuat target
 

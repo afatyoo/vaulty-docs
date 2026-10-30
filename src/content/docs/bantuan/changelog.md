@@ -5,10 +5,30 @@ sidebar:
   order: 4
 ---
 
+## 30 Oktober 2026
+
+**Diperbaiki**
+- **Penarikan dari tabungan atau investasi tidak lagi dihitung sebagai pemasukan.** Dulu uang yang kamu tarik dari tabungan ikut menambah Total Pemasukan, padahal itu bukan uang baru. Sekarang uangnya tetap masuk ke saldo dompet, tetapi Total Pemasukan, grafik arus kas, skor kesehatan keuangan, proyeksi akhir bulan, total di halaman Pemasukan, laporan PDF dan Excel, dan ringkasan untuk agen AI (MCP) hanya menghitung pemasukan yang sebenarnya. Data lama ikut benar otomatis, tanpa perlu diubah.
+
+## 28 Oktober 2026
+
+**Baru**
+- **Centang persetujuan Syarat dan Ketentuan serta Kebijakan Privasi saat daftar.** Keduanya bisa dibaca langsung lewat popup di formulir daftar, tidak perlu pindah tab atau halaman. Daftar lewat Google otomatis dianggap menyetujui keduanya, karena jalur itu tidak melewati formulir dan centangnya.
+- **Halaman error bermerek untuk gangguan server (500/502/503/504).** Kalau server sedang benar-benar tidak bisa dihubungi, sekarang muncul halaman Vaulty yang jelas ("Server kami lagi bermasalah, coba lagi sebentar lagi") bukan halaman error polos nginx.
+
+- **Titik pemisah ribuan sekarang otomatis muncul di semua kolom nominal**, bukan cuma di Tabungan: Pemasukan, Pengeluaran, Tagihan, batas Anggaran, Target Tabungan, dan tombol tambah cepat di Dashboard. Ketik 500000, langsung kebaca 500.000.
+
+**Diubah**
+- **Pemilihan mata uang pencatatan dipindah dari formulir daftar ke onboarding.** Awalnya dipilih sebelum akun dibuat; sekarang dipilih di langkah "Ruang keuanganmu" setelah akun dan organisasi ada, supaya urutannya lebih masuk akal dan formulir daftar tetap ringkas.
+
+**Diperbaiki**
+- **Teks di Pengaturan yang masih bilang "semua data disimpan dalam IDR"** sekarang diperbaiki, karena sejak ada mata uang pencatatan pilihan sendiri klaim itu sudah tidak selalu benar.
+- **Berkas terjemahan yang dipakai aplikasi saat berjalan (bukan cuma saat build) sempat ketinggalan ratusan istilah**, termasuk teks persetujuan Syarat & Kebijakan Privasi di atas. Sekarang disatukan jadi satu sumber, dibuat ulang otomatis setiap kali aplikasi di-build, supaya tidak bisa ketinggalan lagi.
+
 ## 27 Oktober 2026
 
 **Baru**
-- **Mata uang pencatatan keuangan bisa dipilih sendiri, tidak lagi terkunci ke Rupiah.** Saat daftar akun baru, kamu sekarang memilih mata uang yang dipakai untuk mencatat transaksi (IDR, USD, EUR, dan 17 lainnya). Ini beda dari pengaturan "mata uang tampilan" yang sudah ada sebelumnya, yang cuma mengubah cara angka ditampilkan tanpa mengubah datanya; mata uang pencatatan ini adalah mata uang data aslinya.
+- **Mata uang pencatatan keuangan bisa dipilih sendiri, tidak lagi terkunci ke Rupiah.** Saat onboarding (langkah "Ruang keuanganmu", setelah akun dibuat), kamu sekarang memilih mata uang yang dipakai untuk mencatat transaksi (IDR, USD, EUR, dan 17 lainnya). Ini beda dari pengaturan "mata uang tampilan" yang sudah ada sebelumnya, yang cuma mengubah cara angka ditampilkan tanpa mengubah datanya; mata uang pencatatan ini adalah mata uang data aslinya.
 - **Mata uang pencatatan bisa diganti kapan saja lewat Pengaturan** (khusus pemilik organisasi). Semua transaksi, anggaran, tabungan, tagihan, dan utang yang sudah tercatat otomatis dikonversi pakai kurs hari itu, jadi nilai riilnya tetap sama walau angkanya berubah. Ada konfirmasi jelas sebelum dijalankan karena ini mengubah data finansial secara permanen.
 - **Nama akun tabungan/investasi sekarang menyarankan daftar yang pernah dipakai**, jadi tidak perlu mengetik ulang "Tabungan BCA" setiap kali mencatat setoran atau penarikan. Tetap bisa mengetik nama baru kalau belum pernah ada.
 - **Nominal setoran dan penarikan tabungan sekarang otomatis dapat titik pemisah ribuan saat diketik** (1500000 jadi 1.500.000), biar lebih gampang dibaca.

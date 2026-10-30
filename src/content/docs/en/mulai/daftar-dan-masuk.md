@@ -9,10 +9,10 @@ sidebar:
 
 You can sign up two ways:
 
-1. **Email and password.** The password needs at least 12 characters with an uppercase letter, a lowercase letter, and a number. After signing up we send a verification email. Click the link in it (valid for 24 hours) to activate your account.
-2. **Continue with Google.** Your account is active right away with no verification email. If your Google email is already registered with a password, the accounts are linked instead of duplicated.
+1. **Email and password.** The password needs at least 12 characters with an uppercase letter, a lowercase letter, and a number. You need to check the **Terms of Service** and **Privacy Policy** agreement (both open in a popup, no need to leave the page) before the Sign Up button is enabled. After signing up we send a verification email. Click the link in it (valid for 24 hours) to activate your account.
+2. **Continue with Google.** Your account is active right away with no verification email. If your Google email is already registered with a password, the accounts are linked instead of duplicated. This path skips the checkbox in the form, so continuing with Google counts as agreeing to the Terms of Service and Privacy Policy.
 
-Every new account gets a **14-day trial** with no card. After verification (or when the Google account is created) you receive a welcome email.
+Every new account gets a **14-day trial** with no card. After verification (or when the Google account is created) you receive a welcome email, then move into [onboarding](/en/mulai/onboarding-dan-tur/) to pick a recording currency and set up your workspace.
 
 :::note
 All Vaulty emails go to the address registered on your account. If the verification email does not arrive, check your spam folder, then request a new one from the login page.

@@ -13,13 +13,15 @@ Two menus that work as a pair: **Savings** for recording money saved or invested
 
 1. Open **Savings** and click **Add Savings**.
 2. Choose the **Date** and **Type** (**Savings** or **Investments**).
-3. Enter the **Savings Name**, for example "Emergency Fund" or "Mutual Fund".
-4. Enter a **Deposit** for money going in, or a **Withdrawal** for money taken out.
+3. Enter the **Savings Name**, for example "Emergency Fund" or "Mutual Fund". If that name was used before, it shows up as a suggestion under the field, so you don't have to retype it and it doesn't get recorded as a separate account over a spelling difference.
+4. Enter a **Deposit** for money going in, or a **Withdrawal** for money taken out. Thousand separators appear automatically as you type, so large amounts stay easy to read.
 5. Click **Add**.
 
 ![Add Savings form](../../../../assets/screens/en/savings-form.webp)
 
 Each account's balance is deposits minus withdrawals, shown on the cards above the list.
+
+Money you withdraw from savings or investments goes into your wallet balance, but it is **not counted as income**. Total Income, the cash flow chart, and the financial health score only count money that is genuinely new, like salary or a bonus.
 
 ## Creating a goal
 

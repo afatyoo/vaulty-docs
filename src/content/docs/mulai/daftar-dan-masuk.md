@@ -9,10 +9,10 @@ sidebar:
 
 Kamu bisa daftar dengan dua cara:
 
-1. **Email dan password.** Password minimal 12 karakter dengan huruf besar, huruf kecil, dan angka. Setelah daftar, kami mengirim email verifikasi. Klik tautan di dalamnya (berlaku 24 jam) untuk mengaktifkan akun.
-2. **Lanjutkan dengan Google.** Akunmu langsung aktif tanpa email verifikasi. Kalau email Google-mu sudah terdaftar dengan password, akunnya digabung, bukan dibuat ganda.
+1. **Email dan password.** Password minimal 12 karakter dengan huruf besar, huruf kecil, dan angka. Centang dulu persetujuan **Syarat dan Ketentuan** serta **Kebijakan Privasi** (keduanya bisa dibaca lewat popup tanpa pindah halaman) sebelum tombol Daftar aktif. Setelah daftar, kami mengirim email verifikasi. Klik tautan di dalamnya (berlaku 24 jam) untuk mengaktifkan akun.
+2. **Lanjutkan dengan Google.** Akunmu langsung aktif tanpa email verifikasi. Kalau email Google-mu sudah terdaftar dengan password, akunnya digabung, bukan dibuat ganda. Jalur ini tidak melewati centang persetujuan di formulir, jadi lanjut dengan Google berarti otomatis menyetujui Syarat dan Ketentuan serta Kebijakan Privasi.
 
-Setiap akun baru mendapat **trial 14 hari** tanpa kartu. Setelah verifikasi (atau saat akun Google dibuat) kamu menerima email selamat datang.
+Setiap akun baru mendapat **trial 14 hari** tanpa kartu. Setelah verifikasi (atau saat akun Google dibuat) kamu menerima email selamat datang, lalu masuk ke [onboarding](/mulai/onboarding-dan-tur/) untuk memilih mata uang pencatatan dan mengatur ruang keuanganmu.
 
 :::note
 Semua email dari Vaulty dikirim ke alamat yang terdaftar di akunmu. Kalau email verifikasi tidak masuk, cek folder spam, lalu minta kirim ulang dari halaman masuk.

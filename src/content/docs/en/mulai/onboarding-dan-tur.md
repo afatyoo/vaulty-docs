@@ -11,7 +11,7 @@ The first time you sign in you go through five short steps:
 
 1. **Welcome.**
 2. **Choose a plan.** A 14-day Personal trial, the Free plan, or a paid plan right away. You can change it later.
-3. **Workspace.** Workspace name, language, and display currency.
+3. **Workspace.** Workspace name, recording currency, and language. The recording currency can be changed later in Settings (organization owner only), and old data converts automatically.
 4. **First transaction.** Use sample data, or skip.
 5. **Done.** A confirmation screen with a button to the dashboard.
 
@@ -42,7 +42,7 @@ Step 2, choose a plan. Click **See features** to open each plan's details:
 
 Step 3, your workspace:
 
-![Onboarding workspace name, language, and currency step](../../../../assets/screens/en/onboarding-3-workspace.webp)
+![Onboarding workspace name, recording currency, and language step](../../../../assets/screens/en/onboarding-3-workspace.webp)
 
 ## If you pay right at step 2
 

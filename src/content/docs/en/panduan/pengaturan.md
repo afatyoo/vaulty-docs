@@ -5,7 +5,7 @@ sidebar:
   order: 13
 ---
 
-Open **Settings** from the gear icon on the left or the account menu.
+Open **Settings** from the gear icon on the left or the account menu. Each section below is a row you can expand, click its title to open it.
 
 ![Settings page](../../../../assets/screens/en/settings.webp)
 
@@ -43,4 +43,5 @@ The **Send Test Email** button confirms your SMTP setup works, and **Check Now**
 
 - **Language:** Bahasa Indonesia or English. Every screen, email, report, and invoice follows this choice.
 - **Appearance:** light or dark mode.
-- **Display currency** (Personal and above): numbers are converted for display. Your data is still stored in Rupiah.
+- **Display currency** (Personal and above): numbers are converted for display only, your stored data does not change.
+- **Recording currency:** the actual currency your transactions are stored in, chosen the first time during onboarding. Only the organization owner can change it here. Changing it automatically converts all existing data (income, expenses, budgets, bills, savings, debts) at that day's exchange rate, so the real value stays the same even though the numbers change. If exchange rates cannot be fetched, the change is rejected until it can be retried.
