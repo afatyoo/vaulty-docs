@@ -8,6 +8,7 @@ sidebar:
 ## 30 Oktober 2026
 
 **Diperbaiki**
+- **Angka di kalender Peta Panas Pengeluaran sekarang mengikuti mata uang tampilan.** Sebelumnya setiap sel selalu dibagi 1000 lalu diberi "k", jadi kalau tampilan diganti ke dolar, angkanya tetap terlihat seperti rupiah. Sekarang tampil ringkas sesuai mata uang dan bahasa, misalnya "3 jt" dan "319 rb" untuk rupiah, atau "192" untuk dolar.
 - **Penarikan dari tabungan atau investasi tidak lagi dihitung sebagai pemasukan.** Dulu uang yang kamu tarik dari tabungan ikut menambah Total Pemasukan, padahal itu bukan uang baru. Sekarang uangnya tetap masuk ke saldo dompet, tetapi Total Pemasukan, grafik arus kas, skor kesehatan keuangan, proyeksi akhir bulan, total di halaman Pemasukan, laporan PDF dan Excel, dan ringkasan untuk agen AI (MCP) hanya menghitung pemasukan yang sebenarnya. Data lama ikut benar otomatis, tanpa perlu diubah.
 
 ## 28 Oktober 2026
