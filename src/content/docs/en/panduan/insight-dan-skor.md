@@ -23,13 +23,17 @@ At the bottom of the page, the Family plan adds three analyses:
 
 Other plans see an upgrade hint here.
 
-## Expense Heat Map (Personal and above)
+## Expense Heat Map
+
+Available on the Personal plan and above.
 
 ![Expense heat map page](../../../../assets/screens/en/heatmap.webp)
 
 The heat map shows **the days and times you spend the most**. A darker color means higher spending. It helps you spot habits, such as overspending on weekends.
 
-## Financial Health Score (Personal and above)
+## Financial Health Score
+
+Available on the Personal plan and above.
 
 ![Financial Health Score page with four components](../../../../assets/screens/en/health-score.webp)
 
@@ -43,3 +47,22 @@ A score from 0 to 100 built from four components:
 | Tracking Consistency | 10 | how regularly you record transactions |
 
 Below the score are **Recommendations** pointing to what to improve first.
+
+### How each component is calculated
+
+- **Savings Rate (40 points):** that month's savings (deposits minus withdrawals) divided by income. Savings of about 20% of income earns the full score. Withdrawals from savings do not count as income.
+- **Budget Discipline (30 points):** the percentage of budgeted categories that stay within their limit. If you have not set any budget, you automatically get 15 out of 30, so creating budgets is the easiest way to raise this score.
+- **Spending Stability (20 points):** compared with last month. Down or equal earns 20, up to 10% earns 18, up 10 to 25% earns 12, up 25 to 50% earns 6, and up more than 50% earns 2. With no data from last month you get 10.
+- **Tracking Consistency (10 points):** the number of days in the month with a transaction. Ten days earns the full score.
+
+### What the status means
+
+| Score | Status | Meaning |
+|---|---|---|
+| 80 to 100 | **Healthy** | Enough savings, budgets under control, and steady spending. Keep it up. |
+| 60 to 79 | **Moderate** | Decent, but some indicators can still improve. |
+| 0 to 59 | **Attention required** | Several indicators need attention soon. |
+
+Hover the **exclamation icon** on the status badge (on a phone, tap it). A comment-style bubble appears with what that status means and up to three things to do, taken from your weakest indicators. For example saving up to about 20% of income, cutting spending in categories over budget, setting a budget per category, or recording transactions more regularly.
+
+An AI agent connected through MCP can also read this score with the `get_financial_health` tool, using the same formula.

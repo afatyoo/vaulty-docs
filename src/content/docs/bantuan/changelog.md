@@ -30,6 +30,10 @@ sidebar:
 - **Transaksi yang terhubung dijaga.** Setoran tabungan dan pembayaran tagihan punya pengeluaran pasangan. Kalau agen mencoba mengubah atau menghapus pengeluaran itu langsung, ditolak dengan petunjuk untuk memakai alat tabungan atau tagihan, supaya saldo dan riwayat tidak jadi tidak cocok.
 - **Halaman referensi tools di dokumentasi dirombak.** Sekarang dikelompokkan per fitur, ada penjelasan dalam bahasa Indonesia dan Inggris untuk tiap alat, dan daftarnya otomatis dibaca dari kode server.
 
+**Baru**
+- **Tombol bantuan "?" di kanan bawah layar.** Di setiap halaman aplikasi sekarang ada tombol tanda tanya kecil di pojok kanan bawah (di HP, tepat di atas bilah menu bawah). Satu klik membuka panduan halaman yang sedang kamu lihat di dokumentasi, di tab baru. Misalnya dari Skor Kesehatan langsung ke bagian skornya, dari Peta Panas ke bagian peta panas, dan dari Anggaran ke panduan Anggaran. Mengikuti bahasa aplikasi (Indonesia atau Inggris).
+- **Panduan Skor Kesehatan di dokumentasi dilengkapi:** cara tiap komponen dihitung (termasuk aturan poin Stabilitas Pengeluaran), arti tiga status beserta rentang skornya, dan penjelasan balon di ikon tanda seru.
+
 **Diubah**
 - **Skor Kesehatan Keuangan sekarang menjelaskan statusnya.** Arahkan kursor ke ikon tanda seru di badge status (Sehat, Cukup, atau Perlu Perhatian) dan muncul balon komentar berisi arti status itu beserta rentang skornya, lalu sampai tiga langkah yang perlu dilakukan. Langkahnya diambil dari indikator yang paling lemah: tabungan di bawah 20% dari pemasukan, anggaran yang terlampaui atau belum dibuat, pengeluaran naik lebih dari 10% dari bulan lalu, dan pencatatan kurang dari 10 hari. Kalau semuanya sudah baik, balonnya hanya menyarankan untuk mempertahankan kebiasaan. Di layar sentuh, ketuk ikonnya.
 - **Kartu "Akses agen AI (MCP)" di Pengaturan** memakai teks baru: pilihan akses kini "Baca saja" atau "Baca dan ubah data", dan peringatan keamanannya diperbarui. Kalimat lama yang bilang agen tidak bisa menghapus data sudah tidak benar, jadi diganti dengan penjelasan soal konfirmasi dan tong sampah 30 hari.
