@@ -8,6 +8,7 @@ sidebar:
 ## October 31, 2026
 
 **Fixed**
+- **The Expense Heatmap is no longer empty after refreshing the page.** Opening it directly or pressing refresh used to leave the calendar blank until you switched to another menu and back. The page now loads its own data.
 - **Amounts on the Expense Heatmap calendar now follow the display currency.** Each cell used to be divided by 1000 and suffixed with "k" no matter what, so switching the display to dollars still looked like rupiah. They now show a compact figure for the chosen currency and language, for example "3 jt" and "319 rb" for rupiah or "192" for dollars.
 
 ## October 30, 2026

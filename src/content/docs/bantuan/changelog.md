@@ -8,6 +8,7 @@ sidebar:
 ## 31 Oktober 2026
 
 **Diperbaiki**
+- **Peta Panas Pengeluaran tidak lagi kosong setelah halaman di-refresh.** Kalau kamu membuka halaman ini langsung atau menekan refresh, kalender sebelumnya kosong sampai kamu pindah ke menu lain lalu kembali. Sekarang datanya dimuat sendiri oleh halamannya.
 - **Angka di kalender Peta Panas Pengeluaran sekarang mengikuti mata uang tampilan.** Sebelumnya setiap sel selalu dibagi 1000 lalu diberi "k", jadi kalau tampilan diganti ke dolar, angkanya tetap terlihat seperti rupiah. Sekarang tampil ringkas sesuai mata uang dan bahasa, misalnya "3 jt" dan "319 rb" untuk rupiah, atau "192" untuk dolar.
 
 ## 30 Oktober 2026
