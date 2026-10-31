@@ -5,10 +5,14 @@ sidebar:
   order: 4
 ---
 
-## October 30, 2026
+## October 31, 2026
 
 **Fixed**
 - **Amounts on the Expense Heatmap calendar now follow the display currency.** Each cell used to be divided by 1000 and suffixed with "k" no matter what, so switching the display to dollars still looked like rupiah. They now show a compact figure for the chosen currency and language, for example "3 jt" and "319 rb" for rupiah or "192" for dollars.
+
+## October 30, 2026
+
+**Fixed**
 - **Withdrawals from savings or investments no longer count as income.** Money you withdrew from savings used to inflate Total Income even though it wasn't new money. It still lands in your wallet balance, but Total Income, the cash flow chart, the financial health score, the end-of-month projection, the total on the Income page, PDF and Excel reports, and the AI agent (MCP) summary now only count real income. Existing data corrects itself automatically, with nothing to change.
 
 ## October 28, 2026
