@@ -94,7 +94,7 @@
     {
       "name": "add_transaction",
       "title": "Catat transaksi",
-      "description": "Mencatat satu pemasukan atau pengeluaran. Butuh token dengan akses tulis. Cek list_categories dulu supaya kategori dan metode sesuai.",
+      "description": "Mencatat satu pemasukan atau pengeluaran. Butuh token dengan akses tulis. Cek list_categories dulu supaya kategori dan metode sesuai. Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -108,7 +108,7 @@
           "amount": {
             "type": "number",
             "exclusiveMinimum": 0,
-            "description": "Jumlah dalam Rupiah."
+            "description": "Jumlah dalam mata uang pencatatan organisasi."
           },
           "category": {
             "type": "string"
@@ -142,6 +142,1326 @@
         "destructiveHint": false,
         "idempotentHint": false,
         "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_organization",
+      "description": "Info organisasi: nama, paket, mata uang pencatatan, peran kamu, jumlah anggota, dan fitur mana yang tersedia di paketnya. Panggil ini lebih dulu kalau ragu fitur apa yang bisa dipakai.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_cashflow",
+      "description": "Arus kas beberapa bulan terakhir: pemasukan, pengeluaran, dan selisih per bulan (maksimal 24 bulan).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "months": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 24,
+            "description": "Jumlah bulan. Default 6."
+          },
+          "end_month": {
+            "type": "string",
+            "description": "Bulan terakhir format YYYY-MM. Default bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_daily_spending",
+      "description": "Pengeluaran per hari dalam satu bulan (data peta panas): total tiap hari, tingkat intensitas, hari paling boros, dan rata-rata harian. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "Bulan format YYYY-MM. Kosong = bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_financial_health",
+      "description": "Skor kesehatan keuangan 0 sampai 100 untuk satu bulan beserta rincian empat komponennya dan rekomendasi. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "Bulan format YYYY-MM. Kosong = bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_insights",
+      "description": "Insight pengeluaran satu bulan: porsi tiap kategori. Di paket Family ditambah perbandingan dengan bulan lalu, proyeksi akhir bulan, dan pengeluaran per anggota.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "Bulan format YYYY-MM. Kosong = bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_report",
+      "description": "Data laporan keuangan satu bulan atau seluruh periode: pemasukan dan pengeluaran per kategori, anggaran vs realisasi, dan ringkasan tabungan. Ini data, bukan file PDF atau Excel.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "YYYY-MM, atau \"all\" untuk semua periode. Default bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_savings",
+      "description": "Tabungan dan investasi: saldo tiap akun dan riwayat setoran serta penarikan terbaru. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "description": "Jumlah riwayat. Default 30."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_savings_targets",
+      "description": "Target menabung beserta progres, sisa, hari tersisa, dan saran setoran per bulan. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_bills",
+      "description": "Tagihan berulang beserta status bulan tertentu (paid, unpaid, overdue). Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "Bulan format YYYY-MM. Kosong = bulan ini."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_debts",
+      "description": "Utang dan piutang beserta sisa dan status. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "include_payments": {
+            "type": "boolean",
+            "description": "Sertakan riwayat pembayaran. Default false."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_net_worth",
+      "description": "Aset dan kewajiban untuk kekayaan bersih, beserta totalnya.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_categorization_rules",
+      "description": "Aturan kategori otomatis (pola teks yang diarahkan ke kategori tertentu).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_activity",
+      "description": "Log aktivitas organisasi terbaru: siapa menambah, mengubah, atau menghapus apa.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100,
+            "description": "Default 20."
+          }
+        },
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "list_trash",
+      "description": "Data yang baru dihapus dan masih bisa dipulihkan dalam 30 hari. Pemulihannya lewat menu Tong sampah di aplikasi.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "update_transaction",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengubah satu pemasukan atau pengeluaran. Hanya kirim field yang mau diubah. Transaksi yang terhubung ke tabungan atau tagihan ditolak: pakai alat tabungan atau tagihan.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense"
+            ],
+            "description": "Jenis transaksi."
+          },
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "date": {
+            "type": "string",
+            "description": "YYYY-MM-DD"
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Jumlah dalam mata uang pencatatan organisasi (lihat get_organization)."
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_transaction",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus satu transaksi (masuk tong sampah 30 hari). Wajib confirm: true setelah menanyakan pengguna.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense"
+            ],
+            "description": "Jenis transaksi."
+          },
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "type",
+          "id",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "set_budget",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Membuat atau mengubah anggaran satu kategori untuk satu bulan. Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string",
+            "description": "YYYY-MM. Default bulan ini."
+          },
+          "category": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "rollover": {
+            "type": "boolean",
+            "description": "Bawa sisa ke bulan berikutnya."
+          }
+        },
+        "required": [
+          "category",
+          "amount"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_budget",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus anggaran satu kategori di satu bulan. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "month",
+          "category",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_savings_entry",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Mencatat setoran atau penarikan tabungan atau investasi (paket Personal ke atas). Setoran otomatis tercatat sebagai pengeluaran, penarikan sebagai uang kembali ke dompet tanpa dihitung sebagai pemasukan. Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "YYYY-MM-DD. Default hari ini."
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "Tabungan",
+              "Investasi"
+            ]
+          },
+          "account": {
+            "type": "string",
+            "description": "Nama akun, mis. BCA atau Reksa Dana."
+          },
+          "deposit": {
+            "type": "number",
+            "minimum": 0
+          },
+          "withdrawal": {
+            "type": "number",
+            "minimum": 0
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "account"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_savings_entry",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengubah catatan tabungan. Setoran dan penarikan terhubungnya ikut disesuaikan.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "date": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "Tabungan",
+              "Investasi"
+            ]
+          },
+          "account": {
+            "type": "string"
+          },
+          "deposit": {
+            "type": "number",
+            "minimum": 0
+          },
+          "withdrawal": {
+            "type": "number",
+            "minimum": 0
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_savings_entry",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus catatan tabungan beserta pengeluaran atau pemasukan terhubungnya. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "id",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_savings_target",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Membuat target menabung terhubung ke satu akun tabungan (paket Personal ke atas). Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "target_amount": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Default hari ini."
+          },
+          "target_date": {
+            "type": "string",
+            "description": "YYYY-MM-DD"
+          },
+          "linked_account": {
+            "type": "string",
+            "description": "Nama akun tabungan yang dipakai menghitung progres."
+          }
+        },
+        "required": [
+          "name",
+          "target_amount",
+          "target_date",
+          "linked_account"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_savings_target",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengubah target menabung. Hanya kirim field yang berubah.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "name": {
+            "type": "string"
+          },
+          "target_amount": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "target_date": {
+            "type": "string"
+          },
+          "linked_account": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_savings_target",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus target menabung. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "id",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_bill",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Membuat tagihan berulang tiap bulan (paket Personal ke atas). Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "due_day": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 31,
+            "description": "Tanggal jatuh tempo tiap bulan."
+          },
+          "starts_from": {
+            "type": "string",
+            "description": "YYYY-MM. Default bulan ini."
+          },
+          "ends_at": {
+            "type": "string",
+            "description": "YYYY-MM, atau \"ongoing\" (default) kalau tanpa akhir."
+          },
+          "note": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "category",
+          "amount",
+          "due_day"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_bill",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengubah tagihan berulang. Hanya kirim field yang berubah.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "due_day": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 31
+          },
+          "starts_from": {
+            "type": "string"
+          },
+          "ends_at": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_bill",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus tagihan beserta riwayat pembayarannya. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "id",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "pay_bill",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Menandai tagihan lunas untuk satu bulan dan mencatat pengeluarannya. Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "bill_id": {
+            "type": "string",
+            "description": "ID dari list_bills."
+          },
+          "month": {
+            "type": "string",
+            "description": "Bulan tagihan YYYY-MM. Default bulan ini."
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Default sesuai nominal tagihan."
+          },
+          "paid_at": {
+            "type": "string",
+            "description": "YYYY-MM-DD. Default hari ini."
+          }
+        },
+        "required": [
+          "bill_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "unpay_bill",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Membatalkan status lunas satu bulan beserta pengeluaran terhubungnya. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "bill_id": {
+            "type": "string"
+          },
+          "month": {
+            "type": "string"
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "bill_id",
+          "month",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_debt",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Mencatat utang (owed, kamu berutang) atau piutang (receivable, orang lain berutang ke kamu). Paket Personal ke atas. Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "type": "string",
+            "enum": [
+              "owed",
+              "receivable"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "principal": {
+            "type": "number",
+            "minimum": 0
+          },
+          "remaining": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Default sama dengan principal."
+          },
+          "interest_rate": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Persen. Default 0."
+          },
+          "due_date": {
+            "type": "string",
+            "description": "YYYY-MM-DD, opsional."
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "direction",
+          "name",
+          "principal"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_debt",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengubah data utang atau piutang. Hanya kirim field yang berubah.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "owed",
+              "receivable"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "principal": {
+            "type": "number",
+            "minimum": 0
+          },
+          "remaining": {
+            "type": "number",
+            "minimum": 0
+          },
+          "interest_rate": {
+            "type": "number",
+            "minimum": 0
+          },
+          "due_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "active",
+              "paid"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_debt",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus utang beserta riwayat pembayarannya. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "id",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "pay_debt",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Mencatat cicilan utang atau penerimaan piutang dan mengurangi sisanya. Tidak boleh melebihi sisa. Jumlah dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "amount": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "paid_at": {
+            "type": "string",
+            "description": "YYYY-MM-DD. Default hari ini."
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "amount"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_net_worth_item",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Menambah aset (asset) atau kewajiban (liability) untuk kekayaan bersih. Nilai dalam mata uang pencatatan organisasi (lihat get_organization).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "asset",
+              "liability"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number",
+            "minimum": 0
+          },
+          "as_of_date": {
+            "type": "string",
+            "description": "YYYY-MM-DD. Default hari ini."
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "name",
+          "category",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_net_worth_item",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengubah item kekayaan bersih. Hanya kirim field yang berubah.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "asset",
+              "liability"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number",
+            "minimum": 0
+          },
+          "as_of_date": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_net_worth_item",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus item kekayaan bersih. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "id",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_category",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Menambah kategori pemasukan, kategori pengeluaran, atau metode pembayaran.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense",
+              "payment_method"
+            ]
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_category",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus kategori atau metode pembayaran. Transaksi lama tidak berubah. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense",
+              "payment_method"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "kind",
+          "name",
+          "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_categorization_rule",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Membuat aturan kategori otomatis: kalau nama transaksi memuat pola tertentu, arahkan ke kategori tertentu.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "expense",
+              "income"
+            ]
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "type",
+          "pattern",
+          "category"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_categorization_rule",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengubah aturan kategori otomatis.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "expense",
+              "income"
+            ]
+          },
+          "pattern": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "delete_categorization_rule",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menghapus aturan kategori otomatis. Wajib confirm: true.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID dari alat list_*."
+          },
+          "confirm": {
+            "type": "boolean",
+            "description": "Harus true. Tanyakan dulu ke pengguna sebelum menghapus."
+          }
+        },
+        "required": [
+          "id",
+          "confirm"
+        ],
+        "additionalProperties": false
       }
     }
   ]

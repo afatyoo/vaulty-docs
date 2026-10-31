@@ -7,7 +7,37 @@ sidebar:
 
 ## 31 Oktober 2026
 
+**Baru**
+- **Agen AI (MCP) sekarang bisa menjangkau hampir semua fitur Vaulty, bukan cuma mencatat transaksi.** Dulu ada 5 alat (ringkasan, daftar transaksi, anggaran, kategori, dan tambah transaksi). Sekarang ada **46 alat** yang dikelompokkan seperti menu di aplikasi. Semuanya mengikuti aturan yang sama dengan aplikasi: validasi, batas paket, masa tenggang langganan, dan setiap perubahan tercatat di log aktivitas dengan nama token.
+- **Baca lebih lengkap.**
+  - `get_organization`: nama, paket, mata uang pencatatan, peranmu, jumlah anggota, dan fitur apa saja yang ada di paketmu.
+  - `get_cashflow`: pemasukan, pengeluaran, dan selisih per bulan untuk sampai 24 bulan.
+  - `get_insights`: porsi tiap kategori pengeluaran. Di paket Family ditambah perbandingan dengan bulan lalu per kategori, proyeksi akhir bulan, dan pengeluaran per anggota.
+  - `get_report`: data laporan satu bulan atau seluruh periode (pemasukan dan pengeluaran per kategori, anggaran vs realisasi, ringkasan tabungan). Ini data, bukan file PDF atau Excel.
+  - `get_financial_health`: skor kesehatan 0 sampai 100 beserta empat komponennya dan rekomendasi. Rumusnya sama dengan halaman Skor Kesehatan, jadi angkanya persis sama (dicek: 75/100 di kedua tempat).
+  - `get_daily_spending`: data peta panas, yaitu total tiap hari, tingkat intensitas, hari paling boros, dan rata-rata harian.
+  - `list_savings`, `list_savings_targets`, `list_bills`, `list_debts`, `list_net_worth`, `list_categorization_rules`, `list_activity`, dan `list_trash`.
+- **Tulis dan ubah data di semua fitur**, dengan token akses tulis:
+  - **Transaksi:** ubah dan hapus pemasukan atau pengeluaran.
+  - **Anggaran:** buat atau ubah anggaran satu kategori di satu bulan, dan hapus.
+  - **Tabungan dan investasi:** catat setoran dan penarikan, ubah, dan hapus. Seperti di aplikasi, setoran otomatis tercatat sebagai pengeluaran, dan penarikan mengembalikan uang ke dompet tanpa dihitung sebagai pemasukan.
+  - **Target menabung:** buat, ubah, hapus.
+  - **Tagihan:** buat, ubah, hapus, tandai lunas satu bulan (otomatis mencatat pengeluarannya), dan batalkan lunas.
+  - **Utang dan piutang:** catat, ubah, hapus, dan catat cicilan yang mengurangi sisa. Cicilan tidak boleh melebihi sisa.
+  - **Kekayaan bersih:** tambah, ubah, hapus aset dan kewajiban.
+  - **Kategori, metode pembayaran, dan aturan kategori otomatis:** tambah, ubah, hapus.
+- **Penghapusan lebih aman untuk agen.** Setiap alat hapus wajib diberi `confirm: true`, dan deskripsinya menyuruh agen bertanya dulu ke kamu. Data yang dihapus masuk tong sampah selama 30 hari seperti kalau kamu menghapusnya sendiri, jadi bisa dipulihkan dari menu Tong sampah di aplikasi.
+- **Transaksi yang terhubung dijaga.** Setoran tabungan dan pembayaran tagihan punya pengeluaran pasangan. Kalau agen mencoba mengubah atau menghapus pengeluaran itu langsung, ditolak dengan petunjuk untuk memakai alat tabungan atau tagihan, supaya saldo dan riwayat tidak jadi tidak cocok.
+- **Halaman referensi tools di dokumentasi dirombak.** Sekarang dikelompokkan per fitur, ada penjelasan dalam bahasa Indonesia dan Inggris untuk tiap alat, dan daftarnya otomatis dibaca dari kode server.
+
+**Diubah**
+- **Kartu "Akses agen AI (MCP)" di Pengaturan** memakai teks baru: pilihan akses kini "Baca saja" atau "Baca dan ubah data", dan peringatan keamanannya diperbarui. Kalimat lama yang bilang agen tidak bisa menghapus data sudah tidak benar, jadi diganti dengan penjelasan soal konfirmasi dan tong sampah 30 hari.
+- **Yang tetap tidak bisa lewat MCP:** mengubah langganan atau pembayaran, mengundang atau mengeluarkan anggota, mengganti mata uang pencatatan, memulihkan cadangan, dan mengunggah lampiran struk. Aksi sensitif itu sengaja hanya bisa dilakukan sendiri di aplikasi.
+- **Batas pemakaian tidak berubah:** 60 permintaan per menit per token dan 10 token aktif per organisasi. Alat tabungan, tagihan, utang, skor kesehatan, dan peta panas tetap hanya untuk paket Personal ke atas, dan perbandingan serta proyeksi insight untuk paket Family.
+
 **Diperbaiki**
+- **Agen AI sekarang tahu mata uang pencatatan organisasimu.** Sebelumnya jawaban `get_summary`, `list_budgets`, dan `list_transactions` selalu berlabel "IDR", dan deskripsi alat tulis menyebut "Jumlah dalam Rupiah", padahal sejak 27 Oktober organisasi bisa mencatat dalam dolar atau mata uang lain. Akibatnya agen bisa salah mengira 12,34 dolar sebagai 12,34 rupiah. Sekarang semua jawaban memakai mata uang pencatatan yang benar dan angkanya dibulatkan sesuai mata uang itu.
+- **Data contoh onboarding dan penarikan tabungan tidak ikut terhitung** di semua alat baca baru, sama seperti di dashboard.
 - **Peta Panas Pengeluaran tidak lagi kosong setelah halaman di-refresh.** Kalau kamu membuka halaman ini langsung atau menekan refresh, kalender sebelumnya kosong sampai kamu pindah ke menu lain lalu kembali. Sekarang datanya dimuat sendiri oleh halamannya.
 - **Angka di kalender Peta Panas Pengeluaran sekarang mengikuti mata uang tampilan.** Sebelumnya setiap sel selalu dibagi 1000 lalu diberi "k", jadi kalau tampilan diganti ke dolar, angkanya tetap terlihat seperti rupiah. Sekarang tampil ringkas sesuai mata uang dan bahasa, misalnya "3 jt" dan "319 rb" untuk rupiah, atau "192" untuk dolar.
 

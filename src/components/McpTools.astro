@@ -1,68 +1,153 @@
 ---
 import data from '../data/mcp-tools.json';
 // Nama, jenis, dan parameter tiap alat dibaca dari berkas yang dihasilkan
-// backend Vaulty (scripts/exportMcpTools.mjs), jadi tidak bisa menyimpang dari
-// kode. Teks penjelasan ditulis per bahasa di bawah supaya satu halaman satu bahasa.
+// backend Vaulty (backend/scripts/exportMcpTools.mjs), jadi tidak bisa
+// menyimpang dari kode. Teks bahasa Inggris dan pengelompokan ditulis di sini
+// supaya satu halaman satu bahasa.
 const { lang = 'id' } = Astro.props;
-const T = {
-  id: {
-    read: 'Baca', write: 'Tulis', params: 'Parameter', none: 'Tanpa parameter', required: 'wajib',
-    desc: {
-      get_summary: 'Total pemasukan, pengeluaran, selisih, lima kategori pengeluaran terbesar, dan kategori anggaran yang terlampaui untuk satu bulan.',
-      list_transactions: 'Transaksi terbaru (pemasukan dan pengeluaran). Bisa disaring per jenis, bulan, dan kategori. Maksimal 100 baris.',
-      list_budgets: 'Anggaran per kategori untuk satu bulan beserta jumlah yang sudah terpakai dan sisanya.',
-      list_categories: 'Kategori pemasukan, kategori pengeluaran, dan metode pembayaran milik organisasi. Panggil ini sebelum mencatat transaksi.',
-      add_transaction: 'Mencatat satu pemasukan atau pengeluaran. Butuh token dengan akses tulis. Hanya menambah, tidak bisa mengubah atau menghapus.',
-    },
-    param: {
-      month: 'Bulan, format YYYY-MM. Kosong = bulan ini (atau semua bulan untuk list_transactions).',
-      type: 'income, expense, atau all (list_transactions). income atau expense saja untuk add_transaction.',
-      category: 'Nama kategori.', limit: 'Jumlah baris, 1 sampai 100. Default 20.',
-      amount: 'Jumlah dalam Rupiah, lebih dari 0.', name: 'Keterangan singkat: sumber pemasukan atau nama pengeluaran.',
-      date: 'Tanggal YYYY-MM-DD. Kosong = hari ini.', method: 'Metode pembayaran. Kosong = metode pertama di daftar.', note: 'Catatan tambahan (maks 500 karakter).',
-    } as Record<string, string>,
-  },
-  en: {
-    read: 'Read', write: 'Write', params: 'Parameters', none: 'No parameters', required: 'required',
-    desc: {
-      get_summary: 'Total income, total expenses, the difference, the five largest expense categories, and any budget categories over their limit for one month.',
-      list_transactions: 'Latest transactions (income and expenses). Filter by type, month, and category. Up to 100 rows.',
-      list_budgets: 'Budgets per category for one month, with the amount already spent and what remains.',
-      list_categories: 'The organization\'s income categories, expense categories, and payment methods. Call this before recording a transaction.',
-      add_transaction: 'Record one income or expense. Needs a token with write access. It can only add, never change or delete.',
-    },
-    param: {
-      month: 'Month, format YYYY-MM. Empty = this month (or all months for list_transactions).',
-      type: 'income, expense, or all (list_transactions). Only income or expense for add_transaction.',
-      category: 'Category name.', limit: 'Number of rows, 1 to 100. Default 20.',
-      amount: 'Amount in Rupiah, greater than 0.', name: 'Short label: the income source or the expense name.',
-      date: 'Date YYYY-MM-DD. Empty = today.', method: 'Payment method. Empty = the first method in the list.', note: 'Extra note (max 500 characters).',
-    } as Record<string, string>,
-  },
-}[lang === 'en' ? 'en' : 'id'];
-const READ_ONLY = (t: any) => t.annotations?.readOnlyHint === true;
+const en = lang === 'en';
+
+const GROUPS: { id: string; en: string; tools: string[] }[] = [
+  { id: 'Ringkasan dan analisis', en: 'Summaries and analysis', tools: ['get_organization', 'get_summary', 'get_cashflow', 'get_insights', 'get_report', 'get_financial_health', 'get_daily_spending'] },
+  { id: 'Transaksi', en: 'Transactions', tools: ['list_transactions', 'add_transaction', 'update_transaction', 'delete_transaction'] },
+  { id: 'Anggaran', en: 'Budgets', tools: ['list_budgets', 'set_budget', 'delete_budget'] },
+  { id: 'Kategori dan aturan otomatis', en: 'Categories and auto rules', tools: ['list_categories', 'add_category', 'delete_category', 'list_categorization_rules', 'add_categorization_rule', 'update_categorization_rule', 'delete_categorization_rule'] },
+  { id: 'Tabungan dan target', en: 'Savings and goals', tools: ['list_savings', 'add_savings_entry', 'update_savings_entry', 'delete_savings_entry', 'list_savings_targets', 'add_savings_target', 'update_savings_target', 'delete_savings_target'] },
+  { id: 'Tagihan', en: 'Bills', tools: ['list_bills', 'add_bill', 'update_bill', 'delete_bill', 'pay_bill', 'unpay_bill'] },
+  { id: 'Utang dan piutang', en: 'Debts', tools: ['list_debts', 'add_debt', 'update_debt', 'delete_debt', 'pay_debt'] },
+  { id: 'Kekayaan bersih', en: 'Net worth', tools: ['list_net_worth', 'add_net_worth_item', 'update_net_worth_item', 'delete_net_worth_item'] },
+  { id: 'Riwayat dan tong sampah', en: 'Activity and trash', tools: ['list_activity', 'list_trash'] },
+];
+
+const T = en
+  ? { read: 'Read', write: 'Write', remove: 'Delete', params: 'Parameters', none: 'No parameters', required: 'required' }
+  : { read: 'Baca', write: 'Tulis', remove: 'Hapus', params: 'Parameter', none: 'Tanpa parameter', required: 'wajib' };
+
+// Teks Inggris. Versi Indonesia memakai deskripsi dari server apa adanya.
+const DESC_EN: Record<string, string> = {
+  get_organization: 'Organization info: name, plan, recording currency, your role, member count, and which features the plan includes. Call this first when unsure what is available.',
+  get_summary: 'Total income, total expenses, the difference, the five largest expense categories, and any budget categories over their limit for one month.',
+  get_cashflow: 'Cash flow for the last few months: income, expenses, and the difference per month (up to 24 months).',
+  get_insights: 'Spending insights for one month: each category\'s share. On the Family plan it adds a comparison with last month, an end-of-month projection, and spending per member.',
+  get_report: 'Report data for one month or the whole period: income and expenses by category, budget versus actual, and a savings summary. Data only, not a PDF or Excel file.',
+  get_financial_health: 'Financial health score from 0 to 100 for one month, with its four components and recommendations. Personal plan and above.',
+  get_daily_spending: 'Spending per day in one month (the heatmap data): each day\'s total and intensity, the most expensive day, and the daily average. Personal plan and above.',
+  list_transactions: 'Latest transactions (income and expenses). Filter by type, month, and category. Up to 100 rows.',
+  add_transaction: 'Record one income or expense. Needs a token with write access. Call list_categories first so the category and method match.',
+  update_transaction: 'Change one income or expense. Send only the fields to change. Transactions linked to savings or bills are refused; use the savings or bill tools instead.',
+  delete_transaction: 'Delete one transaction (goes to the trash for 30 days). Requires confirm: true after asking the user.',
+  list_budgets: 'Budgets per category for one month, with the amount already spent and what remains.',
+  set_budget: 'Create or change the budget of one category for one month.',
+  delete_budget: 'Delete the budget of one category in one month. Requires confirm: true.',
+  list_categories: 'The organization\'s income categories, expense categories, and payment methods. Call this before recording a transaction.',
+  add_category: 'Add an income category, expense category, or payment method.',
+  delete_category: 'Delete a category or payment method. Old transactions are unchanged. Requires confirm: true.',
+  list_categorization_rules: 'Auto-categorization rules (a text pattern routed to a category).',
+  add_categorization_rule: 'Create an auto-categorization rule: when a transaction name contains a pattern, route it to a category.',
+  update_categorization_rule: 'Change an auto-categorization rule.',
+  delete_categorization_rule: 'Delete an auto-categorization rule. Requires confirm: true.',
+  list_savings: 'Savings and investments: each account\'s balance and the latest deposits and withdrawals. Personal plan and above.',
+  add_savings_entry: 'Record a savings or investment deposit or withdrawal (Personal plan and above). A deposit is also recorded as an expense; a withdrawal returns money to the wallet without counting as income.',
+  update_savings_entry: 'Change a savings entry. Its linked deposit and withdrawal transactions are adjusted too.',
+  delete_savings_entry: 'Delete a savings entry together with its linked expense or income. Requires confirm: true.',
+  list_savings_targets: 'Savings goals with progress, what remains, days left, and a suggested monthly deposit. Personal plan and above.',
+  add_savings_target: 'Create a savings goal linked to one savings account (Personal plan and above).',
+  update_savings_target: 'Change a savings goal. Send only the fields that change.',
+  delete_savings_target: 'Delete a savings goal. Requires confirm: true.',
+  list_bills: 'Recurring bills with their status for a given month (paid, unpaid, overdue). Personal plan and above.',
+  add_bill: 'Create a bill that repeats every month (Personal plan and above).',
+  update_bill: 'Change a recurring bill. Send only the fields that change.',
+  delete_bill: 'Delete a bill together with its payment history. Requires confirm: true.',
+  pay_bill: 'Mark a bill as paid for one month and record the expense.',
+  unpay_bill: 'Undo the paid status for one month together with its linked expense. Requires confirm: true.',
+  list_debts: 'Debts and receivables with what remains and their status. Personal plan and above.',
+  add_debt: 'Record a debt (owed, you owe) or a receivable (receivable, someone owes you). Personal plan and above.',
+  update_debt: 'Change a debt or receivable. Send only the fields that change.',
+  delete_debt: 'Delete a debt together with its payment history. Requires confirm: true.',
+  pay_debt: 'Record an installment on a debt or a payment received on a receivable, and reduce what remains. It cannot exceed the remaining amount.',
+  list_net_worth: 'Assets and liabilities for net worth, with the totals.',
+  add_net_worth_item: 'Add an asset or a liability for net worth.',
+  update_net_worth_item: 'Change a net worth item. Send only the fields that change.',
+  delete_net_worth_item: 'Delete a net worth item. Requires confirm: true.',
+  list_activity: 'Latest organization activity log: who added, changed, or deleted what.',
+  list_trash: 'Recently deleted data that can still be restored within 30 days. Restoring is done from the Trash menu in the app, not through MCP.',
+};
+
+const PARAM: Record<string, { id: string; en: string }> = {
+  id: { id: 'ID dari alat list_*.', en: 'ID from a list_* tool.' },
+  confirm: { id: 'Harus true. Tanyakan dulu ke pengguna sebelum menghapus.', en: 'Must be true. Ask the user before deleting.' },
+  month: { id: 'Bulan, format YYYY-MM. Kosong = bulan ini.', en: 'Month, format YYYY-MM. Empty = this month.' },
+  months: { id: 'Jumlah bulan, 1 sampai 24. Default 6.', en: 'Number of months, 1 to 24. Default 6.' },
+  end_month: { id: 'Bulan terakhir, format YYYY-MM. Default bulan ini.', en: 'Last month, format YYYY-MM. Default this month.' },
+  type: { id: 'Jenis: income atau expense (list_transactions juga boleh all).', en: 'Type: income or expense (list_transactions also accepts all).' },
+  category: { id: 'Nama kategori.', en: 'Category name.' },
+  limit: { id: 'Jumlah baris, 1 sampai 100.', en: 'Number of rows, 1 to 100.' },
+  amount: { id: 'Jumlah dalam mata uang pencatatan organisasi.', en: 'Amount in the organization\'s recording currency.' },
+  name: { id: 'Nama atau keterangan singkat.', en: 'Name or short label.' },
+  date: { id: 'Tanggal YYYY-MM-DD. Kosong = hari ini.', en: 'Date YYYY-MM-DD. Empty = today.' },
+  method: { id: 'Metode pembayaran. Kosong = metode pertama di daftar.', en: 'Payment method. Empty = the first method in the list.' },
+  note: { id: 'Catatan tambahan.', en: 'Extra note.' },
+  rollover: { id: 'Bawa sisa anggaran ke bulan berikutnya.', en: 'Carry the remaining budget to next month.' },
+  kind: { id: 'Jenis (Tabungan atau Investasi untuk tabungan; income, expense, payment_method untuk kategori).', en: 'Kind (Tabungan or Investasi for savings; income, expense, payment_method for categories).' },
+  account: { id: 'Nama akun tabungan atau investasi.', en: 'Savings or investment account name.' },
+  deposit: { id: 'Setoran, 0 atau lebih.', en: 'Deposit, 0 or more.' },
+  withdrawal: { id: 'Penarikan, 0 atau lebih.', en: 'Withdrawal, 0 or more.' },
+  target_amount: { id: 'Nominal target, lebih dari 0.', en: 'Target amount, greater than 0.' },
+  start_date: { id: 'Tanggal mulai YYYY-MM-DD. Default hari ini.', en: 'Start date YYYY-MM-DD. Default today.' },
+  target_date: { id: 'Tanggal target YYYY-MM-DD.', en: 'Target date YYYY-MM-DD.' },
+  linked_account: { id: 'Akun tabungan yang dipakai menghitung progres.', en: 'Savings account used to calculate progress.' },
+  due_day: { id: 'Tanggal jatuh tempo tiap bulan, 1 sampai 31.', en: 'Due day each month, 1 to 31.' },
+  starts_from: { id: 'Mulai bulan YYYY-MM. Default bulan ini.', en: 'Starts from month YYYY-MM. Default this month.' },
+  ends_at: { id: 'Berakhir bulan YYYY-MM, atau "ongoing" (default).', en: 'Ends at month YYYY-MM, or "ongoing" (default).' },
+  active: { id: 'Aktif atau tidak.', en: 'Active or not.' },
+  bill_id: { id: 'ID tagihan dari list_bills.', en: 'Bill ID from list_bills.' },
+  paid_at: { id: 'Tanggal bayar YYYY-MM-DD. Default hari ini.', en: 'Payment date YYYY-MM-DD. Default today.' },
+  direction: { id: 'owed (kamu berutang) atau receivable (orang lain berutang ke kamu).', en: 'owed (you owe) or receivable (someone owes you).' },
+  principal: { id: 'Pokok utang.', en: 'Principal.' },
+  remaining: { id: 'Sisa. Default sama dengan pokok.', en: 'Remaining. Default equals the principal.' },
+  interest_rate: { id: 'Bunga dalam persen. Default 0.', en: 'Interest in percent. Default 0.' },
+  due_date: { id: 'Jatuh tempo YYYY-MM-DD (opsional).', en: 'Due date YYYY-MM-DD (optional).' },
+  status: { id: 'active atau paid.', en: 'active or paid.' },
+  include_payments: { id: 'Sertakan riwayat pembayaran. Default false.', en: 'Include payment history. Default false.' },
+  as_of_date: { id: 'Tanggal nilai YYYY-MM-DD. Default hari ini.', en: 'Value date YYYY-MM-DD. Default today.' },
+  value: { id: 'Nilai aset atau kewajiban.', en: 'Value of the asset or liability.' },
+  pattern: { id: 'Pola teks yang dicari di nama transaksi.', en: 'Text pattern matched in the transaction name.' },
+  priority: { id: 'Urutan prioritas, bilangan bulat.', en: 'Priority order, an integer.' },
+};
+
+const kindOf = (t: any) => (t.annotations?.readOnlyHint === true ? T.read : t.annotations?.destructiveHint === true ? T.remove : T.write);
+const byName = new Map(data.tools.map((t: any) => [t.name, t]));
+const groups = GROUPS.map((g) => ({ title: en ? g.en : g.id, tools: g.tools.map((n) => byName.get(n)).filter(Boolean) as any[] }));
+const grouped = new Set(GROUPS.flatMap((g) => g.tools));
+const extra = data.tools.filter((t: any) => !grouped.has(t.name));
+if (extra.length) groups.push({ title: en ? 'Other' : 'Lainnya', tools: extra as any[] });
 ---
-{data.tools.map((tool) => {
-  const props = Object.entries((tool.inputSchema as any).properties ?? {});
-  const required = new Set((tool.inputSchema as any).required ?? []);
-  return (
-    <section>
-      <h3 id={tool.name}><code>{tool.name}</code> <small>({READ_ONLY(tool) ? T.read : T.write})</small></h3>
-      <p>{(T.desc as Record<string, string>)[tool.name] ?? tool.description}</p>
-      {props.length === 0 ? <p><em>{T.none}</em></p> : (
-        <table>
-          <thead><tr><th>{T.params}</th><th>Type</th><th></th></tr></thead>
-          <tbody>
-            {props.map(([name, schema]: [string, any]) => (
-              <tr>
-                <td><code>{name}</code>{required.has(name) ? <> <small>({T.required})</small></> : null}</td>
-                <td><code>{schema.enum ? schema.enum.join(' | ') : schema.type}</code></td>
-                <td>{T.param[name] ?? schema.description ?? ''}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </section>
-  );
-})}
+{groups.map((group) => (
+  <>
+    <h2 id={group.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>{group.title}</h2>
+    {group.tools.map((tool) => {
+      const props = Object.entries((tool.inputSchema as any).properties ?? {});
+      const required = new Set((tool.inputSchema as any).required ?? []);
+      return (
+        <section>
+          <h3 id={tool.name}><code>{tool.name}</code> <small>({kindOf(tool)})</small></h3>
+          <p>{en ? (DESC_EN[tool.name] ?? tool.description) : tool.description}</p>
+          {props.length === 0 ? <p><em>{T.none}</em></p> : (
+            <table>
+              <thead><tr><th>{T.params}</th><th>Type</th><th></th></tr></thead>
+              <tbody>
+                {props.map(([name, schema]: [string, any]) => (
+                  <tr>
+                    <td><code>{name}</code>{required.has(name) ? <> <small>({T.required})</small></> : null}</td>
+                    <td><code>{schema.enum ? schema.enum.join(' | ') : Array.isArray(schema.type) ? schema.type.join(' | ') : schema.type}</code></td>
+                    <td>{PARAM[name] ? (en ? PARAM[name].en : PARAM[name].id) : (schema.description ?? '')}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </section>
+      );
+    })}
+  </>
+))}

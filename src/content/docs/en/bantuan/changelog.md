@@ -7,7 +7,37 @@ sidebar:
 
 ## October 31, 2026
 
+**New**
+- **The AI agent (MCP) now reaches almost every Vaulty feature, not just recording transactions.** It used to have 5 tools (summary, transaction list, budgets, categories, and add transaction). There are now **46 tools**, grouped like the menus in the app. They all follow the same rules as the app: validation, plan limits, the subscription grace period, and every change is written to the activity log with the token name.
+- **Richer reading.**
+  - `get_organization`: name, plan, recording currency, your role, member count, and which features your plan includes.
+  - `get_cashflow`: income, expenses, and the difference per month for up to 24 months.
+  - `get_insights`: each expense category's share. On the Family plan it adds a per-category comparison with last month, an end-of-month projection, and spending per member.
+  - `get_report`: report data for one month or the whole period (income and expenses by category, budget versus actual, savings summary). This is data, not a PDF or Excel file.
+  - `get_financial_health`: the 0 to 100 health score with its four components and recommendations. It uses the same formula as the Financial Health page, so the numbers match exactly (checked: 75/100 in both places).
+  - `get_daily_spending`: the heatmap data, meaning each day's total, its intensity level, the most expensive day, and the daily average.
+  - `list_savings`, `list_savings_targets`, `list_bills`, `list_debts`, `list_net_worth`, `list_categorization_rules`, `list_activity`, and `list_trash`.
+- **Write and edit data in every feature**, with a write-access token:
+  - **Transactions:** edit and delete income or expenses.
+  - **Budgets:** create or change the budget of one category in one month, and delete it.
+  - **Savings and investments:** record deposits and withdrawals, edit, and delete. As in the app, a deposit is automatically recorded as an expense, and a withdrawal returns money to the wallet without counting as income.
+  - **Savings goals:** create, edit, delete.
+  - **Bills:** create, edit, delete, mark a month as paid (which records the expense for you), and undo it.
+  - **Debts and receivables:** record, edit, delete, and record an installment that reduces what remains. An installment cannot exceed the remaining amount.
+  - **Net worth:** add, edit, and delete assets and liabilities.
+  - **Categories, payment methods, and auto-categorization rules:** add, edit, delete.
+- **Safer deleting for agents.** Every delete tool requires `confirm: true`, and its description tells the agent to ask you first. Deleted data goes to the trash for 30 days, just as when you delete it yourself, so it can be restored from the Trash menu in the app.
+- **Linked transactions are protected.** A savings deposit and a bill payment each have a paired expense. If an agent tries to edit or delete that expense directly, it is refused with a pointer to the savings or bill tools, so balances and history cannot drift apart.
+- **The tools reference in the docs was rebuilt.** It is now grouped by feature, each tool has an English and Indonesian description, and the list is read straight from the server code.
+
+**Changed**
+- **The "AI agent access (MCP)" card in Settings** has new text: the access choices are now "Read only" or "Read and edit data", and the security warning was updated. The old sentence saying agents cannot delete data was no longer true, so it now explains confirmation and the 30-day trash.
+- **Still not possible through MCP:** changing the subscription or payments, inviting or removing members, changing the recording currency, restoring backups, and uploading receipt attachments. Those sensitive actions are deliberately left to you in the app.
+- **Usage limits are unchanged:** 60 requests per minute per token and 10 active tokens per organization. The savings, bills, debts, health score, and heatmap tools remain Personal plan and above, and the insight comparison and projection remain Family.
+
 **Fixed**
+- **The AI agent now knows your organization's recording currency.** Before, the answers of `get_summary`, `list_budgets`, and `list_transactions` were always labelled "IDR", and the write tool descriptions said "Amount in Rupiah", even though since October 27 an organization can record in dollars or another currency. An agent could therefore mistake 12.34 dollars for 12.34 rupiah. All answers now use the correct recording currency, with amounts rounded to that currency.
+- **Onboarding sample data and savings withdrawals are not counted** in any of the new read tools, the same as on the dashboard.
 - **The Expense Heatmap is no longer empty after refreshing the page.** Opening it directly or pressing refresh used to leave the calendar blank until you switched to another menu and back. The page now loads its own data.
 - **Amounts on the Expense Heatmap calendar now follow the display currency.** Each cell used to be divided by 1000 and suffixed with "k" no matter what, so switching the display to dollars still looked like rupiah. They now show a compact figure for the chosen currency and language, for example "3 jt" and "319 rb" for rupiah or "192" for dollars.
 

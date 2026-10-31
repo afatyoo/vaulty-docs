@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-**MCP (Model Context Protocol)** is a standard way for AI assistants to connect to other services. With MCP, the assistant you use (for example Claude Code) can read your financial summary and, if you allow it, record new transactions in Vaulty.
+**MCP (Model Context Protocol)** is a standard way for AI assistants to connect to other services. With MCP, the assistant you use (for example Claude Code) can read your finances (summaries, cash flow, budgets, savings, bills, debts, health score, and more) and, if you allow it, record new transactions in Vaulty.
 
 Available on the **Personal** plan and above.
 
@@ -13,7 +13,7 @@ Available on the **Personal** plan and above.
 
 1. Open **Settings > AI agent access (MCP)**. Only the organization owner can manage tokens.
 2. Enter a **token name** (for example "Claude on my laptop").
-3. Choose the **access**: *Read only*, or *Read and record transactions*.
+3. Choose the **access**: *Read only*, or *Read and edit data*.
 4. Choose the **validity**: 30 days, 90 days, 1 year, or no expiry.
 5. Click **Create token**, then **copy the token now**. It is shown only once.
 
@@ -53,12 +53,18 @@ Ask your agent, for example:
 - "What is my total spending this month, and which category is the largest?"
 - "Which budgets have I gone over?"
 - "Record a coffee expense of Rp 25,000 in the Food category."
+- "What is my financial health score this month, and what should I improve?"
+- "Which bills are still unpaid this month? Mark the electricity bill as paid."
+- "How far along is my vacation goal, and how much should I deposit each month?"
+- "Record a Rp 500,000 installment on my debt to Budi."
 
-For the last request the token needs write access. The agent will first fetch the category list so the category and payment method match.
+Requests that record or change data need a token with write access. The agent will first fetch the category list so the category and payment method match.
 
 ## Limits and security
 
-- The agent can only **add** transactions. There is no editing or deleting, and no sensitive actions such as changing the subscription or inviting members.
+- The agent can read and, with a write token, add and change data in every feature your plan includes. What it **cannot** do through MCP: change the subscription or payments, invite or remove members, change the recording currency, restore backups, and upload receipt attachments.
+- **Deleting** always needs explicit confirmation (`confirm: true`), and the data goes to the trash for 30 days. Restoring is done from the Trash menu in the app.
+- All amounts use your organization's **recording currency**, not always rupiah.
 - At most **60 requests per minute** per token and **10 active tokens** per organization.
 - Every call is checked again: the token is not revoked or expired, its creator is still a member of the organization, and the plan still includes MCP.
 - Everything recorded through MCP is written to the activity log with the token name.

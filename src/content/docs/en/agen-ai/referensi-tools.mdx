@@ -10,6 +10,6 @@ import data from '../../../../data/mcp-tools.json';
 
 Vaulty provides **{data.tools.length} tools**. This list is read straight from the server code, so it always matches what is available. Protocol version: <code>{data.protocolVersion}</code>.
 
-All amounts are in **Rupiah (IDR)**. Responses are JSON text.
+All amounts use the organization's **recording currency** (see `get_organization`), not always rupiah. Responses are JSON text. Write tools need a token with write access, and delete tools require `confirm: true` (the data goes to the trash for 30 days). The savings, bills, debts, health score, and heatmap tools are available on the Personal plan and above.
 
 <McpTools lang="en" />

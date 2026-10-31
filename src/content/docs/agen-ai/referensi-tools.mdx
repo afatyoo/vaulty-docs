@@ -10,6 +10,6 @@ import data from '../../../data/mcp-tools.json';
 
 Vaulty menyediakan **{data.tools.length} alat**. Daftar ini dibaca langsung dari kode server, jadi selalu sama dengan yang tersedia. Versi protokol: <code>{data.protocolVersion}</code>.
 
-Semua jumlah dalam **Rupiah (IDR)**. Jawaban berupa teks JSON.
+Semua jumlah memakai **mata uang pencatatan** organisasi (lihat `get_organization`), bukan selalu rupiah. Jawaban berupa teks JSON. Alat tulis butuh token dengan akses tulis, dan alat hapus wajib `confirm: true` (data masuk tong sampah 30 hari). Alat tabungan, tagihan, utang, skor kesehatan, dan peta panas hanya tersedia di paket Personal ke atas.
 
 <McpTools lang="id" />
