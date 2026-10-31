@@ -31,6 +31,7 @@ sidebar:
 - **The tools reference in the docs was rebuilt.** It is now grouped by feature, each tool has an English and Indonesian description, and the list is read straight from the server code.
 
 **Changed**
+- **The Financial Health Score now explains its status.** Hover the exclamation icon on the status badge (Healthy, Moderate, or Attention required) and a comment-style bubble appears with what that status means and its score range, followed by up to three things to do. The steps come from the weakest indicators: savings below 20% of income, budgets exceeded or not set, spending up more than 10% from last month, and fewer than 10 recorded days. If everything is fine, the bubble just suggests keeping up the habit. On touch screens, tap the icon.
 - **The "AI agent access (MCP)" card in Settings** has new text: the access choices are now "Read only" or "Read and edit data", and the security warning was updated. The old sentence saying agents cannot delete data was no longer true, so it now explains confirmation and the 30-day trash.
 - **Still not possible through MCP:** changing the subscription or payments, inviting or removing members, changing the recording currency, restoring backups, and uploading receipt attachments. Those sensitive actions are deliberately left to you in the app.
 - **Usage limits are unchanged:** 60 requests per minute per token and 10 active tokens per organization. The savings, bills, debts, health score, and heatmap tools remain Personal plan and above, and the insight comparison and projection remain Family.
