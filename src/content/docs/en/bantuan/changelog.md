@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## November 1, 2026
+
+**Changed**
+- **The Terms of Service and Privacy Policy were updated** (last updated November 1, 2026), in the app and on vaulty.id. Added: the AI agent (MCP) access token data we store, meaning name, prefix, access level, validity, and usage records, with only a hash of the token kept; a note that AI assistants and their providers are third parties you choose and the data they read follows their policies; the user's responsibility for a token as if it were a password; Cloudflare as a traffic layer in front of the service; and a statement that service email is sent from our own mail server, not through a third party provider. The "Local Wallet" mention in the intellectual property clause was also removed because it is a different product.
+
 ## October 31, 2026
 
 **New**
