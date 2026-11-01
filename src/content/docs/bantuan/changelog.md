@@ -7,6 +7,12 @@ sidebar:
 
 ## 1 November 2026
 
+**Baru**
+- **Persetujuan Syarat dan Kebijakan Privasi sekarang dicatat dan bisa dibuktikan.** Setiap kali kamu mendaftar (lewat email atau Google) atau menyetujui ulang, Vaulty menyimpan versi syaratnya, waktunya, dan jalurnya. Pendaftaran juga ditolak oleh server kalau persetujuannya tidak dikirim, bukan hanya oleh kotak centang di formulir.
+- **Layar persetujuan ulang.** Kalau Syarat atau Kebijakan Privasi berubah, kamu diminta membaca dan menyetujui versi terbaru di login berikutnya sebelum melanjutkan memakai aplikasi, dengan pilihan untuk keluar. Akun yang sudah ada akan melihatnya satu kali, karena sebelumnya belum ada catatan persetujuan. Tawaran tur produk menunggu sampai itu selesai.
+- **Konfirmasi usia 18 tahun** sekarang ada di kalimat persetujuan saat daftar, dan keterangan di bawah tombol Google juga menyebutnya.
+- **Catatan sebelum bayar.** Halaman pembayaran menampilkan bahwa pembayaran tidak dikembalikan (kecuali kesalahan sistem yang tidak bisa kami perbaiki) dan langganan tidak diperpanjang otomatis, dengan tautan ke Syarat dan Ketentuan.
+
 **Diubah**
 - **Syarat dan Ketentuan serta Kebijakan Privasi diperbarui** (terakhir diperbarui 1 November 2026), di aplikasi dan di vaulty.id. Yang ditambahkan: data token akses agen AI (MCP) yang kami simpan, yaitu nama, awalan, hak akses, masa berlaku, dan catatan pemakaian, dengan hanya hash token yang tersimpan; penjelasan bahwa asisten AI dan penyedianya adalah pihak ketiga pilihanmu dan data yang mereka baca tunduk pada kebijakan mereka; tanggung jawab pengguna atas token seperti kata sandi; Cloudflare sebagai perantara lalu lintas di depan layanan; dan keterangan bahwa email layanan dikirim dari server email kami sendiri, bukan lewat penyedia pihak ketiga. Sebutan "Local Wallet" di pasal kekayaan intelektual juga dihapus karena itu produk yang berbeda.
 

@@ -7,6 +7,12 @@ sidebar:
 
 ## November 1, 2026
 
+**New**
+- **Agreement to the Terms and Privacy Policy is now recorded and provable.** Whenever you sign up (by email or Google) or agree again, Vaulty stores the terms version, the time, and the route. Registration is also rejected by the server if the agreement is not sent, not only by the checkbox in the form.
+- **A re-acceptance screen.** When the Terms or Privacy Policy change, you are asked to read and agree to the latest version at your next sign-in before you continue using the app, with the option to sign out. Existing accounts will see it once, because no agreement was recorded before. The product tour offer waits until it is done.
+- **An age confirmation (18+)** is now part of the agreement sentence when signing up, and the note under the Google button mentions it too.
+- **A note before paying.** The payment page states that payments are not refunded (except for a system fault we cannot fix) and that the subscription does not renew automatically, with a link to the Terms of Service.
+
 **Changed**
 - **The Terms of Service and Privacy Policy were updated** (last updated November 1, 2026), in the app and on vaulty.id. Added: the AI agent (MCP) access token data we store, meaning name, prefix, access level, validity, and usage records, with only a hash of the token kept; a note that AI assistants and their providers are third parties you choose and the data they read follows their policies; the user's responsibility for a token as if it were a password; Cloudflare as a traffic layer in front of the service; and a statement that service email is sent from our own mail server, not through a third party provider. The "Local Wallet" mention in the intellectual property clause was also removed because it is a different product.
 
