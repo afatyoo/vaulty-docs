@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## 3 November 2026
+
+**Diubah**
+- **Form daftar tunggu di vaulty.id lebih transparan.** Di bawah form sekarang ada keterangan bahwa emailmu hanya dipakai untuk mengabari saat pendaftaran dibuka, dengan tautan ke Kebijakan Privasi. Kebijakan Privasi kini menyebut data daftar tunggu (alamat email dan bahasa, disimpan sampai kamu meminta penghapusan) serta tujuannya. Email konfirmasi daftar tunggu juga menyebut cara dihapus dari daftar, yaitu menulis ke halo@vaulty.id. Tanggal pembaruan terakhir Kebijakan Privasi menjadi 3 November 2026.
+
 ## 1 November 2026
 
 **Baru**

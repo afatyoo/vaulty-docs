@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## November 3, 2026
+
+**Changed**
+- **The waitlist form on vaulty.id is more transparent.** Below the form there is now a note that your email is only used to tell you when sign up opens, with a link to the Privacy Policy. The Privacy Policy now lists waitlist data (email address and language, kept until you ask for deletion) and its purposes. The waitlist confirmation email also says how to be removed from the list, by writing to halo@vaulty.id. The Privacy Policy's last updated date is now November 3, 2026.
+
 ## November 1, 2026
 
 **New**
