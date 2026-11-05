@@ -9,6 +9,7 @@ sidebar:
 
 **New**
 - **Launch promo: 1 month free for the waitlist.** Emails that joined the Vaulty waitlist by November 14, 2026, 11:59 PM WIB (UTC+7) get a 30 day trial (instead of 14) on Personal or Family. To claim it, sign up with the same email and pick the plan by November 21, 2026, 11:59 PM WIB. Free plan users with a waitlist email who start a trial before that deadline also get 30 days. The waitlist form on vaulty.id and its confirmation email now explain the promo.
+- **First payment discount for the waitlist.** After the free month, the same waitlist emails get 50% off their first monthly payment, or 15% off their first yearly payment, if they pay by December 31, 2026, 11:59 PM WIB (UTC+7). The discount applies before tax and only once per organization. The checkout page, receipt email, and invoice PDF show the discount line.
 
 **Security**
 - **nginx update on the server.** Our hosting provider announced five new nginx vulnerabilities. The nginx running Vaulty's app has been updated to a version that includes the fixes (1.30.6), and the host's nginx was already on the patched version. The app was unreachable for about 2 seconds during the update, and no data was touched.
