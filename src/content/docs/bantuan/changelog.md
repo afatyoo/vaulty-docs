@@ -7,6 +7,9 @@ sidebar:
 
 ## 5 November 2026
 
+**Baru**
+- **Promo peluncuran: 1 bulan gratis untuk daftar tunggu.** Email yang masuk daftar tunggu Vaulty sampai 14 November 2026 pukul 23.59 WIB mendapat trial 30 hari (bukan 14 hari) di paket Personal atau Family. Caranya daftar akun dengan email yang sama dan pilih paketnya paling lambat 21 November 2026 pukul 23.59 WIB. Pengguna paket Gratis dengan email daftar tunggu yang memulai trial sebelum batas itu juga mendapat 30 hari. Form daftar tunggu di vaulty.id dan email konfirmasinya sekarang menjelaskan promo ini.
+
 **Keamanan**
 - **Pembaruan nginx di server.** Pengumuman penyedia server menyebut lima celah keamanan baru di nginx. Nginx di server Vaulty sudah kami perbarui ke versi yang memuat perbaikannya (1.30.6), dan yang di host sudah berada di versi yang dipatch. Aplikasi hanya terputus sekitar 2 detik saat pembaruan, dan data tidak tersentuh.
 - **Login lebih tahan terhadap penebakan.** Waktu respons login kini sama, baik username-nya terdaftar maupun tidak, sehingga orang luar tidak bisa menebak akun yang ada. Login juga punya batas percobaan per akun (30 kali per 15 menit) yang berlaku walau percobaan datang dari banyak alamat IP.
