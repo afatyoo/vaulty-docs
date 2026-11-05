@@ -5,6 +5,12 @@ sidebar:
   order: 4
 ---
 
+## November 5, 2026
+
+**Security**
+- **nginx update on the server.** Our hosting provider announced five new nginx vulnerabilities. The nginx running Vaulty's app has been updated to a version that includes the fixes (1.30.6), and the host's nginx was already on the patched version. The app was unreachable for about 2 seconds during the update, and no data was touched.
+- **Login is harder to probe.** Login response time is now the same whether or not the username exists, so outsiders cannot guess which accounts exist. Login also has a per-account attempt limit (30 per 15 minutes) that applies even when the attempts come from many IP addresses.
+
 ## November 3, 2026
 
 **Changed**

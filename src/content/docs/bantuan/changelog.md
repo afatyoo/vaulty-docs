@@ -5,6 +5,12 @@ sidebar:
   order: 4
 ---
 
+## 5 November 2026
+
+**Keamanan**
+- **Pembaruan nginx di server.** Pengumuman penyedia server menyebut lima celah keamanan baru di nginx. Nginx di server Vaulty sudah kami perbarui ke versi yang memuat perbaikannya (1.30.6), dan yang di host sudah berada di versi yang dipatch. Aplikasi hanya terputus sekitar 2 detik saat pembaruan, dan data tidak tersentuh.
+- **Login lebih tahan terhadap penebakan.** Waktu respons login kini sama, baik username-nya terdaftar maupun tidak, sehingga orang luar tidak bisa menebak akun yang ada. Login juga punya batas percobaan per akun (30 kali per 15 menit) yang berlaku walau percobaan datang dari banyak alamat IP.
+
 ## 3 November 2026
 
 **Diubah**
