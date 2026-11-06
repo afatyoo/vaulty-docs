@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## 6 November 2026
+
+**Baru**
+- **Tombol berhenti menerima email di email daftar tunggu.** Setiap email konfirmasi daftar tunggu kini memuat tautan "Berhenti menerima email ini", dan Gmail serta Yahoo menampilkan tombol berhenti berlangganan bawaannya di atas email. Tautannya membuka halaman konfirmasi, lalu satu klik menghapus emailmu dari daftar tunggu tanpa perlu login. Email lama yang sudah terkirim sebelum ini tidak memuat tautan itu, jadi untuk mereka tetap tulis ke halo@vaulty.id. Kebijakan Privasi diperbarui untuk menyebut cara ini (6 November 2026).
+
 ## 5 November 2026
 
 **Baru**

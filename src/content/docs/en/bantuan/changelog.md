@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## November 6, 2026
+
+**New**
+- **Unsubscribe link in waitlist emails.** Every waitlist confirmation email now includes a "Stop receiving these emails" link, and Gmail and Yahoo show their built-in unsubscribe button above the email. The link opens a confirmation page, and one click removes your email from the waitlist with no login. Emails sent before this do not include the link, so for those, write to halo@vaulty.id. The Privacy Policy was updated to mention this (November 6, 2026).
+
 ## November 5, 2026
 
 **New**
