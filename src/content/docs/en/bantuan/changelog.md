@@ -9,6 +9,9 @@ sidebar:
 
 **Fixed**
 - **Fallback when the payment form does not show.** If the embedded Midtrans payment form fails to load in the browser (for example because of a blocking extension), the checkout page now shows an "Open payment page" button that goes to the Midtrans payment page, and a small link with the same action is always shown below the form. Before, the page only said the order could not be opened.
+- **Unpaid orders no longer hang around.** An order abandoned before choosing a payment method is now marked expired once its payment page lifetime (24 hours) has passed, instead of staying "Awaiting payment" forever with a dead payment link. A payment that still comes in afterwards is still applied.
+- **"Check status" now tells you something.** If no payment has come in yet, the checkout page says so instead of doing nothing.
+- **Midtrans "failure" transactions are now recorded as failed**, following the Midtrans integration guide. Before, that status was ignored.
 
 ## November 6, 2026
 

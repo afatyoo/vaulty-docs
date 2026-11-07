@@ -9,6 +9,9 @@ sidebar:
 
 **Diperbaiki**
 - **Cadangan kalau form pembayaran tidak tampil.** Kalau form pembayaran Midtrans yang tertanam di halaman bayar gagal dimuat di browser (misalnya karena ekstensi pemblokir), halaman sekarang menampilkan tombol "Buka halaman pembayaran" ke halaman bayar Midtrans, dan tautan kecil dengan fungsi yang sama selalu ada di bawah form. Sebelumnya halaman hanya menampilkan pesan bahwa pesanan tidak bisa dibuka.
+- **Pesanan yang tidak pernah dibayar tidak lagi menggantung.** Pesanan yang ditinggalkan sebelum memilih metode bayar kini otomatis ditandai kedaluwarsa setelah masa berlaku halaman pembayarannya (24 jam) lewat, bukan tetap "Menunggu pembayaran" selamanya dengan tautan bayar yang sudah mati. Pembayaran yang tetap masuk sesudahnya tetap diterapkan.
+- **Tombol "Cek status" sekarang memberi kabar.** Kalau belum ada pembayaran yang masuk, halaman bayar menampilkan pesan itu, bukan diam saja.
+- **Status transaksi "failure" dari Midtrans kini dicatat sebagai gagal**, sesuai panduan integrasi Midtrans. Sebelumnya status itu diabaikan.
 
 ## 6 November 2026
 
