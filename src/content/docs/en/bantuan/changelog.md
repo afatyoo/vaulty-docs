@@ -5,6 +5,11 @@ sidebar:
   order: 4
 ---
 
+## November 7, 2026
+
+**Fixed**
+- **Fallback when the payment form does not show.** If the embedded Midtrans payment form fails to load in the browser (for example because of a blocking extension), the checkout page now shows an "Open payment page" button that goes to the Midtrans payment page, and a small link with the same action is always shown below the form. Before, the page only said the order could not be opened.
+
 ## November 6, 2026
 
 **New**
