@@ -12,6 +12,7 @@ sidebar:
 - **Unpaid orders no longer hang around.** An order abandoned before choosing a payment method is now marked expired once its payment page lifetime (24 hours) has passed, instead of staying "Awaiting payment" forever with a dead payment link. A payment that still comes in afterwards is still applied.
 - **"Check status" now tells you something.** If no payment has come in yet, the checkout page says so instead of doing nothing.
 - **Midtrans "failure" transactions are now recorded as failed**, following the Midtrans integration guide. Before, that status was ignored.
+- **Pay-by time in payment history.** Orders still "Awaiting payment" now show their deadline and the time left, for example "Pay by Nov 8, 08:29 PM · 23h 10m left", based on the payment page lifetime (24 hours from when the order was created).
 
 ## November 6, 2026
 

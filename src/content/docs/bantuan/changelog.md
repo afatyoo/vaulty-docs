@@ -12,6 +12,7 @@ sidebar:
 - **Pesanan yang tidak pernah dibayar tidak lagi menggantung.** Pesanan yang ditinggalkan sebelum memilih metode bayar kini otomatis ditandai kedaluwarsa setelah masa berlaku halaman pembayarannya (24 jam) lewat, bukan tetap "Menunggu pembayaran" selamanya dengan tautan bayar yang sudah mati. Pembayaran yang tetap masuk sesudahnya tetap diterapkan.
 - **Tombol "Cek status" sekarang memberi kabar.** Kalau belum ada pembayaran yang masuk, halaman bayar menampilkan pesan itu, bukan diam saja.
 - **Status transaksi "failure" dari Midtrans kini dicatat sebagai gagal**, sesuai panduan integrasi Midtrans. Sebelumnya status itu diabaikan.
+- **Batas waktu bayar di riwayat pembayaran.** Pesanan yang masih "Menunggu pembayaran" kini menampilkan batas waktunya dan sisa waktu, misalnya "Bayar sebelum 8 Nov 20.29 · sisa 23 jam 10 menit", sesuai masa berlaku halaman pembayaran (24 jam sejak pesanan dibuat).
 
 ## 6 November 2026
 
