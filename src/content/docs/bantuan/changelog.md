@@ -8,6 +8,7 @@ sidebar:
 ## 7 November 2026
 
 **Diperbaiki**
+- **Pembayaran yang sudah lunas di Midtrans kini selalu mengaktifkan paket.** Sebelumnya, kalau tanda tangan notifikasi dari Midtrans tidak cocok dengan kunci yang terpasang, pembayaran yang sudah lunas tetap tercatat "Menunggu pembayaran" dan tombol "Cek status" tidak mengubah apa pun. Sekarang server menanyakan status pesanan langsung ke Midtrans dan memakai jawabannya.
 - **Cadangan kalau form pembayaran tidak tampil.** Kalau form pembayaran Midtrans yang tertanam di halaman bayar gagal dimuat di browser (misalnya karena ekstensi pemblokir), halaman sekarang menampilkan tombol "Buka halaman pembayaran" ke halaman bayar Midtrans, dan tautan kecil dengan fungsi yang sama selalu ada di bawah form. Sebelumnya halaman hanya menampilkan pesan bahwa pesanan tidak bisa dibuka.
 - **Pesanan yang tidak pernah dibayar tidak lagi menggantung.** Pesanan yang ditinggalkan sebelum memilih metode bayar kini otomatis ditandai kedaluwarsa setelah masa berlaku halaman pembayarannya (24 jam) lewat, bukan tetap "Menunggu pembayaran" selamanya dengan tautan bayar yang sudah mati. Pembayaran yang tetap masuk sesudahnya tetap diterapkan.
 - **Tombol "Cek status" sekarang memberi kabar.** Kalau belum ada pembayaran yang masuk, halaman bayar menampilkan pesan itu, bukan diam saja.
