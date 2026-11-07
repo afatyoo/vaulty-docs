@@ -7,6 +7,9 @@ sidebar:
 
 ## November 7, 2026
 
+**Changed**
+- **Terms of Service: payments from outside Indonesia.** Section 4 now says that payments from outside Indonesia are not supported yet and are still being prepared. If you are outside Indonesia and want to subscribe, write to halo@vaulty.id to confirm first. The last updated date is now November 7, 2026.
+
 **Fixed**
 - **Payments completed in Midtrans now always activate the plan.** Before, if the signature on a Midtrans notification did not match the key in use, a paid order stayed "Awaiting payment" and "Check status" changed nothing. Now the server asks Midtrans for the order status directly and uses that answer.
 - **Fallback when the payment form does not show.** If the embedded Midtrans payment form fails to load in the browser (for example because of a blocking extension), the checkout page now shows an "Open payment page" button that goes to the Midtrans payment page, and a small link with the same action is always shown below the form. Before, the page only said the order could not be opened.

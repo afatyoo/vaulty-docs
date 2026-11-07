@@ -7,6 +7,9 @@ sidebar:
 
 ## 7 November 2026
 
+**Diubah**
+- **Syarat dan Ketentuan: pembayaran dari luar Indonesia.** Pasal 4 kini menyebut bahwa pembayaran dari luar Indonesia belum didukung dan masih disiapkan. Kalau kamu berada di luar Indonesia dan ingin berlangganan, tulis ke halo@vaulty.id untuk konfirmasi lebih dulu. Tanggal pembaruan terakhir menjadi 7 November 2026.
+
 **Diperbaiki**
 - **Pembayaran yang sudah lunas di Midtrans kini selalu mengaktifkan paket.** Sebelumnya, kalau tanda tangan notifikasi dari Midtrans tidak cocok dengan kunci yang terpasang, pembayaran yang sudah lunas tetap tercatat "Menunggu pembayaran" dan tombol "Cek status" tidak mengubah apa pun. Sekarang server menanyakan status pesanan langsung ke Midtrans dan memakai jawabannya.
 - **Cadangan kalau form pembayaran tidak tampil.** Kalau form pembayaran Midtrans yang tertanam di halaman bayar gagal dimuat di browser (misalnya karena ekstensi pemblokir), halaman sekarang menampilkan tombol "Buka halaman pembayaran" ke halaman bayar Midtrans, dan tautan kecil dengan fungsi yang sama selalu ada di bawah form. Sebelumnya halaman hanya menampilkan pesan bahwa pesanan tidak bisa dibuka.
