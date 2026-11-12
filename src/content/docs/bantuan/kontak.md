@@ -13,4 +13,4 @@ Supaya cepat dibantu, sertakan:
 - nomor invoice atau nomor pesanan (untuk urusan pembayaran),
 - penjelasan singkat dan, kalau ada, tangkapan layar.
 
-Pembayaran dari **luar Indonesia**, permintaan **refund**, dan kebutuhan lain di luar panduan ini juga lewat email yang sama.
+Kendala **pembayaran kartu**, permintaan **refund**, dan kebutuhan lain di luar panduan ini juga lewat email yang sama.

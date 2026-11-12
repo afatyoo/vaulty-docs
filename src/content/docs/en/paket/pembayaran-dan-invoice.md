@@ -35,7 +35,16 @@ A Vaulty invoice is **proof of payment for the subscription**, not a tax invoice
 
 ## Payments from outside Indonesia
 
-For now payments only work through methods available in Indonesia (including QRIS). Fees differ by country. If you are outside Indonesia, **email us** and we will help.
+Prices follow the **billing country** in the **Billing details** card on the Subscription page. If you have not set it, the country is guessed from your location.
+
+| Plan | Indonesia | Other countries |
+|---|---|---|
+| Personal | Rp25,000/month, Rp250,000/year | $3/month, $30/year |
+| Family | Rp65,000/month, Rp650,000/year | $7/month, $70/year |
+
+USD prices are paid in **rupiah** at that day's exchange rate, rounded up to the nearest Rp1,000. The rate and amount are locked to the order, so the charge does not change while the order waits for payment. The rate used is shown on the payment page and on the invoice.
+
+Pay with a **Visa or Mastercard credit or debit card**, including cards issued outside Indonesia. Your card issuer may add a currency conversion fee. If your card is declined, **email us** and we will help.
 
 ## Refunds
 

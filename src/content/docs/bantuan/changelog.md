@@ -5,6 +5,15 @@ sidebar:
   order: 4
 ---
 
+## 12 November 2026
+
+**Baru**
+- **Harga internasional.** Pelanggan di luar Indonesia kini melihat harga dalam USD: Personal $3 per bulan ($30 per tahun), Family $7 per bulan ($70 per tahun). Pembayarannya tetap dalam rupiah dengan kurs harian yang dikunci saat pesanan dibuat. Pilih negara penagihan di kartu Data penagihan pada halaman Langganan.
+- **Bayar dengan kartu kredit dan debit.** Langganan bisa dibayar dengan kartu Visa dan Mastercard, termasuk kartu dari luar Indonesia.
+
+**Diubah**
+- **Syarat dan Ketentuan pasal 4** kini mengatur harga per negara penagihan dan pembayaran kartu. Karena aturannya berubah, kamu akan diminta menyetujui versi baru saat masuk berikutnya. Tanggal pembaruan terakhir menjadi 12 November 2026.
+
 ## 7 November 2026
 
 **Diubah**

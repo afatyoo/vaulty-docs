@@ -5,6 +5,15 @@ sidebar:
   order: 4
 ---
 
+## November 12, 2026
+
+**New**
+- **International pricing.** Customers outside Indonesia now see prices in USD: Personal $3 per month ($30 per year), Family $7 per month ($70 per year). Payment is still in rupiah at a daily exchange rate locked when the order is created. Set your billing country in the Billing details card on the Subscription page.
+- **Pay by credit or debit card.** Subscriptions can be paid with Visa and Mastercard cards, including cards issued outside Indonesia.
+
+**Changed**
+- **Terms of Service section 4** now covers pricing by billing country and card payments. Because the rules changed, you will be asked to accept the new version the next time you sign in. The last updated date is now November 12, 2026.
+
 ## November 7, 2026
 
 **Changed**

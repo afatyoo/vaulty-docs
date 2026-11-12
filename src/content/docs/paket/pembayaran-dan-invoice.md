@@ -35,7 +35,16 @@ Invoice Vaulty adalah **bukti pembayaran langganan**, bukan faktur pajak.
 
 ## Pembayaran dari luar Indonesia
 
-Saat ini pembayaran hanya bisa lewat metode yang tersedia di Indonesia (termasuk QRIS). Biaya tiap negara berbeda. Kalau kamu berada di luar Indonesia, **hubungi kami lewat email** dan kami bantu.
+Harga mengikuti **negara penagihan** di kartu **Data penagihan** pada halaman Langganan. Kalau belum diisi, negara ditebak dari lokasimu.
+
+| Paket | Indonesia | Negara lain |
+|---|---|---|
+| Personal | Rp25.000/bulan, Rp250.000/tahun | $3/bulan, $30/tahun |
+| Family | Rp65.000/bulan, Rp650.000/tahun | $7/bulan, $70/tahun |
+
+Harga USD dibayar dalam **rupiah** dengan kurs hari itu, dibulatkan ke atas ke Rp1.000. Kurs dan nominalnya dikunci di pesanan, jadi tagihan tidak berubah selama pesanan menunggu dibayar. Kurs yang dipakai tampil di halaman pembayaran dan di invoice.
+
+Bayar dengan **kartu kredit atau debit Visa dan Mastercard**, termasuk kartu dari luar Indonesia. Bank penerbit kartumu bisa mengenakan biaya konversi mata uang. Kalau kartumu ditolak, **hubungi kami lewat email** dan kami bantu.
 
 ## Refund
 

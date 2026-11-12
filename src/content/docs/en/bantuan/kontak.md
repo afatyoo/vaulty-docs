@@ -13,4 +13,4 @@ To get help faster, include:
 - the invoice or order number (for payment matters),
 - a short description and, if you have one, a screenshot.
 
-Payments from **outside Indonesia**, **refund** requests, and anything else outside these guides also go to the same email.
+**Card payment** problems, **refund** requests, and anything else outside these guides also go to the same email.
