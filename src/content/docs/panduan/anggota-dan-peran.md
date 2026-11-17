@@ -31,3 +31,11 @@ Orang itu menerima email berisi tautan yang **berlaku 7 hari dan hanya bisa dipa
 Di tabel **Anggota Organisasi**, ubah peran lewat kotak pilihan, atau klik **Hapus** untuk mengeluarkan anggota. **Jadikan Pemilik** memindahkan kepemilikan organisasi ke anggota tersebut.
 
 Anggota yang dikeluarkan langsung kehilangan akses, termasuk token agen AI yang dia buat.
+
+## Kode undangan dan undang banyak orang (Family)
+
+Di halaman **Anggota** kamu bisa mengundang sampai **20 email sekaligus**. Atau klik **Buat kode** untuk membuat **kode undangan**: pilih peran, berapa kali boleh dipakai (1 sampai 20), dan masa berlakunya (1 sampai 30 hari). Maksimal 10 kode aktif, dan setiap kode bisa dicabut kapan saja. Orang yang menerima kode memasukkannya di halaman Anggota. Percobaan memasukkan kode dibatasi 10 kali per 15 menit.
+
+## Berbagi per rekening dan anggaran (Family)
+
+Pemilik dan admin bisa membatasi sebuah rekening atau anggaran hanya untuk anggota tertentu, lewat tombol berbagi di kartunya. Anggota yang tidak dipilih tidak melihat rekening itu, saldonya, transfernya, transaksinya, dan juga tidak melihatnya di prakiraan, deteksi transaksi ganda, ekspor backup, dan agen AI. Pemilik dan admin selalu melihat semuanya.

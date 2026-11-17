@@ -66,3 +66,21 @@ Below the score are **Recommendations** pointing to what to improve first.
 Hover the **exclamation icon** on the status badge (on a phone, tap it). A comment-style bubble appears with what that status means and up to three things to do, taken from your weakest indicators. For example saving up to about 20% of income, cutting spending in categories over budget, setting a budget per category, or recording transactions more regularly.
 
 An AI agent connected through MCP can also read this score with the `get_financial_health` tool, using the same formula.
+
+## Insights for you (Personal and above)
+
+Besides the Insights page, Vaulty checks your own data and tells you what deserves attention. The **Insights for you** card on the Dashboard shows up to 3, and new insights also arrive as notifications. Click **X** to dismiss one; it does not come back that month. **Check again** recalculates right now, and Vaulty also checks every 6 hours.
+
+What it checks:
+
+- A budget is already at 80% or more before the 20th.
+- Account balances minus unpaid bills until month end go negative.
+- A category's spending jumps far above its 3 month average.
+- A subscription goes up in price, or has no payment for 2 months.
+- Last month's savings rate dropped by more than 10 points.
+- Net worth passes a new milestone (Rp10 million, 25 million, 50 million, 100 million, and so on).
+- A credit card statement is almost due, or 80% or more of the limit is used.
+
+The Dashboard also has an **End of month forecast**: your balance now, plus regular income still to arrive, minus unpaid bills and the estimated daily spending until month end.
+
+Members whose accounts are partly restricted do not see insights that add up all accounts.

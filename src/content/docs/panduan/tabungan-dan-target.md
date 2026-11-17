@@ -36,3 +36,13 @@ Uang yang kamu tarik dari tabungan atau investasi masuk ke saldo dompet, tetapi 
 ![Formulir Tambah Target](../../../assets/screens/id/targets-form.webp)
 
 Tiap target menampilkan progres, **Waktu Tersisa**, dan **Perlu/Bulan**: berapa yang harus ditabung tiap bulan agar sampai tepat waktu. Bagian **Insight** di atas memberi tahu target yang hampir tercapai.
+
+## Sisihkan rutin ke target (Personal ke atas)
+
+Di kartu target, **Sisihkan rutin** mengatur jumlah tetap yang disisihkan tiap bulan pada tanggal tertentu, atau tiap kali gaji masuk. Pada hari itu Vaulty mengingatkanmu, lalu kamu klik **Sudah disisihkan** dan sebuah transfer ke rekening target tercatat. Mode **otomatis** hanya untuk yang memakai autodebet, karena Vaulty mencatat uang dan tidak memindahkannya.
+
+## Target bersama (Family)
+
+Hubungkan target ke sebuah rekening, lalu anggota keluarga bisa membuat **janji setoran**: berapa dan paling lambat kapan. Janji **ditepati** kalau anggota itu mencatat transfer ke rekening target antara 31 hari sebelum sampai 7 hari sesudah jatuh tempo, dengan selisih jumlah paling besar 1%. Lewat 7 hari tanpa transfer, janji ditandai **lewat waktu**. Panel target menampilkan progres tiap anggota.
+
+Uang yang **keluar** dari rekening target (transfer keluar atau pengeluaran) masuk ke daftar yang perlu dijelaskan. Anggota menjawab untuk apa: keperluan target, dipinjam dan akan dikembalikan, atau lainnya dengan catatan. Rekening yang dipakai harian (tunai, e-wallet, atau banyak pengeluaran) diberi peringatan, karena tabungan bersama sebaiknya di rekening khusus.

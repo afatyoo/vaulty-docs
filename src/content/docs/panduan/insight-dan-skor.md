@@ -66,3 +66,21 @@ Di bawah skor ada **Rekomendasi** yang menunjukkan hal paling berpengaruh untuk 
 Arahkan kursor ke **ikon tanda seru** di badge status (di HP, ketuk ikonnya). Muncul balon komentar berisi arti status itu dan sampai tiga langkah yang perlu dilakukan, diambil dari indikator yang paling lemah. Misalnya menabung sampai sekitar 20% dari pemasukan, mengurangi pengeluaran di kategori yang melebihi anggaran, membuat anggaran per kategori, atau mencatat transaksi lebih rutin.
 
 Agen AI yang tersambung lewat MCP juga bisa membaca skor ini dengan alat `get_financial_health`, dengan rumus yang sama.
+
+## Insight untuk kamu (Personal ke atas)
+
+Selain halaman Insight, Vaulty memeriksa datamu sendiri dan memberi tahu hal yang perlu diperhatikan. Kartu **Insight untuk kamu** di Dashboard menampilkan paling banyak 3, dan insight baru juga masuk ke notifikasi. Klik **X** untuk mengabaikan satu insight; insight itu tidak muncul lagi bulan itu. **Periksa ulang** menghitung ulang sekarang, dan Vaulty juga memeriksa tiap 6 jam.
+
+Yang diperiksa:
+
+- Anggaran sudah 80% atau lebih padahal belum tanggal 20.
+- Saldo rekening dikurangi tagihan belum lunas sampai akhir bulan menjadi minus.
+- Pengeluaran sebuah kategori melonjak jauh di atas rata-rata 3 bulan terakhir.
+- Langganan naik harga, atau tidak ada pembayaran selama 2 bulan.
+- Rasio tabungan bulan lalu turun lebih dari 10 poin.
+- Kekayaan bersih melewati angka baru (Rp10 juta, 25 juta, 50 juta, 100 juta, dan seterusnya).
+- Tagihan kartu kredit hampir jatuh tempo, atau limit terpakai 80% ke atas.
+
+Di Dashboard ada juga **Prakiraan saldo akhir bulan**: saldo sekarang, ditambah pemasukan rutin yang belum masuk, dikurangi tagihan belum lunas dan perkiraan belanja harian sampai akhir bulan.
+
+Anggota yang sebagian rekeningnya dibatasi tidak melihat insight yang menjumlahkan semua rekening.

@@ -24,3 +24,7 @@ The report language follows the language you use in the app: Indonesian or Engli
 - Monthly or yearly records.
 - Reviewing together with a partner or family.
 - Material for tax filings or loan applications.
+
+## Most frequent merchants
+
+The report shows a **Most frequent merchants** card. About 70 merchants are recognized from keywords in the transaction name, and each gets a badge with its initials in the brand's color (Vaulty does not download logos from the internet). Transactions **excluded from reports** are not counted.

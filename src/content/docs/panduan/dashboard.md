@@ -11,11 +11,12 @@ Dashboard adalah halaman pertama setelah masuk. Isinya ringkasan keuangan untuk 
 
 ## Yang ada di halaman ini
 
-- **Saldo berjalan:** pemasukan dikurangi pengeluaran pada periode yang dipilih, beserta **Total Pemasukan** dan **Total Pengeluaran**.
+- **Saldo di rekening:** total saldo bank, e-wallet, dan tunai kalau kamu sudah punya rekening (angkanya sama dengan Prakiraan dan Kekayaan bersih). Kalau belum punya rekening, atau saat melihat bulan lalu, isinya pemasukan dikurangi pengeluaran. Ada juga **Total Pemasukan** dan **Total Pengeluaran**.
 - **Arus kas:** batang pemasukan dan pengeluaran per bulan, untuk melihat tren beberapa bulan terakhir.
-- **Total Tabungan:** jumlah semua tabungan dan pertumbuhannya.
-- **Tagihan mendatang:** tagihan rutin yang akan jatuh tempo, urut dari yang terdekat.
-- **Transaksi Terbaru** dan **Pengeluaran per Kategori** di bagian bawah.
+- **Kekayaan bersih** (Personal ke atas): satu angka dengan grafik 30 hari, dan rincian aset (rekening, kripto, aset lain, piutang) dan kewajiban (kartu kredit, utang). Di paket Gratis kartu ini diganti **Total Tabungan**.
+- **Tagihan mendatang:** tagihan rutin yang akan jatuh tempo, urut dari yang terdekat (maksimal 3).
+- **Insight untuk kamu** dan **Prakiraan saldo akhir bulan** (Personal ke atas). Lihat [Insight dan skor](/panduan/insight-dan-skor/).
+- **Transaksi Terbaru**, **Pengeluaran per Kategori**, **Anggaran bulan ini**, dan skor kesehatan di bagian bawah.
 
 ## Yang bisa kamu lakukan
 

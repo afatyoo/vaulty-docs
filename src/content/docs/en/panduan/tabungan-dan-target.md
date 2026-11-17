@@ -36,3 +36,13 @@ Money you withdraw from savings or investments goes into your wallet balance, bu
 ![Add Target form](../../../../assets/screens/en/targets-form.webp)
 
 Each goal shows progress, **Remaining Time**, and **Needed per Month**: how much to save every month to arrive on time. The **Insight** section at the top tells you which goals are nearly done.
+
+## Recurring set-aside for a goal (Personal and above)
+
+On a goal card, **Recurring set-aside** sets a fixed amount to put aside each month on a chosen day, or every time your salary arrives. On that day Vaulty reminds you, then you click **Set aside** and a transfer to the goal's account is recorded. The **automatic** mode is only for people who use auto-debit, because Vaulty records money and does not move it.
+
+## Shared goals (Family)
+
+Link a goal to an account, and family members can make **pledges**: how much and by when. A pledge is **kept** when that member records a transfer to the goal's account between 31 days before and 7 days after the due date, with an amount within 1%. After 7 days without a transfer, the pledge is marked **overdue**. The goal panel shows each member's progress.
+
+Money that **leaves** the goal's account (outgoing transfers or expenses) goes into a list that needs an explanation. Members answer what it was for: the goal, borrowed and to be returned, or something else with a note. Accounts used day to day (cash, e-wallets, or many expenses) get a warning, because shared savings are best kept in a dedicated account.

@@ -11,11 +11,12 @@ The dashboard is the first page after you sign in. It summarizes your finances f
 
 ## What is on this page
 
-- **Running balance:** income minus expenses for the selected period, with **Total Income** and **Total Expenses**.
+- **Balance in your accounts:** the total of your bank, e-wallet, and cash accounts once you have accounts (the same figure as the Forecast and Net worth). Without accounts, or when you look at a past month, it is income minus expenses. **Total Income** and **Total Expenses** sit below it.
 - **Cash flow:** income and expense bars per month, to see the trend over recent months.
-- **Total Savings:** the sum of all your savings and how it is growing.
-- **Upcoming bills:** recurring bills about to fall due, nearest first.
-- **Recent Transactions** and **Expenses by Category** further down.
+- **Net worth** (Personal and above): one figure with a 30 day chart, and a breakdown of assets (accounts, crypto, other assets, receivables) and liabilities (credit cards, debts). On the Free plan this card is replaced by **Total Savings**.
+- **Upcoming bills:** recurring bills about to fall due, nearest first (up to 3).
+- **Insights for you** and **End of month forecast** (Personal and above). See [Insights and scores](/en/panduan/insight-dan-skor/).
+- **Recent Transactions**, **Expenses by Category**, **This month's budget**, and the health score further down.
 
 ## What you can do
 

@@ -31,3 +31,11 @@ The person receives an email with a link that is **valid for 7 days and works on
 In the **Organization Members** table, change a role with the dropdown, or click **Remove** to take someone out. **Make Owner** transfers ownership of the organization to that member.
 
 A removed member loses access right away, including any AI agent tokens they created.
+
+## Invite codes and inviting many people (Family)
+
+On the **Members** page you can invite up to **20 emails at once**. Or click **Create code** to make an **invite code**: pick the role, how many times it can be used (1 to 20), and how long it lasts (1 to 30 days). At most 10 codes can be active, and each can be revoked at any time. The person who receives a code enters it on the Members page. Attempts to enter a code are limited to 10 per 15 minutes.
+
+## Sharing per account and budget (Family)
+
+Owners and admins can limit an account or a budget to selected members, with the share button on its card. Members who are not selected do not see that account, its balance, its transfers, or its transactions, and also do not see it in the forecast, duplicate detection, backup export, or AI agents. Owners and admins always see everything.

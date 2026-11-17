@@ -5,6 +5,42 @@ sidebar:
   order: 4
 ---
 
+## Rilis berikutnya
+
+<!-- GANTI judul ini dengan tanggal rilis (mis. "20 November 2026") saat digabung ke main. -->
+
+**Baru**
+- **Rekening, saldo, dan transfer.** Catat bank, e-wallet, tunai, dan kartu kredit, pindahkan uang antar rekening tanpa mengubah laporan, dan cocokkan saldo dengan aplikasi bank. Tiap rekening punya grafik saldo 30 hari. Paket Gratis boleh punya 2 rekening aktif.
+- **Arsip mutasi bulanan.** Simpan PDF mutasi bank per rekening per bulan (Personal ke atas), dengan penanda bulan yang belum ada.
+- **Tag dan pecahan pengeluaran.** Kelompokkan transaksi lintas kategori dengan tag, dan pecah satu struk jadi beberapa kategori.
+- **Pencarian lanjutan dan filter tersimpan.** Cari menurut teks, jumlah, rekening, kategori, tag, dan tanggal di halaman Pemasukan dan Pengeluaran, lalu simpan filter dengan nama.
+- **Deteksi transaksi ganda** dan sakelar **Kecualikan dari laporan**.
+- **Tagihan yang kami temukan.** Pola pengeluaran rutin ditawarkan sebagai tagihan, lengkap dengan pembaruan saat harganya naik (Personal ke atas).
+- **Kalender tagihan.** Tagihanmu tampil di Google Calendar, Apple Calendar, atau Outlook lewat link rahasia (Personal ke atas).
+- **Kategori otomatis yang belajar** dari kebiasaanmu, dan **aturan lanjutan** dengan beberapa syarat dan aksi: ubah kategori, ganti nama, tag, kecualikan dari laporan, jadikan transfer, dan kirim email.
+- **Insight untuk kamu** dan **Prakiraan saldo akhir bulan** di Dashboard (Personal ke atas).
+- **Kartu kredit dan kekayaan bersih.** Limit, tanggal cetak, dan jatuh tempo kartu, serta kartu **Kekayaan bersih** di Dashboard dengan grafik 30 hari.
+- **Menu Kripto.** Harga 20 koin, grafik garis atau lilin, dan pencatatan aset kripto yang masuk ke kekayaan bersih (Personal ke atas).
+- **Simulasi cicilan.** Jadwal angsuran, bunga efektif atau flat, dan simulasi bayar lebih (Personal ke atas).
+- **Sisihkan rutin ke target** dan **target bersama** dengan janji setoran (Family).
+- **Dokumen keluarga.** Simpan polis, surat kendaraan, dan sertifikat dengan pengingat sebelum habis masa berlakunya (Personal ke atas).
+- **Berbagi per rekening dan anggaran**, **kode undangan**, dan undang sampai 20 email sekaligus (Family).
+- **Passkey.** Masuk dengan sidik jari, Face ID, atau PIN perangkat.
+- **Riwayat login 90 hari** dan email peringatan saat ada masuk dari perangkat baru.
+- **Ringkasan email** mingguan atau bulanan (Personal ke atas) dan **notifikasi push** di perangkat.
+- **Lencana merchant** dan kartu **Merchant paling sering** di Laporan.
+- **Popup "Apa yang baru"** setelah pembaruan.
+- **Unduh semua berkas (ZIP)** untuk dokumen, arsip mutasi, dan struk (pemilik dan admin).
+- **Alat MCP bertambah** dari 46 menjadi 63, termasuk rekening, transfer, tag, insight, tagihan yang ditemukan, target bersama, prakiraan, dan transaksi ganda.
+
+**Diubah**
+- **Dashboard ditata ulang.** Kartu hijau kini menampilkan saldo rekening dan angkanya sama dengan Prakiraan dan Kekayaan bersih. Insight, prakiraan, dan tagihan pindah ke baris kedua.
+- **Tanggal mengikuti waktu Indonesia (WIB)** di seluruh aplikasi. Sebelumnya, antara pukul 00.00 dan 07.00 WIB, beberapa form masih terisi tanggal kemarin.
+- **Backup** kini memuat rekening, transfer, tag, target bersama, aturan, dan data baru lainnya (format versi 5). Backup lama tetap bisa dipulihkan.
+
+**Diperbaiki**
+- **Anggota dengan rekening terbatas** tidak lagi melihat insight yang menjumlahkan semua rekening, dan total per tag tidak menghitung rekening yang dibatasi.
+
 ## 12 November 2026
 
 **Baru**

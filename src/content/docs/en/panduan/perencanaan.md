@@ -35,3 +35,22 @@ Rules fill in the category automatically from keywords in the description. For e
 ## Activity History
 
 A record of every change in the organization: who added, changed, or deleted what, and when. Useful for families sharing data.
+
+## Net worth breakdown
+
+Net worth is worked out from your account balances, the assets you record, **crypto**, and receivables, minus credit card balances, liabilities, and remaining debt. A credit card in the negative counts as a liability. This tab also lists your credit cards (used, remaining limit, statement and due dates) and a chart of your asset values over time. Crypto values are tracked in the [Crypto](/en/panduan/kripto/) menu.
+
+## Loan simulator
+
+On the **Debts & Receivables** tab, the **Loan simulator** button opens a calculator, and the **Simulate** button on each debt opens it with the remaining principal and rate already filled in.
+
+1. Enter the **remaining principal**, **yearly interest**, and the **term** in months.
+2. Pick the interest method: **effective or annuity** (mortgages and most banks) or **flat** (vehicles, personal loans, installments).
+3. See the **monthly payment**, total interest, total paid, and a **payment schedule** that splits principal and interest each month.
+4. Enter **extra payment per month** to see how many months sooner it is paid off and how much interest you save.
+
+The figures are estimates, and real results can differ depending on the lender's rules. The simulator does not save or change your debt records.
+
+## Advanced rules
+
+Rules that can change the category, name, or tags, exclude a transaction from reports, record it as a transfer, or send an email are in [Automatic rules](/en/panduan/aturan-otomatis/).

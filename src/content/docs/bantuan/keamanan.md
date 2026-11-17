@@ -31,3 +31,7 @@ sidebar:
 ## Melaporkan masalah keamanan
 
 Kalau kamu menemukan celah atau merasa akunmu disalahgunakan, segera hubungi kami lewat email di halaman [Hubungi kami](/bantuan/kontak/) dan ganti password. Sertakan penjelasan singkat, tanpa mengirim password.
+
+## Masuk dengan passkey dan riwayat login
+
+Kamu bisa masuk dengan **passkey** (sidik jari, Face ID, atau PIN perangkat), dan setiap akun punya **riwayat login** 90 hari. Kalau ada masuk dari perangkat baru, Vaulty mengirim email peringatan. Caranya ada di [Pengaturan akun](/panduan/pengaturan/).

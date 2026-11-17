@@ -24,3 +24,7 @@ Bahasa laporan mengikuti bahasa yang sedang kamu pakai di aplikasi: Indonesia at
 - Arsip bulanan atau tahunan.
 - Dibahas bersama pasangan atau keluarga.
 - Bahan untuk mengisi laporan pajak atau pengajuan pinjaman.
+
+## Merchant paling sering
+
+Laporan menampilkan kartu **Merchant paling sering**. Sekitar 70 merchant dikenali dari kata kunci pada nama transaksi, dan masing-masing diberi lencana berisi inisial dalam warna mereknya (Vaulty tidak mengunduh logo dari internet). Transaksi yang **dikecualikan dari laporan** tidak ikut dihitung.

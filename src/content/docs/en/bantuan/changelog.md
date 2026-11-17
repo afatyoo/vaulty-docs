@@ -5,6 +5,42 @@ sidebar:
   order: 4
 ---
 
+## Next release
+
+<!-- REPLACE this heading with the release date (e.g. "20 November 2026") when merging to main. -->
+
+**New**
+- **Accounts, balances, and transfers.** Track bank, e-wallet, cash, and credit card accounts, move money between them without changing your reports, and match balances with your bank app. Each account has a 30 day balance chart. The Free plan allows 2 active accounts.
+- **Monthly statement archive.** Keep your bank's PDF statement per account per month (Personal and above), with a marker for months that are missing.
+- **Tags and split expenses.** Group transactions across categories with tags, and split one receipt into several categories.
+- **Advanced search and saved filters.** Search by text, amount, account, category, tag, and date on the Income and Expenses pages, then save filters with a name.
+- **Duplicate detection** and an **Exclude from reports** switch.
+- **Bills we found.** Recurring spending patterns are offered as bills, with an update when the price goes up (Personal and above).
+- **Bill calendar.** Your bills show up in Google Calendar, Apple Calendar, or Outlook through a secret link (Personal and above).
+- **Categories that learn** from your habits, and **advanced rules** with several conditions and actions: set category, rename, tags, exclude from reports, record as transfer, and send email.
+- **Insights for you** and an **End of month forecast** on the Dashboard (Personal and above).
+- **Credit cards and net worth.** Card limit, statement day, and due day, plus a **Net worth** card on the Dashboard with a 30 day chart.
+- **Crypto menu.** Prices of 20 coins, line or candle charts, and a record of the crypto you hold that counts toward net worth (Personal and above).
+- **Loan simulator.** Payment schedule, effective or flat interest, and extra payment simulation (Personal and above).
+- **Recurring set-aside for goals** and **shared goals** with pledges (Family).
+- **Family documents.** Keep policies, vehicle papers, and certificates with a reminder before they expire (Personal and above).
+- **Sharing per account and budget**, **invite codes**, and inviting up to 20 emails at once (Family).
+- **Passkeys.** Sign in with your fingerprint, Face ID, or device PIN.
+- **90 day login history** and a warning email when someone signs in from a new device.
+- **Summary email** weekly or monthly (Personal and above) and **push notifications** on your device.
+- **Merchant badges** and a **Most frequent merchants** card in Reports.
+- **"What's new" popup** after updates.
+- **Download all files (ZIP)** for documents, statements, and receipts (owners and admins).
+- **More MCP tools**, from 46 to 63, including accounts, transfers, tags, insights, found bills, shared goals, forecast, and duplicates.
+
+**Changed**
+- **The Dashboard was rearranged.** The green card now shows your account balance and matches the Forecast and Net worth. Insights, the forecast, and bills moved to the second row.
+- **Dates follow Indonesian time (WIB)** across the app. Before, between 00:00 and 07:00 WIB, some forms were still filled with yesterday's date.
+- **Backups** now include accounts, transfers, tags, shared goals, rules, and other new data (format version 5). Older backups can still be restored.
+
+**Fixed**
+- **Members with restricted accounts** no longer see insights that add up all accounts, and tag totals no longer count restricted accounts.
+
 ## November 12, 2026
 
 **New**

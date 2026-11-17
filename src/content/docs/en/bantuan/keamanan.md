@@ -31,3 +31,7 @@ sidebar:
 ## Reporting a security problem
 
 If you find a weakness or think your account is being misused, contact us right away by email (see [Contact us](/en/bantuan/kontak/)) and change your password. Include a short description, without sending your password.
+
+## Passkeys and login history
+
+You can sign in with a **passkey** (fingerprint, Face ID, or device PIN), and every account has a 90 day **login history**. When someone signs in from a new device, Vaulty sends a warning email. How to set it up is in [Account settings](/en/panduan/pengaturan/).

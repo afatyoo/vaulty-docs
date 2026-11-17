@@ -44,6 +44,10 @@
           "category": {
             "type": "string"
           },
+          "tag": {
+            "type": "string",
+            "description": "Hanya transaksi dengan tag ini."
+          },
           "limit": {
             "type": "integer",
             "minimum": 1,
@@ -127,6 +131,18 @@
           },
           "note": {
             "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 10,
+            "description": "Nama tag, misalnya [\"Liburan Bali\"]. Tag yang belum ada dibuat otomatis."
+          },
+          "exclude_from_reports": {
+            "type": "boolean",
+            "description": "true untuk transaksi yang tetap mengubah saldo rekening tapi tidak ikut laporan, anggaran, skor kesehatan, dan insight (uang titipan, reimburse kantor)."
           }
         },
         "required": [
@@ -453,6 +469,10 @@
           },
           "note": {
             "type": "string"
+          },
+          "exclude_from_reports": {
+            "type": "boolean",
+            "description": "Kecualikan dari laporan, anggaran, skor kesehatan, dan insight. Saldo rekening tetap menghitungnya."
           }
         },
         "required": [
@@ -1460,6 +1480,432 @@
         "required": [
           "id",
           "confirm"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_accounts",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Daftar rekening (bank, e-wallet, tunai, kartu kredit, investasi) beserta saldonya saat ini. Pakai nama rekening ini sebagai method saat mencatat transaksi supaya masuk ke saldo rekening.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_transfer",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Mencatat pindah dana antar rekening, misalnya top up GoPay dari BCA. Transfer tidak dihitung sebagai pemasukan atau pengeluaran. Biaya admin (opsional) dicatat sebagai pengeluaran di rekening asal.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "description": "Nama atau id rekening asal."
+          },
+          "to": {
+            "type": "string",
+            "description": "Nama atau id rekening tujuan."
+          },
+          "amount": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "Jumlah dalam mata uang pencatatan organisasi."
+          },
+          "fee": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Biaya admin, opsional."
+          },
+          "date": {
+            "type": "string",
+            "description": "YYYY-MM-DD. Default hari ini."
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "amount"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_bill_suggestions",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Tagihan dan langganan yang ditemukan otomatis dari pengeluaran berulang (minimal 3 bulan, jumlah mirip, tanggal berdekatan) dan belum diterima atau diabaikan. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "find_bill_suggestions",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mencari ulang pola tagihan dari pengeluaran sekarang juga (biasanya otomatis tiap 6 jam), lalu menampilkan saran terbaru.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "accept_bill_suggestion",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menerima saran tagihan sehingga jadi tagihan aktif; pembayaran 40 hari terakhir yang cocok langsung ditandai. Jumlah, tanggal jatuh tempo, dan jenis bisa diubah sekalian.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "due_day": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 31
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "bill",
+              "subscription",
+              "installment"
+            ]
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "dismiss_bill_suggestion",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengabaikan saran tagihan. Pola yang sama tidak akan disarankan lagi.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_tags",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Daftar tag organisasi (label bebas lintas kategori, misalnya \"Liburan Bali\") dan jumlah transaksinya. Tag bisa dipasang lewat add_transaction.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_smart_insights",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Insight proaktif bulan ini yang belum diabaikan, paling penting di atas: anggaran hampir habis, saldo diperkirakan kurang, lonjakan pengeluaran, langganan naik harga atau tidak dibayar, rasio tabungan turun, kartu kredit jatuh tempo atau limit hampir penuh, pencapaian kekayaan bersih. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "refresh": {
+            "type": "boolean",
+            "description": "Hitung ulang sebelum menampilkan. Default false."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "dismiss_smart_insight",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Mengabaikan satu insight proaktif supaya tidak tampil lagi bulan ini.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_shared_goals",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Target tabungan bersama: total setoran, progres per anggota (janji, yang ditepati, yang disetor), daftar janji setoran, dan uang keluar dari rekening target beserta penjelasannya (reason null = belum dijelaskan). Paket Family.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "add_goal_pledge",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Mencatat janji setoran anggota ke target tabungan. Janji ditandai ditepati otomatis saat anggota itu mencatat transfer ke rekening target dengan jumlah sama (selisih paling besar 1%). Paket Family.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string",
+            "description": "Nama atau id target tabungan."
+          },
+          "amount": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "due_date": {
+            "type": "string",
+            "description": "Paling lambat, YYYY-MM-DD."
+          },
+          "member": {
+            "type": "string",
+            "description": "Username atau id anggota. Default pemilik token."
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "target",
+          "amount",
+          "due_date"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_goal_allocations",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Jadwal sisihkan rutin ke target tabungan dan setoran yang menunggu konfirmasi. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "resolve_goal_allocation",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Menyelesaikan satu setoran tertunda dari list_goal_allocations. record: catat sebagai transfer ke rekening target (tanyakan dulu apakah uangnya sudah dipindahkan). skip: lewati bulan ini.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "record",
+              "skip"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "action"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "get_cash_flow_forecast",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Prakiraan saldo akhir bulan ini: saldo rekening sekarang, pemasukan rutin (gaji) yang belum masuk, tagihan yang belum dibayar, dan perkiraan belanja harian untuk sisa hari. Paket Personal ke atas.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_duplicate_transactions",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Daftar pasangan transaksi yang kemungkinan tercatat dua kali (jumlah dan rekening sama, tanggal paling jauh 3 hari, nama mirip), 90 hari terakhir.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "resolve_duplicate",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "description": "Menyelesaikan satu pasangan dari list_duplicate_transactions. merge: simpan keep_id, other_id masuk tong sampah 30 hari, tag dan catatan dipindahkan (wajib confirm: true setelah bertanya ke pengguna). dismiss: tandai bukan ganda, tidak ditawarkan lagi.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "income",
+              "expense"
+            ]
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "merge",
+              "dismiss"
+            ]
+          },
+          "keep_id": {
+            "type": "string"
+          },
+          "other_id": {
+            "type": "string"
+          },
+          "confirm": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "type",
+          "action",
+          "keep_id",
+          "other_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "explain_goal_outflow",
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "description": "Menjelaskan uang yang keluar dari rekening target tabungan: goal_use (dipakai untuk keperluan target itu), borrowed (dipinjam, akan dikembalikan), other (lainnya, wajib catatan). Ambil id dari list_shared_goals.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "goal_use",
+              "borrowed",
+              "other"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "reason"
         ],
         "additionalProperties": false
       }

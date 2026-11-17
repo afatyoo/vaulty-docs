@@ -45,3 +45,25 @@ Tombol **Kirim Email Test** memastikan pengaturan SMTP-nya benar, dan **Periksa 
 - **Tampilan:** mode terang atau gelap.
 - **Mata uang tampilan** (Personal ke atas): angka dikonversi untuk ditampilkan saja, tidak mengubah data tersimpan.
 - **Mata uang pencatatan:** mata uang asli tempat seluruh transaksi disimpan, dipilih pertama kali saat onboarding. Hanya pemilik organisasi yang bisa menggantinya di sini. Kalau diganti, seluruh data lama (pemasukan, pengeluaran, anggaran, tagihan, tabungan, utang) otomatis dikonversi memakai kurs hari itu, supaya nilai riilnya tetap sama walau angkanya berubah. Kalau kurs sedang tidak bisa diambil, penggantian ditolak sampai bisa dicoba lagi.
+
+## Passkey (semua paket)
+
+Di bagian **Verifikasi dua langkah** ada **Passkey**: masuk dengan sidik jari, Face ID, atau PIN perangkat tanpa mengetik kata sandi.
+
+1. Klik **Tambah passkey**, beri nama perangkatnya, dan masukkan **kata sandi saat ini**.
+2. Ikuti perintah dari perangkatmu (sidik jari, Face ID, atau PIN).
+3. Lain kali, klik **Masuk dengan passkey** di halaman masuk.
+
+Masuk dengan passkey mewajibkan sidik jari, Face ID, atau PIN, jadi sudah mencakup dua faktor dan tidak meminta kode 2FA lagi. Kata sandi, Google, dan 2FA tetap bisa dipakai. Vaulty hanya menyimpan kunci publik; sidik jarimu tidak pernah keluar dari perangkat. Satu akun boleh punya sampai 10 passkey, dan menghapus atau menambahnya selalu meminta kata sandi.
+
+## Riwayat login
+
+Di **Perangkat dan sesi** ada **Riwayat login** selama 90 hari terakhir, termasuk percobaan dengan kata sandi salah. Alamat IP disamarkan. Kalau akunmu dimasuki dari kombinasi peramban dan sistem operasi yang baru, Vaulty mengirim **email peringatan**, supaya kamu bisa segera mengeluarkan semua sesi lain kalau itu bukan kamu.
+
+## Notifikasi di perangkat ini
+
+Di kartu **Pasang aplikasi** ada sakelar **Notifikasi di perangkat ini**. Kalau dinyalakan, notifikasi yang sama dengan lonceng di aplikasi (tagihan jatuh tempo, anggaran hampir habis, insight, target) juga muncul di perangkatmu walau Vaulty tidak dibuka. Isinya hanya judul dan pesan singkat. Sakelarnya per perangkat. Di iPhone dan iPad, pasang Vaulty ke layar utama dulu, lalu buka dari ikon itu. Kalau sakelarnya tidak bisa dinyalakan, berarti notifikasi push belum diaktifkan di server atau izin notifikasi di perangkatmu ditolak.
+
+## Ringkasan email (Personal ke atas)
+
+Di **Notifikasi Email**, pilih **Ringkasan email**: **Mati** (bawaan), **Mingguan** (tiap Senin), atau **Bulanan** (tiap tanggal 1), sekitar pukul 07.00 WIB. Isinya total pemasukan dan pengeluaran beserta perubahannya dari periode sebelumnya, kategori terboros, tagihan 7 hari ke depan, dan progres target. Setiap email punya tautan berhenti berlangganan sekali klik.
