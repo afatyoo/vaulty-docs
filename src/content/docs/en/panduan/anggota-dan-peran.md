@@ -17,6 +17,8 @@ The **Family** plan lets up to **5 users** share one organization. Everyone sees
 
 The person receives an email with a link that is **valid for 7 days and works only once**. Invitations not yet accepted show under **Open Invitations** and can be canceled (the link stops working right away). The counter below the form shows the quota, for example "2 / 5".
 
+An invitation can only be accepted by the owner of the invited email. The recipient must sign in with a Vaulty account whose email matches the invitation email and is verified. If the link is opened with any other account, Vaulty rejects it with an error saying the invitation is for a different email address, and the invitation stays open for the right owner. If the recipient wants to use another email, cancel the old invitation and send a new one to that address.
+
 ## Roles
 
 | Role | Can |

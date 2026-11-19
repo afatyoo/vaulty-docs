@@ -19,7 +19,7 @@ Dua menu yang bekerja berpasangan: **Tabungan** untuk mencatat uang yang ditabun
 
 ![Formulir Tambah Tabungan](../../../assets/screens/id/savings-form.webp)
 
-Saldo tiap akun dihitung dari setoran dikurangi penarikan, dan tampil di kartu di atas daftar.
+Saldo tiap akun dihitung dari setoran dikurangi penarikan, dan tampil di kartu di atas daftar. Penarikan tidak boleh lebih besar dari saldo akun itu. Kalau lebih, Vaulty menolak catatannya dan menampilkan saldo yang tersedia, jadi saldo akun tidak pernah negatif.
 
 Uang yang kamu tarik dari tabungan atau investasi masuk ke saldo dompet, tetapi **tidak dihitung sebagai pemasukan**. Total Pemasukan, grafik arus kas, dan skor kesehatan keuangan hanya menghitung uang yang benar-benar baru masuk, seperti gaji atau bonus.
 

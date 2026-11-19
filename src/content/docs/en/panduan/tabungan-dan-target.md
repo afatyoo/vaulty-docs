@@ -19,7 +19,7 @@ Two menus that work as a pair: **Savings** for recording money saved or invested
 
 ![Add Savings form](../../../../assets/screens/en/savings-form.webp)
 
-Each account's balance is deposits minus withdrawals, shown on the cards above the list.
+Each account's balance is deposits minus withdrawals, shown on the cards above the list. A withdrawal cannot be larger than the account's balance. If it is, Vaulty rejects the entry and shows the available balance, so an account balance never goes below zero.
 
 Money you withdraw from savings or investments goes into your wallet balance, but it is **not counted as income**. Total Income, the cash flow chart, and the financial health score only count money that is genuinely new, like salary or a bonus.
 

@@ -21,7 +21,7 @@ sidebar:
 
 ## Marking it paid
 
-Click the circle to the left of the bill name. The bill becomes **Paid** (struck through), and the payment is recorded as an expense for that month.
+Click the circle to the left of the bill name. The bill becomes **Paid** (struck through), and the payment is recorded as an expense for that month. The amount paid must equal the bill amount. A payment with any other amount is rejected, so a bill cannot be marked paid with the wrong amount.
 
 ## Reading the summary
 

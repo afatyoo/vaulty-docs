@@ -21,7 +21,7 @@ sidebar:
 
 ## Menandai lunas
 
-Klik lingkaran di kiri nama tagihan. Tagihan berubah **Sudah Dibayar** (dicoret), dan pembayarannya dicatat sebagai pengeluaran bulan itu.
+Klik lingkaran di kiri nama tagihan. Tagihan berubah **Sudah Dibayar** (dicoret), dan pembayarannya dicatat sebagai pengeluaran bulan itu. Jumlah yang dibayar harus sama dengan jumlah tagihan. Pembayaran dengan nominal lain ditolak, jadi tagihan tidak bisa ditandai lunas dengan jumlah yang salah.
 
 ## Membaca ringkasan
 

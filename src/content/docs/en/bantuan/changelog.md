@@ -41,6 +41,13 @@ sidebar:
 **Fixed**
 - **Members with restricted accounts** no longer see insights that add up all accounts, and tag totals no longer count restricted accounts.
 
+## November 19, 2026
+
+**Fixed**
+- **Organization invitations can only be accepted by the invited email.** Before, anyone holding an invitation link, for example because it was forwarded or sent to the wrong person, could join the organization with the role on that invitation, including admin. Now the recipient must sign in with an account whose email matches the invitation email and is verified. Any other account gets an error saying the invitation is for a different email address, and the invitation stays open for the right owner.
+- **Savings withdrawals cannot be larger than the balance.** Before, a withdrawal above the balance, or on an account that never had a deposit, was saved and made the account balance negative. Now an entry like that is rejected and the message shows the available balance.
+- **Bills can only be marked paid with the right amount.** Before, a payment of any amount, including 0 or far below the bill amount, still made the bill show as Paid. Now the amount paid must equal the bill amount. The Pay button in the app already sends the full amount, so normal use does not change.
+
 ## November 12, 2026
 
 **New**
