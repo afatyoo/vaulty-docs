@@ -44,7 +44,7 @@ Tombol **Kirim Email Test** memastikan pengaturan SMTP-nya benar, dan **Periksa 
 - **Bahasa:** Bahasa Indonesia atau English. Semua layar, email, laporan, dan invoice mengikuti pilihan ini.
 - **Tampilan:** mode terang atau gelap.
 - **Mata uang tampilan** (Personal ke atas): angka dikonversi untuk ditampilkan saja, tidak mengubah data tersimpan.
-- **Mata uang pencatatan:** mata uang asli tempat seluruh transaksi disimpan, dipilih pertama kali saat onboarding. Hanya pemilik organisasi yang bisa menggantinya di sini. Kalau diganti, seluruh data lama (pemasukan, pengeluaran, anggaran, tagihan, tabungan, utang) otomatis dikonversi memakai kurs hari itu, supaya nilai riilnya tetap sama walau angkanya berubah. Kalau kurs sedang tidak bisa diambil, penggantian ditolak sampai bisa dicoba lagi.
+- **Mata uang pencatatan:** mata uang asli tempat seluruh transaksi disimpan, dipilih pertama kali saat onboarding. Hanya pemilik organisasi yang bisa menggantinya di sini. Kalau diganti, seluruh data lama (pemasukan, pengeluaran, anggaran, tagihan, tabungan, utang) otomatis dikonversi memakai kurs hari itu, supaya nilai riilnya tetap sama walau angkanya berubah. Kalau kurs sedang tidak bisa diambil, penggantian ditolak sampai bisa dicoba lagi. Mengganti ke mata uang selain rupiah memerlukan paket Personal ke atas, sedangkan kembali ke rupiah selalu bisa.
 
 ## Passkey (semua paket)
 

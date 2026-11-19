@@ -9,13 +9,13 @@ sidebar:
 
 - **Passwords are not stored as typed.** What is kept is a one-way scramble (hash), and Vaulty requires a password of at least 12 characters with an uppercase letter, a lowercase letter, and a number.
 - **Secure sessions.** Sessions use a cookie that page scripts cannot read, sent only over HTTPS, and protected by a CSRF token. Sessions end automatically after a period of inactivity, and you can sign out other devices yourself.
-- **Attempt limits.** Sign-in, sign-up, and password reset attempts are rate limited so passwords cannot be guessed repeatedly.
-- **Two-step verification (TOTP)** with recovery codes, on the Personal plan and above. The TOTP secret is stored encrypted.
+- **Attempt limits.** Sign-in, sign-up, and password reset attempts are rate limited so passwords cannot be guessed repeatedly. Two-step verification code attempts are limited per account, so signing in again does not give a fresh set of guesses. Slightly different spellings of an account name (capital letters, accents, or full width characters) count as the same account.
+- **Two-step verification (TOTP)** with recovery codes, on the Personal plan and above. The TOTP secret is stored encrypted. Each TOTP code works only once, and a sign-in challenge can only be completed once.
 - **Organizations are separated.** Every request to the server is checked against your active organization. There is no way to see another organization's data.
 - **Per-member roles.** Owner, admin, member, and viewer have different permissions, and they are enforced on the server, not just hidden in the interface.
 - **Single-use, time-limited links:** email verification 24 hours, password reset 1 hour, member invitations 7 days.
 - **Payments through Midtrans.** Card data is processed by Midtrans and never stored by Vaulty.
-- **AI agent (MCP) tokens** are stored only as a hash, tied to one organization, can be limited to read only, and can be revoked at any time.
+- **AI agent (MCP) tokens** are stored only as a hash, tied to one organization, can be limited to read only, and can be revoked at any time. All of your agent tokens are revoked automatically when you reset your password through the reset link.
 - **Activity log.** Changes are recorded (who, what, when), including those made through MCP.
 - **Trash.** Deleted data can be restored.
 

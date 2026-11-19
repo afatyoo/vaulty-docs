@@ -34,7 +34,7 @@ Rules fill in the category automatically from keywords in the description. For e
 
 ## Activity History
 
-A record of every change in the organization: who added, changed, or deleted what, and when. Useful for families sharing data.
+A record of every change in the organization: who added, changed, or deleted what, and when. Useful for families sharing data. Rows about invitations and membership are only shown to Owners and Admins.
 
 ## Net worth breakdown
 

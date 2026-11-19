@@ -34,7 +34,7 @@ Aturan mengisi kategori otomatis dari kata kunci deskripsi. Misalnya kata "Grab"
 
 ## Riwayat Aktivitas
 
-Catatan semua perubahan di organisasi: siapa menambah, mengubah, atau menghapus apa, dan kapan. Berguna untuk keluarga yang berbagi data.
+Catatan semua perubahan di organisasi: siapa menambah, mengubah, atau menghapus apa, dan kapan. Berguna untuk keluarga yang berbagi data. Baris tentang undangan dan keanggotaan hanya tampil untuk Owner dan Admin.
 
 ## Rincian kekayaan bersih
 
