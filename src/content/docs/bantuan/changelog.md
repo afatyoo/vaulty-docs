@@ -5,6 +5,13 @@ sidebar:
   order: 4
 ---
 
+## 19 November 2026
+
+**Diperbaiki**
+- **Undangan organisasi hanya bisa diterima oleh email yang diundang.** Sebelumnya siapa pun yang memegang tautan undangan, misalnya karena tautan diteruskan atau salah kirim, bisa bergabung ke organisasi dengan peran undangan itu, termasuk admin. Sekarang penerima harus masuk dengan akun yang emailnya sama dengan email undangan dan sudah terverifikasi. Akun lain mendapat pesan "Undangan ini ditujukan untuk alamat email lain", dan undangannya tetap terbuka untuk pemilik email yang benar.
+- **Penarikan tabungan tidak bisa lebih besar dari saldo.** Sebelumnya penarikan di atas saldo, atau di akun yang belum pernah diisi, tetap tersimpan dan membuat saldo akun negatif. Sekarang catatan seperti itu ditolak dan pesannya menampilkan saldo yang tersedia.
+- **Tagihan hanya bisa ditandai lunas dengan jumlah yang sesuai.** Sebelumnya pembayaran dengan nominal berapa pun, termasuk 0 atau jauh di bawah jumlah tagihan, tetap membuat tagihan tampil Sudah Dibayar. Sekarang jumlah yang dibayar harus sama dengan jumlah tagihan. Tombol Bayar di aplikasi sudah mengirim jumlah penuh, jadi cara pakai yang biasa tidak berubah.
+
 ## 12 November 2026
 
 **Baru**
