@@ -15,7 +15,7 @@ Paket **Family** memungkinkan sampai **5 pengguna** berbagi satu organisasi. Sem
 2. Pilih **Peran**.
 3. Klik **Kirim Undangan**.
 
-Orang itu menerima email berisi tautan yang **berlaku 7 hari dan hanya bisa dipakai sekali**. Undangan yang belum diterima tampil di **Undangan Terbuka** dan bisa dibatalkan (tautannya langsung tidak berlaku). Penghitung di bawah formulir menunjukkan kuota, misalnya "2 / 5".
+Orang itu menerima email berisi tautan yang **berlaku 7 hari dan hanya bisa dipakai sekali**. Undangan yang belum diterima tampil di **Undangan Terbuka** dan bisa dibatalkan (tautannya langsung tidak berlaku). Daftar ini hanya tampil untuk Owner dan Admin. Penghitung di bawah formulir menunjukkan kuota, misalnya "2 / 5".
 
 Undangan hanya bisa diterima oleh pemilik email yang diundang. Penerima harus masuk dengan akun Vaulty yang emailnya sama dengan email undangan dan sudah terverifikasi. Kalau tautan dibuka dengan akun lain, Vaulty menolaknya dengan pesan "Undangan ini ditujukan untuk alamat email lain", dan undangannya tetap terbuka untuk pemilik email yang benar. Kalau penerima ingin memakai email lain, batalkan undangan lama lalu kirim undangan baru ke alamat itu.
 

@@ -9,13 +9,13 @@ sidebar:
 
 - **Password tidak disimpan apa adanya.** Yang tersimpan adalah hasil pengacakan satu arah (hash), dan Vaulty mewajibkan password minimal 12 karakter dengan huruf besar, huruf kecil, dan angka.
 - **Sesi login aman.** Sesi memakai cookie yang tidak bisa dibaca skrip halaman, hanya dikirim lewat HTTPS, dan dilindungi token CSRF. Sesi berakhir otomatis kalau lama tidak dipakai, dan kamu bisa mengeluarkan perangkat lain sendiri.
-- **Pembatasan percobaan.** Percobaan masuk, daftar, dan reset password dibatasi supaya tebakan password tidak bisa dilakukan berulang.
-- **Verifikasi dua langkah (TOTP)** dengan kode pemulihan, untuk paket Personal ke atas. Rahasia TOTP disimpan terenkripsi.
+- **Pembatasan percobaan.** Percobaan masuk, daftar, dan reset password dibatasi supaya tebakan password tidak bisa dilakukan berulang. Percobaan kode verifikasi dua langkah dibatasi per akun, jadi masuk ulang tidak memberi jatah tebakan baru. Penulisan nama akun yang sedikit berbeda (huruf besar, aksen, atau karakter lebar penuh) dihitung sebagai akun yang sama.
+- **Verifikasi dua langkah (TOTP)** dengan kode pemulihan, untuk paket Personal ke atas. Rahasia TOTP disimpan terenkripsi. Setiap kode TOTP hanya bisa dipakai sekali, dan satu tantangan login hanya bisa diselesaikan sekali.
 - **Data antar organisasi terpisah.** Setiap permintaan ke server diperiksa terhadap organisasi aktifmu. Tidak ada cara melihat data organisasi lain.
 - **Peran per anggota.** Pemilik, admin, member, dan viewer punya izin berbeda, dan izinnya diperiksa di server, bukan hanya disembunyikan di tampilan.
 - **Tautan sekali pakai dan berbatas waktu:** verifikasi email 24 jam, reset password 1 jam, undangan anggota 7 hari.
 - **Pembayaran lewat Midtrans.** Data kartu diproses Midtrans dan tidak pernah disimpan Vaulty.
-- **Token agen AI (MCP)** disimpan hanya dalam bentuk hash, terikat satu organisasi, bisa dibatasi baca saja, dan bisa dicabut kapan saja.
+- **Token agen AI (MCP)** disimpan hanya dalam bentuk hash, terikat satu organisasi, bisa dibatasi baca saja, dan bisa dicabut kapan saja. Semua token agen milikmu otomatis dicabut saat password direset lewat tautan reset.
 - **Catatan aktivitas.** Perubahan data tercatat (siapa, apa, kapan), termasuk yang dilakukan lewat MCP.
 - **Kotak sampah.** Data yang dihapus bisa dipulihkan.
 
